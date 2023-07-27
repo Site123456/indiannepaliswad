@@ -1,15 +1,9 @@
 setTimeout(() => {
-  sendNotification("success", "Tout est prêt");
+  sendNotification("success", "Tout est prêt.");
   document.cookie = "testing=cookies_enabled_nouid; path=/";
   if(document.cookie.indexOf("testing=cookies_enabled_nouid") < 0)
   {
       sendNotification("warning", "Les Cookies sont bloquées.");
-  }
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    sendNotification("blacknotif", "Le mode Sombre est activé.");
-  }
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    sendNotification("purplenotif", "Le mode Claire est activé.");
   }
 }, 200);
 function makeid(length) {

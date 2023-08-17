@@ -17,22 +17,73 @@
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card card-signin my-5">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Send Email</h5>
-                    <form action="./email-script.php" method="post" class="form-signin">
-                        <label for="inputPassword">Subject <span style="color: #FF0000">*</span></label>
-                        <div class="form-label-group">
-                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
-                        </div><br/>
-                        <label for="inputPassword">Message <span style="color: #FF0000">*</span></label>
-                        <div class="form-label-group">
-                            <textarea  id="message" name="message" class="form-control" placeholder="Message" required ></textarea>
-                        </div> <br/>
-                        <button type="submit" name="sendMailBtn" class="btn btn-lg btn-primary btn-block text-uppercase" >Send Email</button>
+                    <form class="row g-3" action="https://formspree.io/f/mvojkjez" method="POST">
+                      <div class="col-12">
+                        <label for="inputAddress" class="form-label">Votre Mail</label>
+                        <input type="mail" class="form-control" name="Email : " id="inputAddress" placeholder="EX : mail@gmail.com" title="Email" required>
+                      </div>
+                      <div class="col-6">
+                        <label for="inputAddress" class="form-label">Votre Nom</label>
+                        <input type="mail" class="form-control" name="Nom : " id="inputAddress" placeholder="Votre Nom" title="Nom" required>
+                      </div>
+                      <div class="col-6">
+                        <label for="inputAddress" class="form-label">Votre Prénom</label>
+                        <input type="mail" class="form-control" name="Prénom : " id="inputAddress" placeholder="Votre Prénom" title="Prénom" required>
+                      </div>
+                      <div class="col-6">
+                        <label for="adult">Adults</label>
+                        <input type="number" id="adult" name="Adults total :" placeholder="1" min="1" title="Adulte(s)" required>
+                      </div>
+                      <div class="col-6">
+                        <label for="child">Enfants</label>
+                        <input type="number" id="child" name="Enfant total :" placeholder="0" min="0" title="Enfant(s)">
+                      </div>
+                      <div class="col-12">
+                        <label for="checkin-date">Pour le :</label>
+                        <input type="date" class="form-control" id="checkin-date" name="Pour Le :" required>
+                      </div>
+                        <p class="col-12">Important : Si il y a une erreur dans le remplissage du questionnaire alors cette réservation ne sera pas validé.</p>
+                        <button type="submit" class="btn btn-primary btn-lg col-12">Envoyer</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtntop");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function footerToggle(footerBtn) {
+    $(footerBtn).toggleClass("btnActive");
+    $(footerBtn).next().toggleClass("active");
+}
+var currentDateTime = new Date();
+var year = currentDateTime.getFullYear();
+var month = (currentDateTime.getMonth() + 1);
+var date = (currentDateTime.getDate() + 1);
+
+if(date < 10) {
+  date = '0' + date;
+}
+if(month < 10) {
+  month = '0' + month;
+}
+
+var dateTomorrow = year + "-" + month + "-" + date;
+var checkinElem = document.querySelector("#checkin-date");
+
+checkinElem.setAttribute("min", dateTomorrow);
+</script>
 </body>
 </html>

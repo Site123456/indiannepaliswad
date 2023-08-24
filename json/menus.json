@@ -1,0 +1,32 @@
+[
+    {
+        "id": "menus1",
+        "title": "Menu Spécial",
+        "type": "Menus",
+        "description": "1 plat + 1 Riz + 1 Naan",
+        "image": "https://www.indian-nepaliswad.fr/37%20menu%20special.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262926",
+        "price": "18,90",
+        "allergenes": ""
+    },
+    {
+        "id": "menus2",
+        "title": "Menu végétarien",
+        "type": "Menus",
+        "description": "1 Plat Végé + 1 Riz + 1 Naan",
+        "image": "https://www.indian-nepaliswad.fr/38%20menu%20vegetarien.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262918",
+        "price": "18,90",
+        "allergenes": ""
+    },
+    {
+        "id": "menus3",
+        "title": "Menu Best Deal",
+        "type": "Menus",
+        "description": "1 Entrée + 1 Plat + 1 Riz + 1 Naan + 1 Boisson",
+        "image": "https://www.indian-nepaliswad.fr/39%20menu%20best%20deal.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262909",
+        "price": "24,90",
+        "allergenes": ""
+    }
+]

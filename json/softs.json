@@ -1,0 +1,82 @@
+[
+    {
+        "id": "softs1",
+        "title": "Lassi fait maison - Smoothie indien",
+        "type": "Softs",
+        "description": "50cl - Mangue, Rose ou Nature",
+        "image": "https://www.indian-nepaliswad.fr/32%20lassi.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262924",
+        "price": "6,50",
+        "allergenes": ""
+    },
+    {
+        "id": "softs2",
+        "title": "Eau plate - Bouteille 50 cL",
+        "type": "Softs",
+        "description": "Evian ou Vittel selon disponibilté",
+        "image": "https://www.indian-nepaliswad.fr/49%20eau%20plate%2050cl.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262966",
+        "price": "3,00",
+        "allergenes": ""
+    },
+    {
+        "id": "softs3",
+        "title": "L'eau gazeuse- 33 cL",
+        "type": "Softs",
+        "description": "Perrier ou Badoit selon arrivage.",
+        "image": "https://www.indian-nepaliswad.fr/48%20eau%20petillante%2033cl.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262906",
+        "price": "2,00",
+        "allergenes": ""
+    },
+    {
+        "id": "softs4",
+        "title": "Coca-cola 33 cL",
+        "type": "Softs",
+        "description": "Canette",
+        "image": "https://www.indian-nepaliswad.fr/45%20coca.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262902",
+        "price": "2,00",
+        "allergenes": ""
+    },
+    {
+        "id": "softs5",
+        "title": "Coca-cola zéro 33 cL",
+        "type": "Softs",
+        "description": "Canette",
+        "image": "https://www.indian-nepaliswad.fr/47%20coca%20zero.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262991",
+        "price": "2,00",
+        "allergenes": ""
+    },
+    {
+        "id": "softs6",
+        "title": "Ice Tea 33 cL - Pêche",
+        "type": "Softs",
+        "description": "Canette",
+        "image": "https://www.indian-nepaliswad.fr/46%20litpon.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262934",
+        "price": "2,00",
+        "allergenes": ""
+    },
+    {
+        "id": "softs7",
+        "title": "L'eau gazeuse-San Pellegrino 50 cL",
+        "type": "Softs",
+        "description": "Bouteille",
+        "image": "https://www.indian-nepaliswad.fr/50%20eau%20petillante%2050%20cl.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262925",
+        "price": "3,50",
+        "allergenes": ""
+    },
+    {
+        "id": "softs8",
+        "title": "Jus 25 cL",
+        "type": "Softs",
+        "description": "Au choix parmi: mangue, ananas, orange - Bouteille, Gilbert",
+        "image": "https://www.indian-nepaliswad.fr/43%20%20jus%20d'orange.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262885",
+        "price": "3,50",
+        "allergenes": ""
+    }
+]

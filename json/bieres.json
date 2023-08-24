@@ -1,0 +1,32 @@
+[
+    {
+        "id": "bieres1",
+        "title": "BIERE INDIENNE",
+        "type": "BIERES",
+        "description": "33cl",
+        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
+        "link": "#indisponible",
+        "price": "5,00",
+        "allergenes": "Seulement sur Place"
+    },
+    {
+        "id": "bieres2",
+        "title": "BIERES NEPALAISE",
+        "type": "BIERES",
+        "description": "33cl",
+        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
+        "link": "#indisponible",
+        "price": "5,00",
+        "allergenes": "Seulement sur Place"
+    },
+    {
+        "id": "bieres3",
+        "title": "HEINEKEN",
+        "type": "BIERES",
+        "description": "33cl",
+        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
+        "link": "#indisponible",
+        "price": "5,00",
+        "allergenes": "Seulement sur Place"
+    }
+]

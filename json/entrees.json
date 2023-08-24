@@ -1,0 +1,82 @@
+[
+    {
+        "id": "enterees1",
+        "title": "Poulet tandoori",
+        "type": "Entrées",
+        "description": "Cuisse de poulet mariné aux épices, grillées au tandoori, servi en une pièce",
+        "image": "https://www.indian-nepaliswad.fr/35%20tandoori.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262905",
+        "price": "8,50",
+        "allergenes": ""
+    },
+    {
+        "id": "enterees2",
+        "title": "Tikka",
+        "type": "Entrées",
+        "description": "Viande marinée aux épices, grillées au tandoor, servi en 4 pièces.",
+        "image": "https://www.indian-nepaliswad.fr/36%20tikka.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262956",
+        "price": "8,90",
+        "allergenes": "Options :,<br> - Poulet Tikka,<br> - Agneau Tikka (+1€)."
+    },
+    {
+        "id": "enterees3",
+        "title": "Pakora (Beignet)",
+        "type": "Entrées",
+        "description": "Tous nos beignets sont végétariens et confectionnés à partir de farine de pois chiche parfumés aux herbes fraîches et aux épices - Servi par 6 pièces.",
+        "image": "https://www.indian-nepaliswad.fr/34%20pakora.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262879",
+        "price": "7,50",
+        "allergenes": "Options :<br> - Baigan Pakora (Aubergine),<br> - Aloo Pakora (Pomme de terre),<br> Mix Pakora (2 Onion Bhaji, 2 Baigan, 2 Aloo)."
+    },
+    {
+        "id": "enterees4",
+        "title": "Samoussas (Beignets)",
+        "type": "Entrées",
+        "description": "Chausson à la viande hachée, herbe fraîche, oignon, coriandre fraîche - 3 pièces.",
+        "image": "https://www.indian-nepaliswad.fr/41%20samussa%20beignet.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262883",
+        "price": "8,50",
+        "allergenes": "Options :<br> - Poulet,<br> - Agneau (+1€)."
+    },
+    {
+        "id": "enterees5",
+        "title": "Samoussas aux légumes",
+        "type": "Entrées",
+        "description": "Chausson aux légumes, pomme de terre, petit pois, carottes, sel, herbes fraiches - 3 pièces",
+        "image": "https://www.indian-nepaliswad.fr/40%20samussa%20legume.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262990",
+        "price": "7,50",
+        "allergenes": ""
+    },
+    {
+        "id": "enterees6",
+        "title": "Onion Bhaji (Beignet)",
+        "type": "Entrées",
+        "description": "Beignets d'oignons à la farine de pois chiche parfumés aux herbes fraîches et aux épices, servi par 6 pièces",
+        "image": "https://www.indian-nepaliswad.fr/33%20onion%20bhagi.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262954",
+        "price": "6,90",
+        "allergenes": ""
+    },
+    {
+        "id": "enterees7",
+        "title": "Combo de 3 sauces salée, sucrée et pimentée",
+        "type": "Entrées",
+        "description": "Sauce sucrée de tamarind, sauce salée à la menthe et sauce pimenté-mix pickle",
+        "image": "https://www.indian-nepaliswad.fr/42%20sauces.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262936",
+        "price": "1,00",
+        "allergenes": ""
+    },
+    {
+        "id": "enterees8",
+        "title": "Samoussas poulet (Beignets)",
+        "type": "Entrées",
+        "description": "3 pièces poulet",
+        "image": "https://www.indian-nepaliswad.fr/41%20samussa%20beignet.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1313879128",
+        "price": "8,50",
+        "allergenes": ""
+    }
+]

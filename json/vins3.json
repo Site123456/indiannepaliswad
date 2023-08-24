@@ -1,0 +1,22 @@
+[
+    {
+        "id": "vinsblancs1",
+        "title": "MUSCADET S&M",
+        "type": "VINS Blancs",
+        "description": "Lie L'hyvernière (Loire). 13,00€(37,50cl), 19,00€(75,00cl)",
+        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
+        "link": "./indisponible/",
+        "price": "13,00",
+        "allergenes": "Seulement sur Place"
+    },
+    {
+        "id": "vinsblancs1",
+        "title": "RIESLING",
+        "type": "VINS Blancs",
+        "description": "Caves de Turckheim (Alsace). 13,00€(37,50cl), 21,00€(75,00cl)",
+        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
+        "link": "./indisponible/",
+        "price": "13,00",
+        "allergenes": "Seulement sur Place"
+    }
+]

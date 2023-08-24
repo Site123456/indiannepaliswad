@@ -1,0 +1,122 @@
+[
+    {
+        "id": "special1",
+        "title": "Curry",
+        "type": "Nos spécialités",
+        "description": "Une base viande cuite dans une sauce curry, coriandre et épices - (Riz à commander en supplément)",
+        "image": "https://www.indian-nepaliswad.fr/18%20curry.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262946",
+        "price": "12,90",
+        "allergenes": ""
+    },
+    {
+        "id": "special2",
+        "title": "Masala",
+        "type": "Nos spécialités",
+        "description": "Brochette grillé puis préparé dans une sauce Masala avec poivrons, tomates et oignons - (Riz à commander en supplément)",
+        "image": "https://www.indian-nepaliswad.fr/17%20masala.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262972",
+        "price": "14,50",
+        "allergenes": ""
+    },
+    {
+        "id": "special3",
+        "title": "Vindaloo",
+        "type": "Nos spécialités",
+        "description": "Base de viande cuite dans une sauce curry, pomme de terre et jus citron - (Riz à commander en supplément)",
+        "image": "https://www.indian-nepaliswad.fr/19%20vindaloo.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262974",
+        "price": "13,90",
+        "allergenes": ""
+    },
+    {
+        "id": "special4",
+        "title": "Shahi korma",
+        "type": "Nos spécialités",
+        "description": "Base de viande dans une sauce à la crème fraîche avec amandes, raisins secs, noix de cajou, oignons, salé et sucré - (Riz à commander en supplément)",
+        "image": "https://www.indian-nepaliswad.fr/15%20sahi%20koura.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262985",
+        "price": "14,50",
+        "allergenes": ""
+    },
+    {
+        "id": "special5",
+        "title": "Madras (HOT)",
+        "type": "Nos spécialités",
+        "description": "Base de viande dans curry de madras avec noix de coco et, sauce traditionnelle de sud de l&apos;Inde. Relevé - (Riz à commander en supplément)",
+        "image": "https://www.indian-nepaliswad.fr/16%20madras.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262948",
+        "price": "13,90",
+        "allergenes": ""
+    },
+    {
+        "id": "special6",
+        "title": "Poulet butter",
+        "type": "Nos spécialités",
+        "description": "Brochette de blanc de poulet dans une sauce à la base de crème fraîche et beurre avec noix de cajou, tomate, épices, amande, un peu sucré - (Riz à commander en supplément)",
+        "image": "https://www.indian-nepaliswad.fr/20%20poulet%20butter.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262893",
+        "price": "14,50",
+        "allergenes": ""
+    },
+    {
+        "id": "special7",
+        "title": "Palak",
+        "type": "Nos spécialités",
+        "description": "MIX LEGUME VIANDE - Base de viande cuites aux épinards hachés, herbes fraîches, épices parfumés - (Riz à commander en supplément)",
+        "image": "https://www.indian-nepaliswad.fr/24%20palak%20panner.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262969",
+        "price": "13,90",
+        "allergenes": ""
+    },
+    {
+        "id": "special8",
+        "title": "Dahl",
+        "type": "Nos spécialités",
+        "description": "MIX LEGUME VIANDE - Base de viande avec lentilles cuites dans une sauce tomate, oignons - (Riz à commander en supplément)",
+        "image": "https://www.indian-nepaliswad.fr/27%20dahl.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262886",
+        "price": "13,90",
+        "allergenes": ""
+    },
+    {
+        "id": "special9",
+        "title": "Bharta",
+        "type": "Nos spécialités",
+        "description": "MIX LEGUME VIANDE - Base de viande avec aubergines cuits dans une sauce tomate, oignons - (Riz à commander en supplément)",
+        "image": "https://www.indian-nepaliswad.fr/26%20bharta.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262939",
+        "price": "13,90",
+        "allergenes": ""
+    },
+    {
+        "id": "special10",
+        "title": "Biryani",
+        "type": "Nos spécialités",
+        "description": "Riz parfumé mijoté avec des épices et viande au choix avec accompagnement de Raita (Pas besoin de riz en supplément)",
+        "image": "https://www.indian-nepaliswad.fr/13%20Biryani.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262944",
+        "price": "16,50",
+        "allergenes": ""
+    },
+    {
+        "id": "special11",
+        "title": "Poulet au curry",
+        "type": "Nos spécialités",
+        "description": "Poulet cuit dans une sauce curry, coriandre et épices - (Riz à commander en supplément)",
+        "image": "https://www.indian-nepaliswad.fr/18%20curry.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1311186895",
+        "price": "12,90",
+        "allergenes": ""
+    },
+    {
+        "id": "special12",
+        "title": "Poulet Masala",
+        "type": "Nos spécialités",
+        "description": "Brochette grillé puis préparé dans une sauce Masala avec poivrons, tomates et oignons - (Riz à commander en supplément)",
+        "image": "https://www.indian-nepaliswad.fr/17%20masala.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1326897764",
+        "price": "14,50",
+        "allergenes": ""
+    }
+]

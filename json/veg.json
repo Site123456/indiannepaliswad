@@ -1,0 +1,62 @@
+[
+    {
+        "id": "veg1",
+        "title": "Dahl Tadka",
+        "type": "Plats Végétariens",
+        "description": "Lentilles jaunes à l'ail, cumin et beurre - (Riz à commander en supplément)",
+        "image": "https://www.indian-nepaliswad.fr/21%20dahl%20tokda.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262960",
+        "price": "11,90",
+        "allergenes": ""
+    },
+    {
+        "id": "veg2",
+        "title": "Légume curry",
+        "type": "Plats Végétariens",
+        "description": "Légumes cuits dans une sauce curry, coriandre et épices - (Riz à commander en supplément)",
+        "image": "https://www.indian-nepaliswad.fr/25%20legume%20curry.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262932",
+        "price": "10,90",
+        "allergenes": ""
+    },
+    {
+        "id": "veg3",
+        "title": "Bhaigan bharta",
+        "type": "Plats Végétariens",
+        "description": "Aubergines grillées au tandoor puis préparé avec des oignions et des tomates, riz est en extra",
+        "image": "https://www.indian-nepaliswad.fr/26%20bharta.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262940",
+        "price": "12,90",
+        "allergenes": ""
+    },
+    {
+        "id": "veg4",
+        "title": "Palak paneer",
+        "type": "Plats Végétariens",
+        "description": "Epinards hachés, sautés à l&apos;ail avec du fromage et épices - (Riz à commander en supplément)",
+        "image": "https://www.indian-nepaliswad.fr/28%20palak.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262914",
+        "price": "12,50",
+        "allergenes": ""
+    },
+    {
+        "id": "veg5",
+        "title": "Légumes korma",
+        "type": "Plats Végétariens",
+        "description": "Légumes cuits dans une sauce aux oignons, crème fraîche, noix de cajou, amandes, raisins secs - (Riz à commander en supplément)",
+        "image": "https://www.indian-nepaliswad.fr/22%20legumes%20korma.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262963",
+        "price": "12,90",
+        "allergenes": ""
+    },
+    {
+        "id": "veg6",
+        "title": "Légumes biryani",
+        "type": "Plats Végétariens",
+        "description": "Riz parfumé mijoté avec des épices et des légumes et petits pois avec accompagnement de raita - (Pas besoin de riz en supplément).",
+        "image": "https://www.indian-nepaliswad.fr/14%20biryani%20legume.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262975",
+        "price": "14,50",
+        "allergenes": ""
+    }
+]

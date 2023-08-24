@@ -1,0 +1,42 @@
+[
+    {
+        "id": "momos1",
+        "title": "Formule MOMO & SIDE",
+        "type": "Menus MOMOS",
+        "description": "6 pièces + 1 side au choix",
+        "image": "https://www.indian-nepaliswad.fr/momoformule1.jpeg",
+        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310865424",
+        "price": "12,00",
+        "allergenes": ""
+    },
+    {
+        "id": "momos2",
+        "title": "Formule MOMO & NAN",
+        "type": "Menus MOMOS",
+        "description": "6 pièces + Nan Fromage+ 1 boisson au choix",
+        "image": "https://www.indian-nepaliswad.fr/momoformule2.jpeg",
+        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310804085",
+        "price": "14,00",
+        "allergenes": ""
+    },
+    {
+        "id": "momos3",
+        "title": "Formule MOMO & DRINK - 1 personne",
+        "type": "Menus MOMOS",
+        "description": "12 pièces + 1 boisson au choix",
+        "image": "https://www.indian-nepaliswad.fr/momoformule3.jpeg",
+        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310804076",
+        "price": "15,00",
+        "allergenes": ""
+    },
+    {
+        "id": "momos4",
+        "title": "Formule MOMO & SIDE",
+        "type": "Menus MOMOS",
+        "description": "18 pièces au choix + 2 boissons aux choix",
+        "image": "https://www.indian-nepaliswad.fr/momoformule4.jpeg",
+        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310804081",
+        "price": "24,00",
+        "allergenes": ""
+    }
+]

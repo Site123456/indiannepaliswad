@@ -1,0 +1,32 @@
+[
+    {
+        "id": "vinsrouges1",
+        "title": "BORDEAUX",
+        "type": "VINS Rouges",
+        "description": "Supérieure Goelane. 15,00€(37,50cl), 21,00€(75,00cl)",
+        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
+        "link": "./indisponible/",
+        "price": "15,00",
+        "allergenes": "Seulement sur Place"
+    },
+    {
+        "id": "vinsrouges2",
+        "title": "CHINON",
+        "type": "VINS Rouges",
+        "description": "Vignerons J.M. Raffault. 13,00€(37,50cl), 21,00€(75,00cl)",
+        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
+        "link": "./indisponible/",
+        "price": "13,00",
+        "allergenes": "Seulement sur Place"
+    },
+    {
+        "id": "vinsrouges3",
+        "title": "BROUILLY",
+        "type": "VINS Rouges",
+        "description": "Domaine de Chatelan. 17,00€(37,50cl), 27,00€(75,00cl)",
+        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
+        "link": "./indisponible/",
+        "price": "17,00",
+        "allergenes": "Seulement sur Place"
+    }
+]

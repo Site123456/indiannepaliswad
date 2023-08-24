@@ -1,0 +1,42 @@
+[
+    {
+        "id": "riz1",
+        "title": "Riz basmati",
+        "type": "Riz",
+        "description": "Une portion",
+        "image": "https://www.indian-nepaliswad.fr/4%20riz%20basmati.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262890",
+        "price": "3,90",
+        "allergenes": ""
+    },
+    {
+        "id": "riz2",
+        "title": "Riz safran",
+        "type": "Riz",
+        "description": "Une portion",
+        "image": "https://www.indian-nepaliswad.fr/1%20riz%20safran.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262980",
+        "price": "3,40",
+        "allergenes": ""
+    },
+    {
+        "id": "riz3",
+        "title": "Matar pulao",
+        "type": "Riz",
+        "description": "Riz avec petits pois, herbes fraîches, raisin sec amande effilée, noix de cajou.",
+        "image": "https://www.indian-nepaliswad.fr/2%20riz%20matar%20palao.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262952",
+        "price": "5,40",
+        "allergenes": ""
+    },
+    {
+        "id": "riz4",
+        "title": "Pulao kashmiri",
+        "type": "Riz",
+        "description": "Riz safran avec et fruits secs",
+        "image": "https://www.indian-nepaliswad.fr/3%20riz%20kashmiri.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262983",
+        "price": "5,40",
+        "allergenes": ""
+    }
+]

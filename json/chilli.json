@@ -1,0 +1,32 @@
+[
+    {
+        "id": "chilli1",
+        "title": "Raviolis chili végétariens - 6 pièces",
+        "type": "MOMO CHILLI",
+        "description": "Raviolis vapeurs à la base de farine de blé, farcis de chou blanc, oignon, carotte, pomme de terre, épices et piment vert - Avec une sauce tomates et poivrons",
+        "image": "https://www.indian-nepaliswad.fr/momo1.webp",
+        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310804073",
+        "price": "10,50",
+        "allergenes": ""
+    },
+    {
+        "id": "chilli2",
+        "title": "Raviolis chili au poulet - 6 pièces",
+        "type": "MOMO CHILLI",
+        "description": "Raviolis vapeurs à la base de farine de blé, farcis de poulet, oignon, épices et piment vert - Avec une sauce tomates et poivrons",
+        "image": "https://www.indian-nepaliswad.fr/momo2.webp",
+        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310804073",
+        "price": "11,50",
+        "allergenes": ""
+    },
+    {
+        "id": "chilli3",
+        "title": "Raviolis chili à l'agneau - 6 pièces",
+        "type": "MOMO CHILLI",
+        "description": "Raviolis vapeurs à la base de farine de blé, farcis d'agneau, oignon, épices et poivrons - Avec une sauce tomates et poivrons",
+        "image": "https://www.indian-nepaliswad.fr/momo3.webp",
+        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310804073",
+        "price": "11,50",
+        "allergenes": ""
+    }
+]

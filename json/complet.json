@@ -1,0 +1,43 @@
+[
+    {
+        "id": "complet1",
+        "title": "Chau-Min légumes",
+        "type": "Plat complet",
+        "description": "Nouilles sautées avec des légumes aux épices Népalaise",
+        "image": "https://www.indian-nepaliswad.fr/8%20chau%20min%20legume.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262986",
+        "price": "13,90",
+        "allergenes": ""
+    },
+    {
+        "id": "complet2",
+        "title": "Chau-Min poulet",
+        "type": "Plat complet",
+        "description": "Nouilles sautées avec des poulets aux épices Népalaise",
+        "image": "https://www.indian-nepaliswad.fr/5%20Chau%20min%20poulet.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262987",
+        "price": "14,90",
+        "allergenes": ""
+    },
+    {
+        "id": "complet3",
+        "title": "Chau-Min agneau",
+        "type": "Plat complet",
+        "description": "Nouilles sautées avec des crevettes aux épices Népalaise",
+        "image": "https://www.indian-nepaliswad.fr/6%20chau%20min%20agneau.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262949",
+        "price": "15,90",
+        "allergenes": ""
+    },
+    {
+        "id": "complet4",
+        "title": "Chau-Min crevettes",
+        "type": "Plat complet",
+        "description": "Nouilles sautées avec des crevettes aux épices Népalaise",
+        "image": "https://www.indian-nepaliswad.fr/7%20chau%20min%20crevette.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262887",
+        "price": "16,90",
+        "allergenes": ""
+    }
+    
+]

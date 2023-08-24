@@ -1,0 +1,22 @@
+[
+    {
+        "id": "desserts1",
+        "title": "Suji Halwa",
+        "type": "Desserts",
+        "description": "Gâteau de semoule, sucré",
+        "image": "https://www.indian-nepaliswad.fr/31%20halwa.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262903",
+        "price": "5,90",
+        "allergenes": ""
+    },
+    {
+        "id": "desserts2",
+        "title": "Gulab Jamun",
+        "type": "Desserts",
+        "description": "Moelleuse et savoureuse pâtisserie fait maison à la noix de coco du lait servie avec sirop, sucré",
+        "image": "https://www.indian-nepaliswad.fr/30%20gulab%20janur.jpg",
+        "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262911",
+        "price": "5,90",
+        "allergenes": ""
+    }
+]

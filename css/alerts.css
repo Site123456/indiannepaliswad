@@ -1,0 +1,140 @@
+:root {
+--dark: #5675ff;
+--darkcolor: #ffffff;
+--yellowbg: #ffcc4c;
+--greenbg: #48ff00;
+}
+body.dark {
+--dark: #34495E;
+--yellowbg: #a57600;
+--darkcolor: #dffffa;
+--greenbg: #387c00;
+}
+#notification-box {
+position: fixed;
+z-index: 4000;
+top: 10px;
+right: 12px;
+z-index: 9999;
+display: flex;
+flex-direction: column;
+text-align: center;
+transition: all 1s ease-in-out;
+}
+#notification-box .toast {
+width: 400px;
+position: relative;
+overflow: hidden;
+list-style: none;
+border-radius: 1em;
+padding: 10px 12px;
+margin-bottom: 10px;
+display: inline;
+justify-content: space-between;
+animation: show_toast 0.3s ease forwards;
+}
+#notification-box .column {
+display: flex;
+}
+#notification-box .column .fa {
+width: 20px;
+}
+#notification-box .column .textclassalert {
+display: inline-block;
+margin-left: 14px;
+margin-right: 2px;
+line-height: 30px;
+width: 100%;
+}
+@media screen and (max-width: 530px) {
+    #notification-box {
+    width: 95%;
+    }
+    #notification-box .toast {
+    width: 100%;
+    font-size: 1rem;
+    margin-left: 20px;
+    }
+}
+.toast .column i {
+  font-size: 1.75rem;
+}
+.toast .column span {
+  font-size: 1.07rem;
+  margin-left: 12px;
+}
+@keyframes show_toast {
+  0% {
+    transform: translateX(100%);
+  }
+  40% {
+    transform: translateX(-5%);
+  }
+  80% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+#notification-box .toast.hide {
+  animation: hide_toast 0.3s ease forwards;
+}
+@keyframes hide_toast {
+  0% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(0%);
+  }
+  80% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(calc(100% + 20px));
+  }
+}
+.yellow-500 {
+background-color: var(--yellowbg);
+color: var(--darkcolor);
+opacity: 0;
+cursor: pointer;
+transition: all 1s ease-in-out;
+}
+.green-500 {
+background-color: var(--greenbg);
+color: var(--darkcolor);
+opacity: 0;
+cursor: pointer;
+transition: all 1s ease-in-out;
+}
+.red-500 {
+background-color: #ff3f09;
+color: #f0f8ff;
+opacity: 0;
+cursor: pointer;
+transition: all 1s ease-in-out;
+}
+.blue-500 {
+background-color: var(--dark);
+color: var(--darkcolor);
+opacity: 0;
+cursor: pointer;
+transition: all 1s ease-in-out;
+}
+.opacity-1 {
+opacity: 1;
+}
+.opacity-0 {
+opacity: 0;
+}
+.scalemore {
+scale: 1;
+}
+.scaleless {
+font-size: 40px;
+font-weight: 200;
+}
+.scalemore:hover {
+scale: 1.1;
+}

@@ -22,15 +22,16 @@ function sendMail() {
     sendbtn.innerText = "Erreur, Nombre de personnes est invalid.";
     return sendNotification("error", "Ooups, le formulaire n'est pas correctement remplis. Détails : <strong>Nombre de personnes invalid</strong>.");
   }
-  alert(document.getElementById("date").value)
   var params = {
-    user_name: document.getElementById("name").value,
-    user_messege: document.getElementById("user_messege").value,
-    user_username: document.getElementById("user_username").value,
-    user_adult: document.getElementById("user_adult").value,
-    user_enfant: document.getElementById("user_enfant").value,
-    user_total: document.getElementById("user_total").value,
-    reply_to: document.getElementById("mail").value,
+    name: document.getElementById("name").value,
+    name1: document.getElementById("name1").value,
+    phone: document.getElementById("phone").value,
+    reply_to: document.getElementById("email").value,
+    date: document.getElementById("date").value,
+    total: document.getElementById("user_total").value,
+    adults: document.getElementById("user_adult").value,
+    enfants: document.getElementById("user_enfant").value,
+    midielse: document.getElementById("user_midiorelse").value,
   };
   const serviceID = "service_b1ki4gi";
   const templateID = "template_z21yatj";

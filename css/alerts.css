@@ -48,12 +48,17 @@ width: 100%;
 }
 @media screen and (max-width: 530px) {
     #notification-box {
-    width: 95%;
+    padding: 0;
+    margin: 0;
+    top: 20%;
+    left: 8%;
+    right: 2%;
+    width: 90%;
+    margin-bottom: 4px;
     }
     #notification-box .toast {
     width: 100%;
-    font-size: 1rem;
-    margin-left: 20px;
+    margin: 0;
     }
 }
 .toast .column i {

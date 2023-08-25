@@ -56,6 +56,22 @@ fetch("./json/bieres.json")
    placeholderbieres.innerHTML = bieres;
    placeholderbigbieres.innerHTML = bigbieres;
 });
+$(document).ready(function () {
+  $('#searchbar').autocomplete({
+    source: function (request, response) {
+        $.getJSON('json/all.json', { q: request.term }, function (result) {
+            response($.map(result.destinations, function (item) {
+                return {
+                    price: item.price,
+                    title: item.title,
+                    description: item.description,
+                    link: item.link
+                };
+            }));
+        });
+    }
+  });
+});
 fetch("./json/chilli.json")
 .then(function(response){
    return response.json();

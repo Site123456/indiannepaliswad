@@ -38,11 +38,19 @@ function getCookie(cname) {
 $(window).on( "load", function() {
   let theme = getCookie("usertheme");
   if (theme == "") {
-    if(window.matchMedia('(prefers-color-scheme: dark)')) {
+    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       body.classList.add("dark");
       modeText.title = "Mode sombre";
       document.querySelector("html").setAttribute("data-bs-theme", "dark");
-      sendNotification("success", "Systeme : Mode sombre.");
+      sendNotification("success", "Système : Mode sombre.");
+      setCookie("usertheme", "dark", 30);
+    } else {
+      modeText.innerText = "Mode claire";
+      modeText.title = "Mode claire";
+      body.classList.remove("dark");
+      document.querySelector("html").setAttribute("data-bs-theme", "light");
+      sendNotification("success", "Système : Mode claire.");
+      setCookie("usertheme", "light", 30);
     }
   }
   if (theme != "") {
@@ -52,7 +60,7 @@ $(window).on( "load", function() {
         modeText.title = "Mode claire";
         body.classList.remove("dark");
         document.querySelector("html").setAttribute("data-bs-theme", "light");
-        sendNotification("success", "Détecté Mode claire.");
+        sendNotification("success", "Utilisateur : Mode claire.");
       }
     }
     if(theme == "dark") {
@@ -61,7 +69,7 @@ $(window).on( "load", function() {
         modeText.title = "Mode sombre";
         body.classList.add("dark");
         document.querySelector("html").setAttribute("data-bs-theme", "dark");
-        sendNotification("success", "Détecté Mode sombre.");
+        sendNotification("success", "Utilisateur : Mode sombre.");
       }
     }
   }
@@ -213,8 +221,13 @@ document.addEventListener("keydown", e => {
   }
   if (e.ctrlKey && focusinputmain.includes(e.key)) {
     $("#searchbar").focus();
-    sendNotification("info", "INFO : BETA Version.");
+    
   }
+});
+$( function() {
+  $( "#searchbar" ).on( "focus", function() {
+    sendNotification("info", "INFO : BETA Version.");
+  });
 });
 const showAlert = e => {
   return sendNotification("error", "Certains touches sont désactivé.");
@@ -228,20 +241,4 @@ window.addEventListener("load", () => {
   )
   .then(res => sendNotification("success","Tout est prêt."))
   .catch(err => sendNotification("info","ADBlock à été détecté, si quelque chose ne se charge pas correctement veillez le désactiver."));
-});
-$(document).ready(function () {
-  $('#searchbar').autocomplete({
-    source: function (request, response) {
-        $.getJSON('json/all.json', { q: request.term }, function (result) {
-            response($.map(result.destinations, function (item) {
-                return {
-                    price: item.price,
-                    title: item.title,
-                    description: item.description,
-                    link: item.link
-                };
-            }));
-        });
-    }
-});
 });

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.indian-nepaliswad.fr/favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.indian-nepaliswad.fr/favicon_io/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.indian-nepaliswad.fr/favicon_io/favicon-16x16.png">
@@ -140,23 +140,6 @@ overflow-y: auto;
 padding: 0;
 margin: 0;
 }
-:root{
-/* ===== Colors ===== */
---body-color: #f0ecea;
---sidebar-color: #FFF;
---primary-color: #fec35c;
---primary-color-light: #F6F5FF;
---toggle-color: #DDD;
---text-color: #707070;
---border-color: #414141;
-/* ====== Transition ====== */
---tran-03: all 0.2s ease;
---tran-03: all 0.3s ease;
---tran-04: all 0.3s ease;
---tran-05: all 0.3s ease;
---scrollbarcolor: #3a2811;
---scrollbarbg: #412525;
-}
 ::selection{
 background-color: var(--primary-color);
 color: #fff;
@@ -166,17 +149,6 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 font-family: "Poppins" , sans-serif;
-}
-body.dark{
---body-color: #1a1918;
---sidebar-color: #262524;
---primary-color: #3c3b3a;
---primary-color-light: #3c3b3a;
---toggle-color: #fff;
---text-color: #ccc;
---border-color: #acacac;
---scrollbarcolor: #e6e6e6;
---scrollbarbg: #412525;
 }
 #contextmenu {
 position: absolute;
@@ -256,7 +228,7 @@ transition: all 0.2s ease-in-out;
     </div>
   </div>
 </div>
-<ul id="notification-box">
+<ul id="notification-box" class="m-0">
 </ul>
 <div id="contextmenu">
   <div class="listcontext">
@@ -335,7 +307,7 @@ transition: all 0.2s ease-in-out;
                   </a>
               </li>
               <li class="nav-link" title="Voir Notre Carte">
-                <a href="./menu.html">
+                <a href="#menus">
                     <i class='bx bx-restaurant bx-tada-hover icon' ></i>
                     <span class="text nav-text">Voir Notre Carte</span>
                 </a>
@@ -356,19 +328,43 @@ transition: all 0.2s ease-in-out;
             <li class="nav-link" title="Deliveroo Édition St-Ouen">
                 <a href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers">
                     <i class='icon bx-tada-hover'><img src="./deliveroo-logo.png" alt="" width="30px"></i>
-                    <span class="small colorall">Deliveroo Édition St-Ouen</span>
+                    <span class="text small colorall" style="font-size: 0.7em;">Deliveroo Édition St-Ouen</span>
                 </a>
             </li>
             <li class="nav-link" title="Deliveroo Édition Bagneux">
                 <a href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux">
                   <i class='icon bx-tada-hover'><img src="./deliveroo-logo.png" alt="" width="30px"></i>
-                    <span class="small colorall">Deliveroo Édition Bagneux</span>
+                    <span class="text small colorall" style="font-size: 0.7em;">Deliveroo Édition Bagneux</span>
                 </a>
             </li>
             <li class="nav-link" title="Deliveroo Édition Ivry">
                 <a href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry">
                     <i class='icon bx-tada-hover'><img src="./deliveroo-logo.png" alt="" width="30px"></i>
-                    <span class="small colorall">Deliveroo Édition Ivry</span>
+                    <span class="text small colorall" style="font-size: 0.8em;">Deliveroo Édition Ivry</span>
+                </a>
+            </li>
+            <li class="nav-link" title="Deliveroo Spécial MoMo - Paris 15ème">
+                <a href="https://deliveroo.fr/fr/menu/paris/Pasteur/bar-a-raviolis-momo-house">
+                    <i class='icon bx-tada-hover'><img src="./deliveroo-logo.png" alt="" width="30px"></i>
+                    <span class="text small colorall" style="font-size: 0.7em;">Spécial MoMo - Paris 15ème</span>
+                </a>
+            </li>
+            <li class="nav-link" title="Deliveroo Spécial MoMo - Bagneux">
+                <a href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/bar-a-raviolis-momo-house-editions-bagneux">
+                    <i class='icon bx-tada-hover'><img src="./deliveroo-logo.png" alt="" width="30px"></i>
+                    <span class="text small colorall" style="font-size: 0.7em;">Spécial MoMo - Bagneux</span>
+                </a>
+            </li>
+            <li class="nav-link" title="Deliveroo Spécial MoMo - Saint Ouen">
+                <a href="https://deliveroo.fr/en/menu/Paris/clichy/bar-a-raviolis-momo-house-editions-saint-ouen">
+                    <i class='icon bx-tada-hover'><img src="./deliveroo-logo.png" alt="" width="30px"></i>
+                    <span class="text small colorall" style="font-size: 0.7em;">Spécial MoMo - Saint Ouen</span>
+                </a>
+            </li>
+            <li class="nav-link" title="Deliveroo Spécial MoMo - Ivry">
+                <a href="https://deliveroo.fr/fr/menu/Paris/ivry-sur-seine-centre/bar-a-raviolis-momo-house-editions-ivry">
+                    <i class='icon bx-tada-hover'><img src="./deliveroo-logo.png" alt="" width="30px"></i>
+                    <span class="text small colorall" style="font-size: 0.8em;">Spécial MoMo - Ivry</span>
                 </a>
             </li>
             <li class="nav-link" title="Reserver une table">
@@ -489,13 +485,13 @@ transition: all 0.2s ease-in-out;
         <li class="nav-link">
           <a href="#" title="&copy;2023, INDIAN NEPALI SWAD." onclick="sendNotification('info','&copy;2023, INDIAN NEPALI SWAD.');">
             <i class='bx bx-copyright bx-tada-hover icon' ></i>
-            <span class="small colorall">INDIAN NEPALI SWAD</span>
+            <span class="text small colorall" style="font-size: 0.8em;">INDIAN NEPALI SWAD</span>
           </a>
         </li>
         <li class="nav-link">
           <a href="#" title="Supprimer vos données" class="bg-danger bg-opacity-25 text-dange" onclick="deleteAllCookies()">
             <i class='fa fa-trash bx-tada-hover icon text-danger' ></i>
-            <span class="small text-danger">Supprimer vos données</span>
+            <span class="text small text-danger" style="font-size: 0.7em;">Supprimer vos données</span>
           </a>
         </li>
         <li class="mode">
@@ -503,7 +499,7 @@ transition: all 0.2s ease-in-out;
                 <i class='bx bx-moon icon moon'></i>
                 <i class='bx bx-sun icon sun'></i>
             </div>
-            <span class="mode-text text">Mode Sombre</span>
+            <span class="mode-text text" style="font-size: 0.8em;">Mode Sombre</span>
             <div class="toggle-switch">
                 <span class="switch"></span>
             </div>
@@ -517,10 +513,10 @@ transition: all 0.2s ease-in-out;
     <div class="input-box">
       <i class="uil uil-search"></i>
       <input autocomplete="off" type="search" id="searchbar" placeholder="Recherche (ctrl + « / » pour le focus)" />
-      <button class="button transition-all scalemore">Rechercher</button>
+      <button class="button transition-all scalemore">Rechercher</button><br><br>
     </div>
   </div>
-  <br><br><br><br>
+  
   <div class="jumbotron jumbotron-main" id="home">
       <div id="particles-js"><canvas class="particles-js-canvas-el" width="1409" height="319" style="width: 100%; height: 100%;"></canvas></div><!-- /.particles div -->
       <div class="container center-vertically-holder text-center">
@@ -809,7 +805,7 @@ transition: all 0.2s ease-in-out;
     
     <div class="project-name">
       <div class="l1">AUCUN</div>
-      <div class="l2">ÉVÉNEMENT<br><span class="small" style="font-size: 0.6em;letter-spacing: normal;">Derniere mise à jour : 24/08/2023.</span></div>
+      <div class="l2">ÉVÉNEMENT<br><span class="small" style="font-size: 0.6em;letter-spacing: normal;">Derniere mise à jour : 25/08/2023.</span></div>
     </div>
   
   </div>

@@ -1,7 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.indian-nepaliswad.fr/favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://www.indian-nepaliswad.fr/favicon_io/favicon-32x32.png">
@@ -9,52 +9,888 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://www.indian-nepaliswad.fr/favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="192x192" href="https://www.indian-nepaliswad.fr/favicon_io/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="https://www.indian-nepaliswad.fr/favicon_io/android-chrome-512x512.png">
-<link rel="manifest" href="https://www.indian-nepaliswad.fr/favicon_io/site.webmanifest"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-<title>INDIAN NEPALI SWAD | Reservation de(s) table(s)</title>
+<link rel="manifest" href="https://www.indian-nepaliswad.fr/favicon_io/site.webmanifest">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="INDIAN-NEPALISWAD 4 RUE BARGUE, 75015, PARIS, FRANCE">
+<meta name="keywords" content="Nourriture, INDIAN, NEPALI, SWAD">
+<meta name="author" content="Food, Nourriture, INDIAN, NEPALI, SWAD">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
+<link rel="stylesheet" href="./css/style.css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="./css/main.css"/>
+<link rel="stylesheet" href="./css/alerts.css"/>
+<link rel="stylesheet" href="./css/mail.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="./css/jquery-ui.css"/>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+<script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+<script src="./js/alerts.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("kbb0Vo3NrSg4U9-z5");
+   })();
+</script>
+<script src="./js/mail.js"></script>
+<title>INDIAN NEPALI SWAD | Acceuil</title>
+<script>
+$(document).ready(function(){
+    $("#contextmenu").hide();
+    $(document).bind("contextmenu", function(e){
+        $("#contextmenu").css({'display':'block', 'left':e.pageX, 'top':e.pageY});
+        return false;
+    });
+    $(document).click(function(e){
+        if(e.button == 0){
+        $("#contextmenu").css("display", "none");
+        }
+    });
+    $(document).keydown(function(e){
+        if(e.keyCode == 27){
+        $("#ccontextmenu").css("display", "none");
+        }
+    });
+});  
+</script>
+<script>
+$( function() {
+  $( document ).tooltip();
+} );
+</script>
+<script>
+$( function() {
+	$.getJSON("./json/all.json", function(data) {
+		autoComplete = [];
+		for (var i = 0, len = data.length; i < len; i++) {
+			autoComplete.push("Catégorie :" + data[i].type + ", " + data[i].title + " : " + data[i].price + "€.");
+		}
+		$( "#tags" ).autocomplete({
+			source: autoComplete
+		});
+	});
+});
+</script>
+<style>
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  text-align: center;
+  background-color: #ffffff;
+  color: #000000;
+  background-position: center;
+}
+.loaderall {
+position: fixed;
+z-index: 10000;
+bottom: 40px;
+text-align: center;
+padding: 20px;
+font-size: 20px;
+}
+.loader {
+display: inline-block;
+text-align: center;
+margin-top: 100px;
+line-height: 86px;
+text-align: center;
+position: relative;
+padding: 0 48px;
+font-size: 48px;
+font-family: Arial, Helvetica, sans-serif;
+color: #ffb547;
+}
+.loader:before, .loader:after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: currentColor;
+  position: absolute;
+  animation: load .7s infinite alternate ease-in-out;
+  top: 0;
+}
+.loader:after {
+  top: auto;
+  bottom: 0;
+}
+@keyframes load {
+  0% {
+    left: 0;
+    height: 43px;
+    width: 15px;
+    transform: translateX(0)
+  }
+  50% {
+    height: 10px;
+    width: 40px
+  }
+  100% {
+    left: 100%;
+    height: 43px;
+    width: 15px;
+    transform: translateX(-100%)
+  }
+}
+html {
+scroll-behavior: smooth;
+}
+body {
+overflow-x: hidden;
+overflow-y: auto;
+padding: 0;
+margin: 0;
+}
+::selection{
+background-color: var(--primary-color);
+color: #fff;
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Poppins" , sans-serif;
+}
+#contextmenu {
+position: absolute;
+top: 0;
+left: 0;
+background-color: var(--sidebar-color);
+z-index: 9999;
+width: 240px;
+padding-top: 8px;
+padding-bottom: 8px;
+box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.6);
+border-radius: 10px;
+transition: all 0.2s ease-in-out;
+display: none;
+}
+#contextmenu .hr {
+height: 1px;
+padding: 0;
+margin: 0;
+margin-top: 2px;
+margin-bottom: 2px;
+border-bottom: 1px solid var(--border-color);
+}
+#contextmenu .listcontext .itemcontext {
+position: relative;
+padding: 10px;
+font-size: 14px;
+color: var(--text-color);
+cursor: pointer;
+}
+#contextmenu .listcontext .itemcontext i {
+display: inline-block;
+width: 20px;
+margin-right: 6px;
+}
+#contextmenu .listcontext .itemcontext:before {
+content: "";
+position: absolute;
+top: 0px;
+left: 0px;
+width: 0%;
+height: 100%;
+background-color: #ff9421;
+border-radius: 10px;
+z-index: -1;
+transition: all 0.2s ease-in-out;
+}
+#contextmenu .listcontext .itemcontext:hover:before {
+width: 100%;
+}
+#contextmenu .listcontext .itemcontext:hover {
+color: #f0f8ff;
+}
+#contextmenu .no-border {
+border-bottom: none;
+border: none;
+}
+.pointer {
+cursor: pointer;
+}
+.transition2 {
+transition: all 0.2s ease-in-out;
+}
+</style>
+<title>INDIAN NEPALI SWAD | Home</title>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-            <div class="card card-signin my-5">
-                <div class="card-body">
-                    <h1 class="card-title">Reservation de(s) table(s)</h1>
-                    <form class="row g-3" action="https://formspree.io/f/mvojkjez" method="POST">
-                      <div class="col-12">
-                        <label for="inputAddress" class="form-label">Votre Mail</label>
-                        <input type="mail" class="form-control" name="Email : " id="inputAddress" placeholder="EX : mail@gmail.com" title="Email" required>
-                      </div>
-                      <div class="col-6">
-                        <label for="inputAddress" class="form-label">Votre Nom</label>
-                        <input type="mail" class="form-control" name="Nom : " id="inputAddress" placeholder="Votre Nom" title="Nom" required>
-                      </div>
-                      <div class="col-6">
-                        <label for="inputAddress" class="form-label">Votre Prénom</label>
-                        <input type="mail" class="form-control" name="Prénom : " id="inputAddress" placeholder="Votre Prénom" title="Prénom" required>
-                      </div>
-                      <div class="col-6">
-                        <label for="adult">Adults</label>
-                        <input type="number" id="adult" name="Adults total :" placeholder="1" min="1" title="Adulte(s)" required>
-                      </div>
-                      <div class="col-6">
-                        <label for="child">Enfants</label>
-                        <input type="number" id="child" name="Enfant total :" placeholder="0" min="0" title="Enfant(s)">
-                      </div>
-                      <div class="col-12">
-                        <label for="checkin-date">Pour le :</label>
-                        <input type="date" class="form-control" id="checkin-date" name="Pour Le :" required>
-                      </div>
-                        <p class="col-12">Important : Si il y a une erreur dans le remplissage du questionnaire alors cette réservation ne sera pas validé.</p>
-                        <button type="submit" class="btn btn-primary btn-lg col-12">Envoyer</button>
-                    </form>
-                </div>
+<div class="wrapper">
+  <div class="content">
+    <h1 style="font-size: 1.6em;">Politique de Confidentialité</h1>
+    <br>
+    <p>Ce site utilise des cookies et d'autres technologies pour pouvoir garantir le bon fonctionnement du site.</p>
+    <br>
+    <div class="buttons">
+      <button class="btn btn-warning me-2 text-light transition2 scalemore" id="acceptcookies">J'ai compris</button>
+      <a href="https://www.indian-nepaliswad.fr/policy.html" class="btn colorall transition2 scalemore text-decoration-underline">Voir tout les détails</a>
+    </div>
+  </div>
+</div>
+<ul id="notification-box">
+</ul>
+<div id="contextmenu">
+  <div class="listcontext">
+    <div class="itemcontext" onclick="window.location.reload();">
+      <i class="fa fa-redo"></i>
+      Actualiser
+    </div>
+  </div>
+  <hr class="hr">
+  <div class="listcontext">
+    <div class="itemcontext" onclick='window.location="https://www.google.com/maps/dir//4+Rue+Bargue,+75015+Paris";'>
+      <i class="fa fa-location-arrow"></i>
+      Venir sur place
+    </div>
+  </div>
+  <hr class="hr">
+  <div class="listcontext">
+    <div class="itemcontext" onclick="window.location='https://www.indian-nepaliswad.fr/mail.html';">
+      <i class="fa fa-table"></i>
+      Reservez une table
+    </div>
+    <div class="itemcontext" onclick="window.location='tel:0145327373';">
+      <i class="fa fa-phone-alt"></i>
+      Emportez
+    </div>
+  </div>
+  <hr class="hr">
+  <div class="listcontext">
+    <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/';">
+      <i class="fa fa-external-link-alt"></i>
+      Deliveroo
+    </div>
+    <div class="itemcontext" onclick="window.location='https://www.ubereats.com/fr/store/taste-of-india-paris/TvKiH_RHT1qLCfmwUR_WVw';">
+      <i class="fa fa-external-link-alt"></i>
+      UberEats
+    </div>
+  </div>
+  <hr class="hr">
+  <div class="listcontext">
+    <div class="itemcontext" onclick="sendNotification('info', '&copy;INDIAN NEPALI SWAD, 2023.')">
+      &copy;INDIAN NEPALI SWAD, 2023
+    </div>
+  </div>
+</div>
+<div class="preloader">
+  <div class="loaderall">INDIAN NEPALI SWAD | Initialisation de l&apos;interface d&apos;utilisateur...<br><span class="small">&copy;INDIAN NEPALI SWAD</span></div>
+  <span class="loader">
+    <img src="https://www.indian-nepaliswad.fr/assets/logo.png" height="180" width="220" alt="" class="p-4">
+  </span>
+</div>
+<nav class="sidebar close">
+  <header>
+      <div class="image-text">
+          <span class="image">
+              <img src="https://www.indian-nepaliswad.fr/assets/logo.png" alt="">
+          </span>
+          <div class="text logo-text">
+              <span class="name">RESTAURANT</span>
+              <span class="profession">INDIAN NEPALI SWAD</span>
+          </div>
+      </div>
+      <i class='bx bx-chevron-right toggle transition2'></i>
+      <hr>
+  </header>
+  <div class="menu-bar">
+      <div class="menu">
+          <li class="search-box">
+              <i class='bx bx-search icon' id="focusfilternav"></i>
+              <input type="text" placeholder="Filtrer..." id="filternav">
+          </li>
+          <ul class="menu-links p-0" id="tofilternavbar">
+              <li class="nav-link" title="Acceuil">
+                  <a href="https://www.indian-nepaliswad.fr">
+                      <i class='bx bx-home-alt bx-tada-hover icon' ></i>
+                      <span class="text nav-text">Acceuil</span>
+                  </a>
+              </li>
+              <li class="nav-link" title="Voir Notre Carte">
+                <a href="./menu.html">
+                    <i class='bx bx-restaurant bx-tada-hover icon' ></i>
+                    <span class="text nav-text">Voir Notre Carte</span>
+                </a>
+            </li>
+            <hr>
+            <li class="nav-link" title="Nous Contacter">
+                <a href="tel:0145327373">
+                    <i class='bx bx-phone bx-tada-hover icon'></i>
+                    <span class="text nav-text">Nous Contacter</span>
+                </a>
+            </li>
+            <li class="nav-link" title="Deliveroo Paris">
+                <a href="https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/">
+                    <i class='icon bx-tada-hover'><img src="./deliveroo-logo.png" alt="" width="30px"></i>
+                    <span class="text nav-text">Deliveroo Paris</span>
+                </a>
+            </li>
+            <li class="nav-link" title="Deliveroo Édition St-Ouen">
+                <a href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers">
+                    <i class='icon bx-tada-hover'><img src="./deliveroo-logo.png" alt="" width="30px"></i>
+                    <span class="text small colorall" style="font-size: 0.7em;">Deliveroo Édition St-Ouen</span>
+                </a>
+            </li>
+            <li class="nav-link" title="Deliveroo Édition Bagneux">
+                <a href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux">
+                  <i class='icon bx-tada-hover'><img src="./deliveroo-logo.png" alt="" width="30px"></i>
+                    <span class="text small colorall" style="font-size: 0.7em;">Deliveroo Édition Bagneux</span>
+                </a>
+            </li>
+            <li class="nav-link" title="Deliveroo Édition Ivry">
+                <a href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry">
+                    <i class='icon bx-tada-hover'><img src="./deliveroo-logo.png" alt="" width="30px"></i>
+                    <span class="text small colorall" style="font-size: 0.8em;">Deliveroo Édition Ivry</span>
+                </a>
+            </li>
+            <li class="nav-link" title="Deliveroo Spécial MoMo - Paris 15ème">
+                <a href="https://deliveroo.fr/fr/menu/paris/Pasteur/bar-a-raviolis-momo-house">
+                    <i class='icon bx-tada-hover'><img src="./deliveroo-logo.png" alt="" width="30px"></i>
+                    <span class="text small colorall" style="font-size: 0.7em;">Spécial MoMo - Paris 15ème</span>
+                </a>
+            </li>
+            <li class="nav-link" title="Deliveroo Spécial MoMo - Bagneux">
+                <a href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/bar-a-raviolis-momo-house-editions-bagneux">
+                    <i class='icon bx-tada-hover'><img src="./deliveroo-logo.png" alt="" width="30px"></i>
+                    <span class="text small colorall" style="font-size: 0.7em;">Spécial MoMo - Bagneux</span>
+                </a>
+            </li>
+            <li class="nav-link" title="Deliveroo Spécial MoMo - Saint Ouen">
+                <a href="https://deliveroo.fr/en/menu/Paris/clichy/bar-a-raviolis-momo-house-editions-saint-ouen">
+                    <i class='icon bx-tada-hover'><img src="./deliveroo-logo.png" alt="" width="30px"></i>
+                    <span class="text small colorall" style="font-size: 0.7em;">Spécial MoMo - Saint Ouen</span>
+                </a>
+            </li>
+            <li class="nav-link" title="Deliveroo Spécial MoMo - Ivry">
+                <a href="https://deliveroo.fr/fr/menu/Paris/ivry-sur-seine-centre/bar-a-raviolis-momo-house-editions-ivry">
+                    <i class='icon bx-tada-hover'><img src="./deliveroo-logo.png" alt="" width="30px"></i>
+                    <span class="text small colorall" style="font-size: 0.8em;">Spécial MoMo - Ivry</span>
+                </a>
+            </li>
+            <li class="nav-link" title="Reserver une table">
+                <a href="https://www.indian-nepaliswad.fr/mail.html">
+                    <i class='bx bx-book-bookmark bx-tada-hover icon'></i>
+                    <span class="text nav-text">Reserver une table</span>
+                </a>
+            </li>
+            <hr>
+            <li class="nav-link" title="Politique de confidentialité">
+                <a href="https://www.indian-nepaliswad.fr/policy.html">
+                    <i class='bx bxs-user-account bx-tada-hover icon'></i>
+                    <span class="text nav-text">Confidentialité</span>
+                </a>
+            </li>
+            <hr>
+          </ul>
+      </div>
+      <div class="bottom-content">
+        <li class="nav-link">
+          <a href="#" title="&copy;2023, INDIAN NEPALI SWAD." onclick="sendNotification('info','&copy;2023, INDIAN NEPALI SWAD.');">
+            <i class='bx bx-copyright bx-tada-hover icon' ></i>
+            <span class="text small colorall" style="font-size: 0.8em;">INDIAN NEPALI SWAD</span>
+          </a>
+        </li>
+        <li class="nav-link">
+          <a href="#" title="Supprimer vos données" class="bg-danger bg-opacity-25 text-dange" onclick="deleteAllCookies()">
+            <i class='fa fa-trash bx-tada-hover icon text-danger' ></i>
+            <span class="text small text-danger" style="font-size: 0.7em;">Supprimer vos données</span>
+          </a>
+        </li>
+        <li class="mode">
+            <div class="sun-moon bx-tada-hover">
+                <i class='bx bx-moon icon moon'></i>
+                <i class='bx bx-sun icon sun'></i>
             </div>
+            <span class="mode-text text" style="font-size: 0.8em;">Mode Sombre</span>
+            <div class="toggle-switch">
+                <span class="switch"></span>
+            </div>
+        </li>
+          
+      </div>
+  </div>
+</nav>
+<section class="home colorall" id="acceuil">
+  <div class="align-content-center">
+    <div class="input-box">
+      <i class="uil uil-search"></i>
+      <input autocomplete="off" type="search" id="searchbar" placeholder="Recherche (ctrl + « / » pour le focus)" />
+      <button class="button transition-all scalemore">Rechercher</button>
+    </div>
+  </div>
+  <br><br><br>
+  <a href="https://www.indian-nepaliswad.fr/" class="p-2 ms-4 btn btn-light text-start"><i class="fa fa-angle-left"></i>&nbsp;&nbsp;Retour à l'acceuil</a>
+  <br>
+  <p class="text-center fa-2x">Réservation de(s) table(s)</p>
+  <div class="formbold-main-wrapper">
+    <!-- Author: FormBold Team -->
+    <!-- Learn More: https://formbold.com -->
+    <div class="formbold-form-wrapper rounded-4 p-4">
+        <div class="formbold-mb-5">
+          <label for="name" class="formbold-form-label">Votre Nom</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Votre Nom"
+            class="formbold-form-input"
+          />
+        </div>
+        <div class="formbold-mb-5">
+          <label for="name" class="formbold-form-label">Votre Prénom</label>
+          <input
+            type="text"
+            name="name1"
+            id="name1"
+            placeholder="Votre Prénom"
+            class="formbold-form-input"
+          />
+        </div>
+        <div class="formbold-mb-5">
+          <label for="phone" class="formbold-form-label">Numéro de téléphone</label>
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="Entrez votre numéro de téléphone"
+            class="formbold-form-input"
+          />
+        </div>
+        <div class="formbold-mb-5">
+          <label for="email" class="formbold-form-label">Votre Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Votre Email"
+            class="formbold-form-input"
+          />
+        </div>
+        <div class="flex flex-wrap formbold--mx-3">
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5 w-full">
+              <label for="date" class="formbold-form-label">Pour le :</label>
+              <input
+                type="date"
+                name="date"
+                id="date"
+                class="formbold-form-input"
+              />
+            </div>
+          </div>
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5">
+              <label for="time" class="formbold-form-label">Midi ou Soir :</label>
+              <select name="user_midiorelse" id="user_midiorelse" class="formbold-form-input">
+                <option value="midi" selected>Midi (11h15 - 14h15)</option>
+                <option value="midi">Soir (18h15 - 22h15)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+  
+        <div class="formbold-mb-5 formbold-pt-3">
+          <label class="formbold-form-label formbold-form-label-2">
+            Details sur le Réservation
+          </label>
+          <div class="flex flex-wrap formbold--mx-3">
+            <div class="w-full sm:w-half formbold-px-3">
+              <div class="formbold-mb-5">
+                <h4>Nombre d'enfant(s)</h4>
+                <input
+                  type="number"
+                  name="user_enfant"
+                  id="user_enfant"
+                  min="0"
+                  placeholder="Nombre d'enfant(s)"
+                  class="formbold-form-input"
+                />
+              </div>
+            </div>
+            <div class="w-full sm:w-half formbold-px-3">
+              <div class="formbold-mb-5">
+                <h4>Nombre d'adulte(s)</h4>
+                <input
+                  type="number"
+                  name="user_adult"
+                  min="1"
+                  id="user_adult"
+                  placeholder="Nombre d'adulte(s)"
+                  class="formbold-form-input"
+                />
+              </div>
+            </div>
+            <div class="w-full formbold-px-3">
+              <div class="formbold-mb-5">
+                <input
+                  type="text"
+                  name="user_total"
+                  id="user_total"
+                  placeholder="Personne(s) total (Auto)"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <h5 for="message" class="formbold-form-label formbold-form-label-2">Message en plus</h5>
+          <textarea class="form-control" id="user_messege" rows="3" placeholder="Des choses à préciser? Dites-les nous ici."></textarea>
+        </div>
+        <br>
+        <p class="p-2">
+          <div onclick="showhideallinfoform();" class="pointer underline"><i class="fa fa-info-circle"></i> <span id="detailsinfoformform">Voir les détails</span></div>
+          <div id="toggledetailsmainformmain22" style="display: none;">
+            En Reservant de(s) table(s) vous acceptez la sauvegarde de vos information jusqu'a 2 jour aprés votre jour de réservation et aussi notre <a href="https://www.indian-nepaliswad.fr/policy.html" target="_blank" rel="noopener noreferrer" class="underline">Politique de Confidentialité</a>.
+          </div>
+        </p>
+        <div>
+          <button class="formbold-btn" onclick="sendMail()" id="sendbtn">Reserver</button>
         </div>
     </div>
-</div>
+  </div>
+  <p class="text-center fa-1x">OU</p>
+  <p class="text-center fa-2x"><a href="tel:0145327373" class="underline">Reservez votre table en nous contactant sur : 0145327373</a></p>
+
+  <br>
+  <div class="mod rounded">
+    <div class="cube">
+      
+      <div class="faces f1">
+        
+        <div class="dot p1"></div>
+        <div class="dot p2"></div>
+        <div class="dot p3"></div>
+        
+        <div class="dot p4"></div>
+        <div class="dot p5"></div>
+        <div class="dot p6"></div>
+        
+        <div class="dot p7"></div>
+        <div class="dot p8"></div>
+        <div class="dot p9"></div>
+    
+      </div>
+      
+      <div class="faces f2">
+        
+        <div class="dot p10"></div>
+        <div class="dot p11"></div>
+        <div class="dot p12"></div>
+        <div class="dot p13"></div>
+    
+      </div>
+      
+      <div class="faces f3">
+        
+        <div class="dot p1"></div>
+        <div class="dot p2"></div>
+        <div class="dot p3"></div>
+        
+        <div class="dot p4"></div>
+        <div class="dot p5"></div>
+        <div class="dot p6"></div>
+        
+        <div class="dot p7"></div>
+        <div class="dot p8"></div>
+        <div class="dot p9"></div>
+    
+      </div>
+    
+      <div class="faces f4">
+        
+        <div class="dot p10"></div>
+        <div class="dot p11"></div>
+        <div class="dot p12"></div>
+        <div class="dot p13"></div>
+    
+      </div>
+    
+      <div class="faces f5">
+        
+        <div class="dot p1"></div>
+        <div class="dot p2"></div>
+        <div class="dot p3"></div>
+        
+        <div class="dot p4"></div>
+        <div class="dot p5"></div>
+        <div class="dot p6"></div>
+        
+        <div class="dot p7"></div>
+        <div class="dot p8"></div>
+        <div class="dot p9"></div>
+    
+      </div>
+    
+      <div class="faces f6">
+        
+        <div class="dot p10"></div>
+        <div class="dot p11"></div>
+        <div class="dot p12"></div>
+        <div class="dot p13"></div>
+    
+      </div>
+    
+      <div class="faces f7">
+        
+        <div class="dot p1"></div>
+        <div class="dot p2"></div>
+        <div class="dot p3"></div>
+        
+        <div class="dot p4"></div>
+        <div class="dot p5"></div>
+        <div class="dot p6"></div>
+        
+        <div class="dot p7"></div>
+        <div class="dot p8"></div>
+        <div class="dot p9"></div>
+    
+      </div>
+    
+      <div class="faces f8">
+        
+        <div class="dot p10"></div>
+        <div class="dot p11"></div>
+        <div class="dot p12"></div>
+        <div class="dot p13"></div>
+    
+      </div>
+    
+      <div class="faces f9">
+        
+        <div class="dot p1"></div>
+        <div class="dot p2"></div>
+        <div class="dot p3"></div>
+        
+        <div class="dot p4"></div>
+        <div class="dot p5"></div>
+        <div class="dot p6"></div>
+        
+        <div class="dot p7"></div>
+        <div class="dot p8"></div>
+        <div class="dot p9"></div>
+    
+      </div>
+    
+      <div class="faces f10">
+        
+        <div class="dot p10"></div>
+        <div class="dot p11"></div>
+        <div class="dot p12"></div>
+        <div class="dot p13"></div>
+    
+      </div>
+    
+      <div class="faces f11">
+        
+        <div class="dot p1"></div>
+        <div class="dot p2"></div>
+        <div class="dot p3"></div>
+        
+        <div class="dot p4"></div>
+        <div class="dot p5"></div>
+        <div class="dot p6"></div>
+        
+        <div class="dot p7"></div>
+        <div class="dot p8"></div>
+        <div class="dot p9"></div>
+    
+      </div>
+      
+    </div>
+    
+    <div class="project-name">
+      <div class="l1">AUCUN</div>
+      <div class="l2">ÉVÉNEMENT<br><span class="small" style="font-size: 0.6em;letter-spacing: normal;">Derniere mise à jour : 25/08/2023.</span></div>
+    </div>
+  
+  </div>
+  <br><br><br><br><br><br><br><br><br>
+  <footer class="text-center text-lg-start bg-dark text-muted text-light mb-0">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom text-light">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>INDIAN NEPALI SWAD</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div class="fa-2x">
+        <a href="https://www.facebook.com/people/Indian-Nepali-Swad/100041638634787/" class="text-light text-decoration-none">
+          <i class="bx bxl-facebook text-decoration-none bx-tada-hover"></i>
+        </a>
+        <a href="https://twitter.com/INepaliswad" class="text-light text-decoration-none">
+          <i class="bx bxl-twitter text-decoration-none bx-tada-hover"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCHPsdHfepFygMiWvlLclhcA" class="text-light text-decoration-none">
+          <i class="bx bxl-youtube text-decoration-none bx-tada-hover"></i>
+        </a>
+        <a href="https://www.instagram.com/indiannepaliswad/" class="text-light text-decoration-none">
+          <i class="bx bxl-instagram text-decoration-none bx-tada-hover"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <section>
+    <div class="row">
+        <div class="col-3">                
+            <div class="link-cat" onclick="footerToggle(this)">
+                <span class="footer-toggle"></span>
+                <span class="footer-cat">Information</span>
+            </div>
+            <ul class="footer-cat-links">
+                <li><a href="https://www.indian-nepaliswad.fr/policy.html"><span>Politique de confidentialité</span></a></li>
+                <li><a href="tel:0145327373"><span>Contacter nous</span></a></li>
+            </ul>
+        </div>
+        <div class="col-3">
+            <div class="link-cat" onclick="footerToggle(this)">
+                <span class="footer-toggle"></span>
+                <span class="footer-cat">Services</span>
+            </div>
+            <ul class="footer-cat-links">
+                <li><a href="https://www.indian-nepaliswad.fr/mail.html" title="Reserver une table"><span>Reservez une table</span></a></li>
+                <li><a href="https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/"><span>Commandez sur Deliveroo</span></a></li>
+                <li><a href="tel:0145327373"><span>Appelez seulement pour Emporter</span></a></li>
+                <li id="footerinfotype"><a href="#footerinfotype" title="Peut se varier selon la dernière date de mise à jour du site : 18/08/2023"><span>Aucun évenement.</span></a></li>
+            </ul>
+        </div>
+        <div class="col-3">
+            <div class="link-cat" onclick="footerToggle(this)">
+                <span class="footer-toggle"></span>
+                <span class="footer-cat">Nos Menus</span>
+            </div>
+            <ul class="footer-cat-links">
+                <li><a href="https://www.indian-nepaliswad.fr/menu.html#menus"><span>Menus</span></a></li>
+                <li><a href="https://www.indian-nepaliswad.fr/menu.html#momos"><span>MOMOS</span></a></li>
+            </ul>
+        </div>
+        <div class="col-3">
+            <div class="link-cat" onclick="footerToggle(this)">
+                <span class="footer-toggle"></span>
+                <span class="footer-cat">Notre Carte</span>
+            </div>
+            <ul class="footer-cat-links">
+                <li><a href="https://www.indian-nepaliswad.fr/menu.html#naan"><span>Pains Maisons</span></a></li>
+                <li><a href="https://www.indian-nepaliswad.fr/menu.html#entrees"><span>Nos Entrées</span></a></li>
+                <li><a href="https://www.indian-nepaliswad.fr/menu.html#vapeurs"><span>MOMOS Vapeurs</span></a></li>
+                <li><a href="https://www.indian-nepaliswad.fr/menu.html#chilli"><span>MOMOS Chilli</span></a></li>
+                <li><a href="https://www.indian-nepaliswad.fr/menu.html#Spécial"><span>Nos spécialités</span></a></li>
+                <li><a href="https://www.indian-nepaliswad.fr/menu.html#riz"><span>RIZ</span></a></li>
+                <li><a href="https://www.indian-nepaliswad.fr/menu.html#desserts"><span>DESSERTS</span></a></li>
+            </ul>
+        </div>
+        <div class="col-3">
+          <div class="link-cat" onclick="footerToggle(this)">
+              <span class="footer-toggle"></span>
+              <span class="footer-cat">Boissons</span>
+          </div>
+          <ul class="footer-cat-links">
+              <li><a href="https://www.indian-nepaliswad.fr/menu.html#softs"><span>Boissons / Softs</span></a></li>
+              <hr>
+              <li><a href="https://www.indian-nepaliswad.fr/menu.html#vins1"><span>VINS Rouges (Seulement sur place)</span></a></li>
+              <li><a href="https://www.indian-nepaliswad.fr/menu.html#vins2"><span>VINS Rosés (Seulement sur place)</span></a></li>
+              <li><a href="https://www.indian-nepaliswad.fr/menu.html#vins3"><span>VINS Blancs (Seulement sur place)</span></a></li>
+              <li><a href="https://www.indian-nepaliswad.fr/menu.html#bieres"><span>BIERES (Seulement sur place)</span></a></li>
+          </ul>
+        </div>
+        <div class="col-3" id="newsletter">
+            <div id="address">
+                <span>Adresse</span>
+                <ul>
+                    <li>
+                        <i class="far fa-building"></i>
+                        <div>4 Rue Bargue, <br/>75015 Paris.</div>
+                    </li>
+                    <li>
+                      <a href="https://goo.gl/maps/F957tJgHVujEjExi8" class="text-white"><i class="fa fa-location-arrow"></i>Venir sur place</a>
+                  </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    </section>
+    <div id="copyright">
+        &copy; Tous droits réservés, www.indian-nepaliswad.fr 2023.
+    </div>
+  </footer>
+</section>
+<a href="#acceuil" id="myBtntop" title="Glisser vers le haut"><i class="fa fa-angle-up"></i></a>
+<script>
+const body = document.querySelector('body'),
+sidebar = body.querySelector('nav'),
+toggle = body.querySelector(".toggle"),
+searchBtn = body.querySelector(".search-box"),
+modeSwitch = body.querySelector(".toggle-switch"),
+modeText = body.querySelector(".mode-text");
+toggle.addEventListener("click" , () =>{
+sidebar.classList.toggle("close");
+})
+searchBtn.addEventListener("click" , () =>{
+sidebar.classList.remove("close");
+$("#filternav").focus();
+})
+modeSwitch.addEventListener("click" , () =>{
+body.classList.toggle("dark");
+
+if(body.classList.contains("dark")){
+modeText.innerText = "Mode Sombre";
+modeText.title = "Mode sombre";
+document.querySelector("html").setAttribute("data-bs-theme", "dark");
+setCookie("usertheme", "dark", 30);
+}else{
+modeText.innerText = "Mode Claire";
+modeText.title = "Mode claire";
+document.querySelector("html").setAttribute("data-bs-theme", "light");
+setCookie("usertheme", "light", 30);
+}
+});
+</script>
+<script>
+let d = new Date();
+d.setDate(d.getDate() + 1);
+let tomorrow = d.toLocaleDateString('fr-CA', {timeZone:'Europe/Paris'});
+document.getElementById("date").min = tomorrow;
+
+$('#user_adult').on('input',function(e){
+  calculatediif();
+});
+$('#user_enfant').on('input',function(e){
+  calculatediif();
+});
+function calculatediif() {
+  var sum = 0;
+  sum += parseInt($("#user_adult").val());
+  sum += parseInt($("#user_enfant").val());
+  $('#user_total').val(sum);
+  if (parseInt($("#user_enfant").val()) < 1) {
+    $('#user_total').val($("#user_adult").val());
+  }
+  if (sum == "" || Number.isNaN(sum)) {
+    $('#user_total').val($("#user_adult").val());
+    return;
+  }
+  var sum1 = 0;
+  sum1 += parseInt($("#user_adult").val());
+  sum1 += parseInt($("#user_enfant").val());
+  return $('#user_total').val(sum1);
+  $('#user_total').val("Non valide");
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/keyboard.js"></script>
 <script>
 // Get the button
 let mybutton = document.getElementById("myBtntop");
@@ -73,22 +909,6 @@ function footerToggle(footerBtn) {
     $(footerBtn).toggleClass("btnActive");
     $(footerBtn).next().toggleClass("active");
 }
-var currentDateTime = new Date();
-var year = currentDateTime.getFullYear();
-var month = (currentDateTime.getMonth() + 1);
-var date = (currentDateTime.getDate() + 1);
-
-if(date < 10) {
-  date = '0' + date;
-}
-if(month < 10) {
-  month = '0' + month;
-}
-
-var dateTomorrow = year + "-" + month + "-" + date;
-var checkinElem = document.querySelector("#checkin-date");
-
-checkinElem.setAttribute("min", dateTomorrow);
 </script>
 </body>
 </html>

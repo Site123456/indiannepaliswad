@@ -32,6 +32,7 @@ function sendMail() {
     adults: document.getElementById("user_adult").value,
     enfants: document.getElementById("user_enfant").value,
     midielse: document.getElementById("user_midiorelse").value,
+    extra: document.getElementById("user_messege").value,
   };
   const serviceID = "service_b1ki4gi";
   const templateID = "template_z21yatj";

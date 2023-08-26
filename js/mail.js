@@ -40,12 +40,18 @@ function sendMail() {
     emailjs.send(serviceID, templateID, params)
     .then(res=>{
         document.getElementById("name").value = "";
-        document.getElementById("mail").value = "";
-        document.getElementById("user_messege").value = "";
+        document.getElementById("name1").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("date").value = "";
+        document.getElementById("user_total").value = "";
+        document.getElementById("user_enfant").value = "";
+        document.getElementById("user_midiorelse").value = "";
+        document.getElementById("user_message").value = "Votre réservation à bien été envoyé à nous, Nous vous enverrons bientôt notre confirmation pour votre réservation de table.";
+        sendNotification("success", "Si le formulaire est correcte, vous allez bientôt recevoir un email de confirmation par nous.");
+        sendbtn.innerText = "Votre reservation à été envoyé avec succès. Vous allez bientôt recevoir un email de confirmation par nous.";
+        sendNotification("success", "Votre reservation pour le : " + user_datereserved + " à été envoyé avec succès à nous. Vous allez bientôt recevoir un email de confirmation par nous.");
         console.log(res);
-        sendNotification("success", "Votre demande de reservation pour le : " + user_datereserved.value + " à été envoyé avec succès.");
-        sendNotification("success", "Si le formulaire est correcte, vous allez bientôt recevoir un email de confirmation.");
-        sendbtn.innerText = "Votre reservation pour le : " + user_datereserved + " à été envoyé avec succès.";
 
     }), (err) => {
       sendbtn.innerText = 'Erreur, veuillez reéssayer.';

@@ -513,7 +513,7 @@ transition: all 0.2s ease-in-out;
     <div class="input-box">
       <i class="uil uil-search"></i>
       <input autocomplete="off" type="search" id="searchbar" placeholder="Recherche (ctrl + « / » pour le focus)" />
-      <button class="button transition-all scalemore">Rechercher</button><br><br>
+      <button class="button transition-all scalemore" onclick="window.location='./results.html'">Rechercher</button><br><br>
     </div>
   </div>
   
@@ -990,6 +990,24 @@ setCookie("usertheme", "light", 30);
 <script src="./js/keyboard.js"></script>
 <script src="./js/script.js"></script>
 <script>
+$( function() {
+  
+    var availableTags = [
+        "Pour afficher les résultats, clickez Rechercher ou appuyez la touche entrer sur votre clavier."
+    ];
+    $( "#searchbar" ).autocomplete({
+        source: availableTags
+    });
+});
+$( "#searchbar" ).bind("enterKey",function(e){
+  window.location = "./results.html?q=" + $( "#searchbar" ).val();
+});
+$( "#searchbar" ).keyup(function(e){
+if(e.keyCode == 13)
+{
+$(this).trigger("enterKey");
+}
+});
 // Get the button
 let mybutton = document.getElementById("myBtntop");
 

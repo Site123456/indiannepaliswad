@@ -29,6 +29,7 @@
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
 <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
 <script src="./js/alerts.js"></script>
+<link rel="stylesheet" href="./css/pagination.css"/>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script type="text/javascript">
    (function(){
@@ -422,145 +423,16 @@ transition: all 0.2s ease-in-out;
   <div class="align-content-center">
     <div class="input-box">
       <i class="uil uil-search"></i>
-      <input autocomplete="off" type="search" id="searchbar" placeholder="Recherche (ctrl + « / » pour le focus)" />
-      <button class="button transition-all scalemore" onclick="window.location='./results.html'">Rechercher</button>
+      <input autocomplete="off" type="search" id="searchbar" placeholder="Recherche (ctrl + « / » pour le focus)" class="w-100 m-0 pe-4 ps-4"/>
     </div>
   </div>
   <br><br><br>
   <a href="https://www.indian-nepaliswad.fr/" class="p-2 ms-4 btn btn-light text-start"><i class="fa fa-angle-left"></i>&nbsp;&nbsp;Retour à l'acceuil</a>
-  <br>
-  <p class="text-center fa-2x">Réservation de(s) table(s)</p>
-  <div class="formbold-main-wrapper">
-    <!-- Author: FormBold Team -->
-    <!-- Learn More: https://formbold.com -->
-    <div class="formbold-form-wrapper rounded-4 p-4">
-        <div class="formbold-mb-5">
-          <label for="name" class="formbold-form-label">Votre Nom</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Votre Nom"
-            class="formbold-form-input"
-          />
-        </div>
-        <div class="formbold-mb-5">
-          <label for="name" class="formbold-form-label">Votre Prénom</label>
-          <input
-            type="text"
-            name="name1"
-            id="name1"
-            placeholder="Votre Prénom"
-            class="formbold-form-input"
-          />
-        </div>
-        <div class="formbold-mb-5">
-          <label for="phone" class="formbold-form-label">Numéro de téléphone</label>
-          <input
-            type="text"
-            name="phone"
-            id="phone"
-            placeholder="Entrez votre numéro de téléphone"
-            class="formbold-form-input"
-          />
-        </div>
-        <div class="formbold-mb-5">
-          <label for="email" class="formbold-form-label">Votre Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Votre Email"
-            class="formbold-form-input"
-          />
-        </div>
-        <div class="flex flex-wrap formbold--mx-3">
-          <div class="w-full sm:w-half formbold-px-3">
-            <div class="formbold-mb-5 w-full">
-              <label for="date" class="formbold-form-label">Pour le :</label>
-              <input
-                type="date"
-                name="date"
-                id="date"
-                class="formbold-form-input"
-              />
-            </div>
-          </div>
-          <div class="w-full sm:w-half formbold-px-3">
-            <div class="formbold-mb-5">
-              <label for="time" class="formbold-form-label">Midi ou Soir :</label>
-              <select name="user_midiorelse" id="user_midiorelse" class="formbold-form-input">
-                <option value="Midi (11h15 - 14h15)" selected>Midi (11h15 - 14h15)</option>
-                <option value="Soir (18h15 - 22h15)">Soir (18h15 - 22h15)</option>
-              </select>
-            </div>
-          </div>
-        </div>
-  
-        <div class="formbold-mb-5 formbold-pt-3">
-          <label class="formbold-form-label formbold-form-label-2">
-            Details sur le Réservation
-          </label>
-          <div class="flex flex-wrap formbold--mx-3">
-            <div class="w-full sm:w-half formbold-px-3">
-              <div class="formbold-mb-5">
-                <h4>Nombre d'enfant(s)</h4>
-                <input
-                  type="number"
-                  name="user_enfant"
-                  id="user_enfant"
-                  min="0"
-                  placeholder="Nombre d'enfant(s)"
-                  class="formbold-form-input"
-                />
-              </div>
-            </div>
-            <div class="w-full sm:w-half formbold-px-3">
-              <div class="formbold-mb-5">
-                <h4>Nombre d'adulte(s)</h4>
-                <input
-                  type="number"
-                  name="user_adult"
-                  min="1"
-                  id="user_adult"
-                  placeholder="Nombre d'adulte(s)"
-                  class="formbold-form-input"
-                />
-              </div>
-            </div>
-            <div class="w-full formbold-px-3">
-              <div class="formbold-mb-5">
-                <input
-                  type="text"
-                  name="user_total"
-                  id="user_total"
-                  placeholder="Personne(s) total (Auto)"
-                  class="form-control"
-                  disabled
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-group" id="plusmessagedisable">
-          <h5 for="message" class="formbold-form-label formbold-form-label-2">Message en plus</h5>
-          <textarea class="form-control" id="user_messege" rows="3" placeholder="Des choses à préciser? Dites-les nous ici."></textarea>
-        </div>
-        <br>
-        <p class="p-2">
-          <div onclick="showhideallinfoform();" class="pointer underline"><i class="fa fa-info-circle"></i> <span id="detailsinfoformform">Voir les détails</span></div>
-          <div id="toggledetailsmainformmain22" style="display: none;">
-            En Reservant de(s) table(s) vous acceptez la sauvegarde de vos information jusqu'a 2 jour aprés votre jour de réservation et aussi notre <a href="https://www.indian-nepaliswad.fr/policy.html" target="_blank" rel="noopener noreferrer" class="underline">Politique de Confidentialité</a>.
-          </div>
-        </p>
-        <div>
-          <button class="formbold-btn" onclick="sendMail()" id="sendbtn">Reserver</button>
-        </div>
-    </div>
-  </div>
-  <p class="text-center fa-1x">OU</p>
-  <p class="text-center fa-2x"><a href="tel:0145327373" class="underline">Reservez votre table en nous contactant sur : 0145327373</a></p>
-
+  <br><br>
+  <h1 class="text-center fa-2x" id="resultsalldispmain"><a class="text-center underline bg-danger text-light rounded p-2" href="https://www.indian-nepaliswad.fr">Ooups, la connection est interrompu.  Clickez ici pour Actualiser.</a></h1>
+  <main class="main m-4">
+    <div id="list"><div class="wrap row" id="rowfinder"></div></div>
+  </main>
   <br>
   <div class="mod rounded">
     <div class="cube">
@@ -856,60 +728,13 @@ setCookie("usertheme", "light", 30);
 }
 });
 </script>
-<script>
-let d = new Date();
-d.setDate(d.getDate() + 1);
-let tomorrow = d.toLocaleDateString('fr-CA', {timeZone:'Europe/Paris'});
-document.getElementById("date").min = tomorrow;
-
-$('#user_adult').on('input',function(e){
-  calculatediif();
-});
-$('#user_enfant').on('input',function(e){
-  calculatediif();
-});
-function calculatediif() {
-  var sum = 0;
-  sum += parseInt($("#user_adult").val());
-  sum += parseInt($("#user_enfant").val());
-  $('#user_total').val(sum);
-  if (parseInt($("#user_enfant").val()) < 1) {
-    $('#user_total').val($("#user_adult").val());
-  }
-  if (sum == "" || Number.isNaN(sum)) {
-    $('#user_total').val($("#user_adult").val());
-    return;
-  }
-  var sum1 = 0;
-  sum1 += parseInt($("#user_adult").val());
-  sum1 += parseInt($("#user_enfant").val());
-  return $('#user_total').val(sum1);
-  $('#user_total').val("Non valide");
-}
-</script>
+<script src="https://pagination.js.org/dist/2.6.0/pagination.js"></script>
+<script src="./js/results.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/keyboard.js"></script>
 <script>
-$( function() {
-    var availableTags = [
-        "Pour afficher les résultats, clickez Rechercher ou appuyez la touche entrer sur votre clavier."
-    ];
-    $( "#searchbar" ).autocomplete({
-        source: availableTags
-    });
-});
-$( "#searchbar" ).bind("enterKey",function(e){
-
-  window.location = "./results.html?q=" + $( "#searchbar" ).val();
-});
-$( "#searchbar" ).keyup(function(e){
-if(e.keyCode == 13)
-{
-$(this).trigger("enterKey");
-}
-});
 // Get the button
 let mybutton = document.getElementById("myBtntop");
 

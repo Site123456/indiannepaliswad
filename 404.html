@@ -215,6 +215,7 @@ $(window).load(function() {
     setTimeout(() => {
         $('.preloader').fadeOut('slow');
         setTimeout(() => {
+            sendNotification('info', 'Ce site utilise des cookies et d&apos;autres technologies pour pouvoir garantir le bon fonctionnement du site.');
             sendNotification('error', 'Page Introuvable.');
         }, 200);
     }, 600);

@@ -535,8 +535,8 @@ transition: all 0.2s ease-in-out;
       </div>
   </div>
   <br>
-  <h1 class="text-center m-0 fa-2x">Nos recommendation pour vous :</h1>
-  <div class="wrapper12" title="Pour de(s) meilleurs recomendation, conectez-vous.">
+  <h1 class="text-center m-0 fa-2x">Nos recommendations pour vous :</h1>
+  <div class="wrapper12" title="Recomendations">
     <div class="icon12"><i id="left" class="fa-solid fa-angle-left"></i></div>
     <ul class="options" id="loadmorecontentsuggestions">
       <li class="option active w-100 text-center">Chargement en cours...</li>
@@ -990,24 +990,6 @@ setCookie("usertheme", "light", 30);
 <script src="./js/keyboard.js"></script>
 <script src="./js/script.js"></script>
 <script>
-$( function() {
-  
-    var availableTags = [
-        "Pour afficher les résultats, clickez Rechercher ou appuyez la touche entrer sur votre clavier."
-    ];
-    $( "#searchbar" ).autocomplete({
-        source: availableTags
-    });
-});
-$( "#searchbar" ).bind("enterKey",function(e){
-  window.location = "./results.html?q=" + $( "#searchbar" ).val();
-});
-$( "#searchbar" ).keyup(function(e){
-if(e.keyCode == 13)
-{
-$(this).trigger("enterKey");
-}
-});
 // Get the button
 let mybutton = document.getElementById("myBtntop");
 

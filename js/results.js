@@ -712,14 +712,6 @@ var alldisplaymainplagnation = {
     },
 ]
 }
-$( function() {
-    var availableTags = [
-        "Filtrer les produits par ses descriptions, nom, prix, type, etc..."
-    ];
-    $( "#searchbar" ).autocomplete({
-        source: availableTags
-    });
-});
 $('#list').pagination({ // you call the plugin
 dataSource: alldisplaymainplagnation.Product, // pass all the data
 pageSize: 71,
@@ -733,7 +725,7 @@ callback: function(data, pagination) {
     `
     <div class="card m-2 p-0" id="${f.imageid}">
         <div class="okvalidchange">
-            <img src="${f.image}" class="card-img-top rounded-top w-100 p-0 m-0" alt="...">
+            <img oncontextmenu="return false" src="${f.image}" class="card-img-top rounded-top w-100 p-0 m-0" alt="...">
             <div class="card-body">
             <h5 class="card-title font-weight-bold" style="font-size:1.6em;"><a>${f.title}</a></h5>
             <p class="card-text">${f.description}</p>

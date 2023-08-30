@@ -1,7 +1,5 @@
+// no reupload
 $( document ).ready(function() {
-    if (location.protocol !== 'https:') {
-        location.replace(`https:${location.href.substring(location.protocol.length)}`);
-    }
     if ($(window).width() < 800) {
         $("#searchbar").attr("placeholder", "Rechercher...");
     }

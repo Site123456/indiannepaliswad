@@ -439,7 +439,7 @@ function getUrlParameter(sParam) {
     return false;
 };
 function confirmmailtofinal() {
-    var sendbtn = $("#sendbtn");
+    var sendbtn = document.getElementById("sendbtn");
     mailto = getUrlParameter("mailto");
     if (mailto == false && !mailto && mailto == "") {
         alert("ERROR, back to previous page.")
@@ -455,13 +455,13 @@ function confirmmailtofinal() {
         reply_to: getUrlParameter("mailto"),
         date: getUrlParameter("date")
         };
-        const serviceID = "service_b1ki4gi";
+        const serviceID = "service_dxmd7ns";
         const templateID = "template_j5ie7il";
 
         emailjs.send(serviceID, templateID, params)
         .then(res=>{
         sendNotification("success", "SENT");
-        sendbtn.innerText = "Votre reservation à été envoyé avec succès. Vous allez bientôt recevoir un email de confirmation par nous.";
+        sendbtn.innerText = "Envoyee, sent. Close this page, fermer la page.";
         console.log(res);
 
         }), (err) => {

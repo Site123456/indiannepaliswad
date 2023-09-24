@@ -13,7 +13,7 @@ $( function() {
     });
 });
 $( "#searchbar" ).bind("enterKey",function(e){
-    window.location = "https://www.indian-nepaliswad.fr/results?q=" + $( "#searchbar" ).val();
+    gosearch();
   });
   $( "#searchbar" ).keyup(function(e){
   if(e.keyCode == 13)
@@ -32,3 +32,6 @@ jQuery.fn.extend({
       return this;
   }
 });
+function gosearch() {
+    window.location.href = "./results?q=" + $( "#searchbar" ).val();
+}

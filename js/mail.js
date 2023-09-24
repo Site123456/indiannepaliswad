@@ -34,7 +34,7 @@ function sendMail() {
     midielse: document.getElementById("user_midiorelse").value,
     extra: document.getElementById("user_messege").value,
   };
-  const serviceID = "service_b1ki4gi";
+  const serviceID = "service_dxmd7ns";
   const templateID = "template_z21yatj";
 
     emailjs.send(serviceID, templateID, params)

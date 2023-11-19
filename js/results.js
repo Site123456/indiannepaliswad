@@ -1,66 +1,6 @@
 var alldisplaymainplagnation = {
 "Product": [
     {
-        "id": "bieres1",
-        "title": "BIERE INDIENNE",
-        "type": "BIERES",
-        "description": "33cl",
-        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
-        "link": "#indisponible",
-        "price": "5,00",
-        "allergenes": "Seulement sur Place"
-    },
-    {
-        "id": "bieres2",
-        "title": "BIERES NEPALAISE",
-        "type": "BIERES",
-        "description": "33cl",
-        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
-        "link": "#indisponible",
-        "price": "5,00",
-        "allergenes": "Seulement sur Place"
-    },
-    {
-        "id": "bieres3",
-        "title": "HEINEKEN",
-        "type": "BIERES",
-        "description": "33cl",
-        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
-        "link": "#indisponible",
-        "price": "5,00",
-        "allergenes": "Seulement sur Place"
-    },
-    {
-        "id": "chilli1",
-        "title": "Raviolis chili végétariens - 6 pièces",
-        "type": "MOMO CHILLI",
-        "description": "Raviolis vapeurs à la base de farine de blé, farcis de chou blanc, oignon, carotte, pomme de terre, épices et piment vert - Avec une sauce tomates et poivrons",
-        "image": "https://www.indian-nepaliswad.fr/momo1.webp",
-        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310804073",
-        "price": "10,50",
-        "allergenes": ""
-    },
-    {
-        "id": "chilli2",
-        "title": "Raviolis chili au poulet - 6 pièces",
-        "type": "MOMO CHILLI",
-        "description": "Raviolis vapeurs à la base de farine de blé, farcis de poulet, oignon, épices et piment vert - Avec une sauce tomates et poivrons",
-        "image": "https://www.indian-nepaliswad.fr/momo2.webp",
-        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310804073",
-        "price": "11,50",
-        "allergenes": ""
-    },
-    {
-        "id": "chilli3",
-        "title": "Raviolis chili à l'agneau - 6 pièces",
-        "type": "MOMO CHILLI",
-        "description": "Raviolis vapeurs à la base de farine de blé, farcis d'agneau, oignon, épices et poivrons - Avec une sauce tomates et poivrons",
-        "image": "https://www.indian-nepaliswad.fr/momo3.webp",
-        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310804073",
-        "price": "11,50",
-        "allergenes": ""
-    },
-    {
         "id": "complet1",
         "title": "Chau-Min légumes",
         "type": "Plat complet",
@@ -228,46 +168,6 @@ var alldisplaymainplagnation = {
         "image": "https://www.indian-nepaliswad.fr/39%20menu%20best%20deal.jpg",
         "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262909",
         "price": "24,90",
-        "allergenes": ""
-    },
-    {
-        "id": "momos1",
-        "title": "Formule MOMO & SIDE",
-        "type": "Menus MOMOS",
-        "description": "6 pièces + 1 side au choix",
-        "image": "https://www.indian-nepaliswad.fr/momoformule1.jpeg",
-        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310865424",
-        "price": "12,00",
-        "allergenes": ""
-    },
-    {
-        "id": "momos2",
-        "title": "Formule MOMO & NAN",
-        "type": "Menus MOMOS",
-        "description": "6 pièces + Nan Fromage+ 1 boisson au choix",
-        "image": "https://www.indian-nepaliswad.fr/momoformule2.jpeg",
-        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310804085",
-        "price": "14,00",
-        "allergenes": ""
-    },
-    {
-        "id": "momos3",
-        "title": "Formule MOMO & DRINK - 1 personne",
-        "type": "Menus MOMOS",
-        "description": "12 pièces + 1 boisson au choix",
-        "image": "https://www.indian-nepaliswad.fr/momoformule3.jpeg",
-        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310804076",
-        "price": "15,00",
-        "allergenes": ""
-    },
-    {
-        "id": "momos4",
-        "title": "Formule MOMO & SIDE",
-        "type": "Menus MOMOS",
-        "description": "18 pièces au choix + 2 boissons aux choix",
-        "image": "https://www.indian-nepaliswad.fr/momoformule4.jpeg",
-        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310804081",
-        "price": "24,00",
         "allergenes": ""
     },
     {
@@ -561,36 +461,6 @@ var alldisplaymainplagnation = {
         "allergenes": ""
     },
     {
-        "id": "vapeurs1",
-        "title": "Raviolis vapeurs végétariens - 6 pièces",
-        "type": "MOMO VAPEURS",
-        "description": "Raviolis vapeurs à la base de farine de blé, farcis de chou blanc, oignons, carottes, pommes de terre et épices",
-        "image": "https://www.indian-nepaliswad.fr/momovapeurs1.jpeg",
-        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310804082",
-        "price": "8,50",
-        "allergenes": ""
-    },
-    {
-        "id": "vapeurs2",
-        "title": "Raviolis chili au poulet - 6 pièces",
-        "type": "MOMO VAPEURS",
-        "description": "Raviolis vapeurs à la base de farine de blé, farcis de poulet, oignon, épices et piment vert - Avec une sauce tomates et poivrons",
-        "image": "https://www.indian-nepaliswad.fr/momovapeurs2.jpeg",
-        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310804107",
-        "price": "11,50",
-        "allergenes": ""
-    },
-    {
-        "id": "vapeurs3",
-        "title": "Raviolis chili à l&apos;agneau - 6 pièces",
-        "type": "MOMO VAPEURS",
-        "description": "Raviolis vapeurs à la base de farine de blé, farcis d&apos;agneau, oignon, épices et poivrons - Avec une sauce tomates et poivrons",
-        "image": "https://www.indian-nepaliswad.fr/momovapeurs3.jpeg",
-        "link": "https://deliveroo.fr/fr/menu/Paris/Pasteur/bar-a-raviolis-momo-house/?item-id=1310804074",
-        "price": "11,50",
-        "allergenes": ""
-    },
-    {
         "id": "veg1",
         "title": "Dahl Tadka",
         "type": "Plats Végétariens",
@@ -649,66 +519,6 @@ var alldisplaymainplagnation = {
         "link": "https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/?item-id=1297262975",
         "price": "14,50",
         "allergenes": ""
-    },
-    {
-        "id": "vinsrouges1",
-        "title": "BORDEAUX",
-        "type": "VINS Rouges",
-        "description": "Supérieure Goelane. 15,00€(37,50cl), 21,00€(75,00cl)",
-        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
-        "link": "./indisponible/",
-        "price": "15,00",
-        "allergenes": "Seulement sur Place"
-    },
-    {
-        "id": "vinsrouges2",
-        "title": "CHINON",
-        "type": "VINS Rouges",
-        "description": "Vignerons J.M. Raffault. 13,00€(37,50cl), 21,00€(75,00cl)",
-        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
-        "link": "./indisponible/",
-        "price": "13,00",
-        "allergenes": "Seulement sur Place"
-    },
-    {
-        "id": "vinsrouges3",
-        "title": "BROUILLY",
-        "type": "VINS Rouges",
-        "description": "Domaine de Chatelan. 17,00€(37,50cl), 27,00€(75,00cl)",
-        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
-        "link": "./indisponible/",
-        "price": "17,00",
-        "allergenes": "Seulement sur Place"
-    },
-    {
-        "id": "vinsroses1",
-        "title": "CÔTE DE PROVENCE",
-        "type": "VINS Rosés",
-        "description": "Maîtres Vignerons St Tropez. 13,50€(37,50cl), 20,50€(75,00cl)",
-        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
-        "link": "./indisponible/",
-        "price": "13,50",
-        "allergenes": "Seulement sur Place"
-    },
-    {
-        "id": "vinsblancs1",
-        "title": "MUSCADET S&M",
-        "type": "VINS Blancs",
-        "description": "Lie L'hyvernière (Loire). 13,00€(37,50cl), 19,00€(75,00cl)",
-        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
-        "link": "./indisponible/",
-        "price": "13,00",
-        "allergenes": "Seulement sur Place"
-    },
-    {
-        "id": "vinsblancs1",
-        "title": "RIESLING",
-        "type": "VINS Blancs",
-        "description": "Caves de Turckheim (Alsace). 13,00€(37,50cl), 21,00€(75,00cl)",
-        "image": "https://www.indian-nepaliswad.fr/assets/logo.png",
-        "link": "./indisponible/",
-        "price": "13,00",
-        "allergenes": "Seulement sur Place"
     },
 ]
 }

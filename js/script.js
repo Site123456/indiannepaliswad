@@ -127,8 +127,8 @@ fetch("./json/veg.json")
       `;
    }
 
-   placeholdercomplet.innerHTML = veg;
-   placeholderbigcomplet.innerHTML = bigveg;
+   placeholderveg.innerHTML = veg;
+   placeholderbigveg.innerHTML = bigveg;
 });
 fetch("./json/desserts.json")
 .then(function(response){

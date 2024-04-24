@@ -246,64 +246,6 @@ fetch("./json/entrees.json")
    placeholderentrees.innerHTML = entrees;
    placeholderbigentrees.innerHTML = bigentrees;
 });
-fetch("./json/menus.json")
-.then(function(response){
-   return response.json();
-}).then(function(products){
-   let placeholdermenus = document.querySelector("#menus");
-   let placeholderbigmenus = document.querySelector("#bigmenus");
-   let menus = "";
-   let bigmenus = "";
-   for(let product of products){
-    menus += `
-    <div class="card m-2 p-0" id="${product.imageid}">
-        <img src="${product.image}" class="card-img-top rounded-top w-100 p-0 m-0" alt="...">
-        <div class="card-body">
-          <h5 class="card-title font-weight-bold" style="font-size:1.6em;"><a>${product.title}</a></h5>
-          <p class="card-text">${product.description}</p>
-          <p class="card-text text-end">${product.price}&euro;</p>
-          <hr class="my-4" />
-          <div class="chip me-0" title="Type du Produit : ${product.type}">Catégorie du produit : ${product.type}</div>
-          <hr class="my-4" />
-          <p class="flex">
-            <a href="#${product.title}" class="text-center w-50 btn btn-outline-warning" title="Plus de détails sur : ${product.title}" data-bs-toggle="modal" data-bs-target="#${product.id}"><i class="fa fa-arrows-alt"></i></a>
-            <a href="tel:0145327373" class="text-center w-50 btn btn-outline-warning" title="Appelez nous pour emporter ce produit."><i class="fa fa-phone-alt"></i></a>
-          </p>
-          <hr class="my-4" />
-          <a href="${product.link}" class="btn btn-warning text-light w-100">Commandez sur deliveroo</a>
-        </div>
-    </div>
-      `;
-      bigmenus += `
-      <div class="modal fade" id="${product.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">${product.title}</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <img src="${product.image}" class="figure-img img-fluid border border-dark" /><br>
-              <span class="badge text-bg-primary">${product.title}</span><br>
-              <span class="badge text-bg-primary">${product.description}</span><br>
-              <span class="badge text-bg-primary">Prix : ${product.price}</span><br>
-              <span class="badge text-bg-primary">Type : ${product.type}</span><br>
-              <span class="badge text-bg-primary">${product.allergenes}</span><br>
-              <button type="button" class="badge btn btn-primary mb-2" onclick="window.location='tel:0145327373';">Appelez nous pour prendre en emporter.</button>
-              <button type="button" class="badge btn btn-primary" onclick="window.location='${product.link}';">Commandez sur Deliveroo pour se faire livrer chez vous.</button>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      `;
-   }
-
-   placeholdermenus.innerHTML = menus;
-   placeholderbigmenus.innerHTML = bigmenus;
-});
 fetch("./json/naan.json")
 .then(function(response){
    return response.json();

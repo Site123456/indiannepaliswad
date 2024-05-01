@@ -1748,13 +1748,6 @@ arrowIcons1.forEach(icon => {
     });
 });
 
-allOption1.forEach(option1 => {
-    option1.addEventListener("click", () => {
-        options1.querySelector(".active").classList.remove("active");
-        option1.classList.add("active");
-    });
-});
-
 const dragStart1 = (e) => {
     isDragging1 = true
     prevTouch1 = e.pageX || e.touches[0].pageX;

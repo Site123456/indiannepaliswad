@@ -185,46 +185,55 @@ function notification(type, notif) {
         return;
     }
     setTimeout(() => {
-        if(type == "err") {
-          $("#notifications").html(`
-          <div class="alert error">
-              <div class="icon bx bx-info-circle"></div>
-              <div class="text">Erreur</div>
-          </div>
-          `);
-          console.log("Erreur" + ": " + notif);
-        }
-        if(type == "error") {
-          $("#notifications").html(`
-          <div class="alert error">
-              <div class="icon bx bx-info-circle"></div>
-              <div class="text">${notif}</div>
-          </div>
-          `);
-          console.log("Erreur" + ": " + notif);
-        }
-        if(type == "ok") {
-          $("#notifications").html(`
-          <div class="alert success">
-              <div class="icon bx bx-check"></div>
-              <div class="text">${notif}</div>
-          </div>
-          `);
-          console.log("Succès" + ": " + notif);
-        }
-        if(type == "notif") {
-          $("#notifications").html(`
-          <div class="alert">
-              <div class="icon bx bx-info-circle"></div>
-              <div class="text">${notif}</div>
-          </div>
-          `);
-          console.log("Notification" + ": " + notif);
-        }
-        $("#notification").show("fade", 200);
-        setTimeout(() => {
-            $("#notification").hide("fade", 200);
-        }, 2000);
+      if(type == "copy") {
+        $("#notifications").html(`
+        <div class="alert w-100" style="width:260px;max-width: 260px;">
+            <div class="icon">&copy;</div>
+            <div class="text">2017-2024, INDIAN NEPALI SWAD.</div>
+        </div>
+        `);
+        console.log("&copy;2017-2024, INDIAN NEPALI SWAD.");
+      }
+      if(type == "err") {
+        $("#notifications").html(`
+        <div class="alert error">
+            <div class="icon bx bx-info-circle"></div>
+            <div class="text">Erreur</div>
+        </div>
+        `);
+        console.log("Erreur" + ": " + notif);
+      }
+      if(type == "error") {
+        $("#notifications").html(`
+        <div class="alert error">
+            <div class="icon bx bx-info-circle"></div>
+            <div class="text">${notif}</div>
+        </div>
+        `);
+        console.log("Erreur" + ": " + notif);
+      }
+      if(type == "ok") {
+        $("#notifications").html(`
+        <div class="alert success">
+            <div class="icon bx bx-check"></div>
+            <div class="text">${notif}</div>
+        </div>
+        `);
+        console.log("Succès" + ": " + notif);
+      }
+      if(type == "notif") {
+        $("#notifications").html(`
+        <div class="alert">
+            <div class="icon bx bx-info-circle"></div>
+            <div class="text">${notif}</div>
+        </div>
+        `);
+        console.log("Notification" + ": " + notif);
+      }
+      $("#notification").show("fade", 200);
+      setTimeout(() => {
+          $("#notification").hide("fade", 200);
+      }, 2000);
     }, 400);
 }
 function systemtheme() {
@@ -623,6 +632,7 @@ flex-direction: column;
 padding: 6px 10px;
 margin: 6px;
 width: 140px;
+max-width: 200px;
 font-size: 18px;
 border-radius: 6px;
 background-color: var(--text-color);
@@ -976,12 +986,12 @@ color: #ffffff;
       </div>
       <div class="bottom-content pb-4">
         <li class="nav-link">
-          <a href="#" title="&copy;2023, INDIAN NEPALI SWAD." onclick="notification('info','&copy;2023, INDIAN NEPALI SWAD.');">
+          <a href="#" title="&copy;2023, INDIAN NEPALI SWAD." onclick="notification('copy');">
             <i class='bx bx-copyright bx-tada-hover icon' ></i>
             <span class="text small colorall" style="font-size: 0.8em;">INDIAN NEPALI SWAD</span>
           </a>
         </li>
-        <li class="nav-link">
+        <li class="nav-link" style="margin-bottom: 10px;">
           <a href="#" title="Supprimer vos données" class="bg-danger bg-opacity-25 text-dange" onclick="deleteAllCookies()">
             <i class='fa fa-trash bx-tada-hover icon text-danger' ></i>
             <span class="text small text-danger" style="font-size: 0.7em;">Supprimer vos données</span>
@@ -1048,8 +1058,8 @@ color: #ffffff;
 <div id="cookies" style="display: flex;justify-content: center;align-items: center;">
   <div class="d-flex justify-content-center">
     <div class="shadow-lg p-3 rounded-4" style="background-color: var(--bg-color);max-width: 1000px;width: 100%;max-height: 100vh;overflow-x: hidden;overflow-y: auto;">
-      <h2 class="mt-2">Première fois dans INDIAN NEPALI SWAD ou sur ce navigateur ? Configurez votre interface utilisateur.</h2>
-      <p class="text-muted">Nous utilisons des cookies et d'autres technologies similaires pour enregistrer et appliquer vos préférences. Nous utilisons uniquement des cookies nécessaires pour appliquer les préférences, en naviguant, vous acceptez notre politique de cookies inscrite dans le <a href="https://www.indian-nepaliswad.fr/policy.html">politique de confidentialité</a>.</p>
+      <h2 class="mt-2 btn-group">Configurez<div class="d-none d-md-block">&nbsp;l'interface&nbsp;utilisateur&nbsp;pour</div>&nbsp;<a href="https://www.indian-nepaliswad.fr" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100%;">indian-nepaliswad.fr</a>.</h2>
+      <p class="text-muted btn-group"><div>Nous utilisons des cookies et d'autres technologies similaires pour enregistrer et appliquer vos préférences.</div><div class="d-none d-md-block m-0 p-0" style="display: inline-block;">Nous utilisons uniquement des cookies nécessaires pour appliquer les préférences, en naviguant, vous acceptez notre politique de cookies inscrite dans le <a href="https://www.indian-nepaliswad.fr/policy.html">politique de confidentialité</a>.</div></p>
       <div class="row" style="padding: 0;margin: 0;">
         <div class="col-lg-8">
           <hr>

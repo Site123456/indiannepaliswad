@@ -60,13 +60,27 @@
         "title": "Papadam",
         "type": "Naan",
         "description": "1 Pcs",
-        "image": "",
+        "image": "https://www.indian-nepaliswad.fr/papadam.jpeg",
         "link": "?item-id=1319602199",
         "link1": "?item-id=1472697198",
         "link2": "?item-id=1303399964",
         "link3": "?item-id=1381473814",
         "link4": "?item-id=1297262971",
         "price": "1,00",
+        "allergenes": ""
+    },
+    {
+        "id": "naan6",
+        "title": "Keema Naan (Mild HOT)",
+        "type": "Naan",
+        "description": "Pain fourré à la viande hachée.",
+        "image": "https://www.indian-nepaliswad.fr/keemanaan.jpeg",
+        "link": "?item-id=1479515771",
+        "link1": "",
+        "link2": "",
+        "link3": "",
+        "link4": "",
+        "price": "6,50",
         "allergenes": ""
     }
 ]

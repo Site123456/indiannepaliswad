@@ -1,5 +1,5 @@
 ## INDIAN NEPALI SWAD
-[a link]([https://github.com/user/repo/blob/branch/other_file.md](https://www.indian-nepaliswad.fr/))
+[www.indian-nepaliswad.fr/]([(https://www.indian-nepaliswad.fr/])
 ==================
 
 Gastronomy from India and Nepal

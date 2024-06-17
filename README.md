@@ -1,5 +1,5 @@
 ## INDIAN NEPALI SWAD
-[www.indian-nepaliswad.fr/]([(https://www.indian-nepaliswad.fr/])
+[Visit website][1]
 ==================
 
 Gastronomy from India and Nepal
@@ -21,3 +21,5 @@ Highlights:
 -   **Pakora (Beignets):** Vegetarian fritters made with chickpea flour and aromatic spices.
 
 Come savor the rich flavors of India and Nepal at Indian Nepali Swad! Bon appétit! 🍽️
+
+[1]: https://www.indian-nepaliswad.fr/

@@ -1,4 +1,4 @@
-![<img src="./etc/android-chrome-512x512.png" width="100"/>](./etc/android-chrome-512x512.png)
+![<img src="./etc/android-chrome-512x512.png" width="100px"/>](./etc/android-chrome-512x512.png)
 ## INDIAN NEPALI SWAD
 [Visit website][1]
 ==================

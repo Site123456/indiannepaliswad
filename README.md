@@ -1,5 +1,5 @@
+![<img src="./etc/android-chrome-512x512.png" width="100"/>](./etc/android-chrome-512x512.png)
 ## INDIAN NEPALI SWAD
-![INDIAN NEPALI SWAD](./etc/android-chrome-512x512.png)
 [Visit website][1]
 ==================
 https://www.indian-nepaliswad.fr/etc/android-chrome-512x512.png

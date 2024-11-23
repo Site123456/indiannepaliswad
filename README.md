@@ -13,7 +13,7 @@ Highlights:
 -   **Address:** 4 rue Bargue, 75015 Paris
 -   **Phone:** +33 1 45 32 73 73
 -   **Menu:** Explore a variety of mouthwatering options, including naan, flavorful entrées, vegetarian specialties, and more.
--   **Delivery:** Available via Deliveroo in Paris, Courbevoie, Saint-Ouen, Bagneux, and Ivry.
+-   **Delivery:** Available via Deliveroo in Paris, Courbevoie, Saint-Ouen, Bagneux, Ivry, Bordeaux.
 
 ### Must-Try Items:
 

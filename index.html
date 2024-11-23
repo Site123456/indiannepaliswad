@@ -67,14 +67,14 @@ $(document).ready(function(){
         }
     });
     const marker_coords = [48.84063,2.30602];
-    var southWest = L.latLng(42.84063, -1.50602);
+    var southWest = L.latLng(41.84063, -2.50602);
     var northEast = L.latLng(50.84063, 5.30602);
     var bounds = L.latLngBounds(southWest, northEast);
     const map = L.map('map', {
         center: marker_coords,
-        zoom: 6,
+        zoom: 5,
         maxZoom: 18,
-        minZoom: 6,
+        minZoom: 5,
         maxBounds: bounds,
         zoomControl: true,
         gestureHandling: true
@@ -87,42 +87,42 @@ $(document).ready(function(){
         color: '#ff000085',
         fillColor: '#ff000055',
         fillOpacity: 0.2,
-        radius: 15000
+        radius: 10000
     }).addTo(map);
     // Courbevoie 13 Rue Latérale, 92400
     L.circle([48.80518, 2.46269], {
         color: '#0000ff85',
         fillColor: '#006aff55',
         fillOpacity: 0.2,
-        radius: 15000
+        radius: 10000
     }).addTo(map);
     // Saint-Ouen 10 rue palouzié, 93400
     L.circle([48.90469, 2.32766], {
         color: '#ff660085',
         fillColor: '#ffa50055',
         fillOpacity: 0.2,
-        radius: 15000
+        radius: 10000
     }).addTo(map);
     // Bagneux 5 allée du parc de garlande, 92220
     L.circle([48.80033, 2.30524], {
         color: '#c8c80085',
         fillColor: '#ffff0055',
         fillOpacity: 0.2,
-        radius: 15000
+        radius: 10000
     }).addTo(map);
     // ivry 11 rue Moïse, 94200
     L.circle([48.81810, 2.40196], {
         color: '#80008085',
         fillColor: '#ff00ff55',
         fillOpacity: 0.2,
-        radius: 15000
+        radius: 10000
     }).addTo(map);
     // Bordeaux 170 Cours du Médoc,33300
     L.circle([44.86313, -0.57288], {
         color: '#00ff8085',
         fillColor: '#00ffff55',
         fillOpacity: 0.2,
-        radius: 30000
+        radius: 10000
     }).addTo(map);
 
     var legend = L.control({ position: "bottomleft" });
@@ -152,7 +152,7 @@ $(document).ready(function(){
                         </div>
                         <div class="btn-group" style="display: flex;justify-content: start;align-items: center;">
                             <input type="text" disabled class="form-control" style="cursor: help;background-color: #80008085;width: 40px;display: inline;height: 20px;filter: var(--map-tiles-filter);">&nbsp;
-                            <a style="color:var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry">DELIVEROO ivry</a>
+                            <a style="color:var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry">DELIVEROO Ivry</a>
                         </div>
                         <div class="text-muted small p-1">* : INDIAN NEPALI SWAD</div>`;
         return div;

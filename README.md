@@ -2,7 +2,8 @@
 ## INDIAN NEPALI SWAD
 [Visit website][1]
 ==================
-https://www.indian-nepaliswad.fr/etc/android-chrome-512x512.png
+https://www.indian-nepaliswad.fr/
+
 Gastronomy from India and Nepal
 
 Indian Nepali Swad is a culinary gem where you'll discover authentic, delicious, and flavorful dishes from the Orient. Whether you're dining in or ordering for delivery, our menu promises an unforgettable experience.

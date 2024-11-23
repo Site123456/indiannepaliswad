@@ -67,14 +67,14 @@ $(document).ready(function(){
         }
     });
     const marker_coords = [48.84063,2.30602];
-    var southWest = L.latLng(50.84063, -1.30602);
-    var northEast = L.latLng(46.84063, 5.30602);
+    var southWest = L.latLng(42.84063, -1.50602);
+    var northEast = L.latLng(50.84063, 5.30602);
     var bounds = L.latLngBounds(southWest, northEast);
     const map = L.map('map', {
         center: marker_coords,
-        zoom: 10,
+        zoom: 6,
         maxZoom: 18,
-        minZoom: 8,
+        minZoom: 6,
         maxBounds: bounds,
         zoomControl: true,
         gestureHandling: true
@@ -87,35 +87,42 @@ $(document).ready(function(){
         color: '#ff000085',
         fillColor: '#ff000055',
         fillOpacity: 0.2,
-        radius: 10000
+        radius: 15000
     }).addTo(map);
     // Courbevoie 13 Rue Latérale, 92400
     L.circle([48.80518, 2.46269], {
         color: '#0000ff85',
         fillColor: '#006aff55',
         fillOpacity: 0.2,
-        radius: 12000
+        radius: 15000
     }).addTo(map);
     // Saint-Ouen 10 rue palouzié, 93400
     L.circle([48.90469, 2.32766], {
         color: '#ff660085',
         fillColor: '#ffa50055',
         fillOpacity: 0.2,
-        radius: 12000
+        radius: 15000
     }).addTo(map);
     // Bagneux 5 allée du parc de garlande, 92220
     L.circle([48.80033, 2.30524], {
         color: '#c8c80085',
         fillColor: '#ffff0055',
         fillOpacity: 0.2,
-        radius: 12000
+        radius: 15000
     }).addTo(map);
     // ivry 11 rue Moïse, 94200
     L.circle([48.81810, 2.40196], {
         color: '#80008085',
         fillColor: '#ff00ff55',
         fillOpacity: 0.2,
-        radius: 12000
+        radius: 15000
+    }).addTo(map);
+    // Bordeaux 170 Cours du Médoc,33300
+    L.circle([44.86313, -0.57288], {
+        color: '#00ff8085',
+        fillColor: '#00ffff55',
+        fillOpacity: 0.2,
+        radius: 30000
     }).addTo(map);
 
     var legend = L.control({ position: "bottomleft" });
@@ -126,6 +133,10 @@ $(document).ready(function(){
                         <div class="btn-group" style="display: flex;justify-content: start;align-items: center;">
                             <input type="text" disabled class="form-control" style="cursor: help;background-color: #ff000085;width: 40px;display: inline;height: 20px;filter: var(--map-tiles-filter);">&nbsp;
                             <a style="color:var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/">INS* PARIS 15</a>
+                        </div>
+                        <div class="btn-group" style="display: flex;justify-content: start;align-items: center;">
+                            <input type="text" disabled class="form-control" style="cursor: help;background-color: #00ff0085;width: 40px;display: inline;height: 20px;filter: var(--map-tiles-filter);">&nbsp;
+                            <a style="color:var(--text-color);" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">DELIVEROO Bordeaux</a>
                         </div>
                         <div class="btn-group" style="display: flex;justify-content: start;align-items: center;">
                             <input type="text" disabled class="form-control" style="cursor: help;background-color: #0000ff85;width: 40px;display: inline;height: 20px;filter: var(--map-tiles-filter);">&nbsp;
@@ -895,6 +906,12 @@ color: #ffffff;
                     <span class="text nav-text">Deliveroo Paris</span>
                 </a>
             </li>
+            <li class="nav-link" title="Deliveroo Édition Bordeaux">
+                <a href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">
+                  <i class='icon bx-tada-hover'><img src="https://www.indian-nepaliswad.fr/deliveroo-logo.png" alt="" width="30px"></i>
+                    <span class="text nav-text">Édition Bordeaux</span>
+                </a>
+            </li>
             <li class="nav-link" title="Deliveroo Courbevoie">
                 <a href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">
                     <i class='icon bx-tada-hover'><img src="https://www.indian-nepaliswad.fr/deliveroo-logo.png" alt="" width="30px"></i>
@@ -1023,22 +1040,27 @@ color: #ffffff;
     </div>
   </div>
   <div class="listcontext">
-    <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie';">
+    <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/';">
+        <i class="fa fa-external-link-alt"></i>Deliveroo - Bordeaux
+    </div>
+  </div>
+  <div class="listcontext">
+    <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/';">
         <i class="fa fa-external-link-alt"></i>Deliveroo - Courbevoie
     </div>
   </div>
   <div class="listcontext">
-    <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers';">
+    <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/';">
         <i class="fa fa-external-link-alt"></i>Deliveroo - Saint Ouen
     </div>
   </div>
   <div class="listcontext">
-    <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux';">
+    <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/';">
         <i class="fa fa-external-link-alt"></i>Deliveroo - Bagneux
     </div>
   </div>
   <div class="listcontext">
-    <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry';">
+    <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry/';">
         <i class="fa fa-external-link-alt"></i>Deliveroo - ivry
     </div>
   </div>
@@ -1124,6 +1146,7 @@ color: #ffffff;
               Gastronomie Indienne et Népalaise<br><br>
               <div class="row p-2">
                 <a class="m-1 btn rounded" style="pointer-events: all;width:fit-content;color: var(--text-color);background-color: var(--bg-color);border: 2px solid var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/">Deliveroo Paris</a>
+                <a class="m-1 btn rounded" style="pointer-events: all;width:fit-content;color: var(--text-color);background-color: var(--bg-color);border: 2px solid var(--text-color);" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
                 <a class="m-1 btn rounded" style="pointer-events: all;width:fit-content;color: var(--text-color);background-color: var(--bg-color);border: 2px solid var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">Deliveroo Courbevoie</a>
                 <a class="m-1 btn rounded" style="pointer-events: all;width:fit-content;color: var(--text-color);background-color: var(--bg-color);border: 2px solid var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/">Deliveroo Saint-Ouen</a>
                 <a class="m-1 btn rounded" style="pointer-events: all;width:fit-content;color: var(--text-color);background-color: var(--bg-color);border: 2px solid var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/">Deliveroo Bagneux</a>
@@ -1159,22 +1182,27 @@ color: #ffffff;
                 </div>
             </div>
             <div class="listcontext">
-                <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie';">
+                <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/';">
+                    <i class="fa fa-external-link-alt"></i>&nbsp;&nbsp;Deliveroo - Bordeaux
+                </div>
+            </div>
+            <div class="listcontext">
+                <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/';">
                     <i class="fa fa-external-link-alt"></i>&nbsp;&nbsp;Deliveroo - Courbevoie
                 </div>
             </div>
             <div class="listcontext">
-                <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers';">
+                <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/';">
                     <i class="fa fa-external-link-alt"></i>&nbsp;&nbsp;Deliveroo - Saint Ouen
                 </div>
             </div>
             <div class="listcontext">
-                <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux';">
+                <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/';">
                     <i class="fa fa-external-link-alt"></i>&nbsp;&nbsp;Deliveroo - Bagneux
                 </div>
             </div>
             <div class="listcontext">
-                <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry';">
+                <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry/';">
                     <i class="fa fa-external-link-alt"></i>&nbsp;&nbsp;Deliveroo - ivry
                 </div>
             </div>
@@ -1315,6 +1343,7 @@ color: #ffffff;
             <ul class="footer-cat-links">
                 <li><a href="tel:0145327373"><span>Appelez seulement pour Emporter</span></a></li>
                 <li><a href="https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/"><span>Deliveroo Paris</span></a></li>
+                <li><a href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/"><span>Deliveroo Bordeaux</span></a></li>
                 <li><a href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/"><span>Deliveroo Courbevoie</span></a></li>
                 <li><a href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/"><span>Deliveroo Saint Ouen</span></a></li>
                 <li><a href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/"><span>Deliveroo Bagneux</span></a></li>
@@ -1428,6 +1457,9 @@ $( document ).ready(function() {
                           <div class="col-6 p-1">
                               <a class="mt-2 btn btn-sm btn-danger rounded" href="${product.link5}">DELIVEROO Ivry</a>
                           </div>
+                          <div class="col-6 p-1">
+                              <a class="mt-2 btn btn-sm btn-danger rounded" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">DELIVEROO Bordeaux</a>
+                          </div>
                       </div>
                   </main>
                   </div>
@@ -1464,6 +1496,7 @@ $( document ).ready(function() {
           </p>
           <div class="row p-2">
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/${product.link}">Deliveroo Paris</a>
+              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/${product.link1}">Deliveroo Courbevoie</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/${product.link2}">Deliveroo Saint-Ouen</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/${product.link3}">Deliveroo Bagneux</a>
@@ -1500,6 +1533,7 @@ $( document ).ready(function() {
           </p>
           <div class="row p-2">
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="${product.link}">Deliveroo Paris</a>
+              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">Deliveroo Courbevoie</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/">Deliveroo Saint-Ouen</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/">Deliveroo Bagneux</a>
@@ -1536,6 +1570,7 @@ $( document ).ready(function() {
           </p>
           <div class="row p-2">
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="${product.link}">Deliveroo Paris</a>
+              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">Deliveroo Courbevoie</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/">Deliveroo Saint-Ouen</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/">Deliveroo Bagneux</a>
@@ -1572,6 +1607,7 @@ $( document ).ready(function() {
           </p>
           <div class="row p-2">
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="${product.link}">Deliveroo Paris</a>
+              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">Deliveroo Courbevoie</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/">Deliveroo Saint-Ouen</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/">Deliveroo Bagneux</a>
@@ -1608,6 +1644,7 @@ $( document ).ready(function() {
           </p>
           <div class="row p-2">
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="${product.link}">Deliveroo Paris</a>
+              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">Deliveroo Courbevoie</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/">Deliveroo Saint-Ouen</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/">Deliveroo Bagneux</a>
@@ -1644,6 +1681,7 @@ $( document ).ready(function() {
           </p>
           <div class="row p-2">
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="${product.link}">Deliveroo Paris</a>
+              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">Deliveroo Courbevoie</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/">Deliveroo Saint-Ouen</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/">Deliveroo Bagneux</a>
@@ -1680,6 +1718,7 @@ $( document ).ready(function() {
           </p>
           <div class="row p-2">
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="${product.link}">Deliveroo Paris</a>
+              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">Deliveroo Courbevoie</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/">Deliveroo Saint-Ouen</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/">Deliveroo Bagneux</a>
@@ -1716,6 +1755,7 @@ $( document ).ready(function() {
           </p>
           <div class="row p-2">
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="${product.link}">Deliveroo Paris</a>
+              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">Deliveroo Courbevoie</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/">Deliveroo Saint-Ouen</a>
               <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/">Deliveroo Bagneux</a>

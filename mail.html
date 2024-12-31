@@ -272,8 +272,8 @@ transition: all 0.2s ease-in-out;
   </div>
   <hr class="hr">
   <div class="listcontext">
-    <div class="itemcontext" onclick="sendNotification('info', '&copy;INDIAN NEPALI SWAD, 2023.')">
-      &copy;INDIAN NEPALI SWAD, 2023
+    <div class="itemcontext" onclick="sendNotification('info', '&copy;INDIAN NEPALI SWAD, 2017-' + new Date().getFullYear());">
+      &copy;INDIAN NEPALI SWAD, 2017-<script>document.write(new Date().getFullYear())</script>
     </div>
   </div>
 </div>
@@ -383,7 +383,8 @@ transition: all 0.2s ease-in-out;
       </div>
       <div class="bottom-content">
         <li class="nav-link">
-          <a href="#" title="&copy;2023, INDIAN NEPALI SWAD." onclick="sendNotification('info','&copy;2023, INDIAN NEPALI SWAD.');">
+          <a href="#" id="titledatemain" title="&copy;INDIAN NEPALI SWAD." onclick="sendNotification('info','&copy;2017-' + new Date().getFullYear() + ', INDIAN NEPALI SWAD.');">
+            <script>$("#titledatemain").attr("title", "&copy;2017 - " + new Date().getFullYear() + ", INDIAN NEPALI SWAD.")</script>
             <i class='bx bx-copyright bx-tada-hover icon' ></i>
             <span class="text small colorall" style="font-size: 0.8em;">INDIAN NEPALI SWAD</span>
           </a>
@@ -810,7 +811,7 @@ transition: all 0.2s ease-in-out;
     </div>
     </section>
     <div id="copyright">
-        &copy; Tous droits réservés, www.indian-nepaliswad.fr 2023.
+        &copy; Tous droits réservés, www.indian-nepaliswad.fr 2017-<script>document.write(new Date().getFullYear())</script>
     </div>
   </footer>
 </section>

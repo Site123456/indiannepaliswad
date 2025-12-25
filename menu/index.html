@@ -11,85 +11,95 @@
        ========================================================================= */
 
     :root {
-      --page-max-width: 1080px;
+      --page-max-width: 1120px;
 
       --radius-xl: 22px;
-      --radius-lg: 18px;
-      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-md: 10px;
       --radius-pill: 999px;
 
       --transition-fast: 0.15s ease-out;
       --transition-med: 0.22s ease-out;
 
-      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont,
+        "SF Pro Text", "Segoe UI", sans-serif;
+      --font-serif: "Georgia", "Times New Roman", serif;
 
-      /* LIGHT THEME */
-      --bg-page: #f8f2ea;
-      --bg-surface: #ffffff;
-      --bg-soft: #f5ebe0;
-      --bg-muted: #f1e3d5;
+      /* Warm light theme */
+      --bg-page: #f6efe7;
+      --bg-surface: rgba(255, 255, 255, 0.92);
+      --bg-surface-strong: #ffffff;
+      --bg-glass: rgba(255, 255, 255, 0.92);
+      --bg-chip: #f3e3d3;
+      --bg-chip-active: #c85f1f;
+      --bg-tag: rgba(0, 0, 0, 0.04);
 
-      --border-subtle: rgba(55, 37, 25, 0.08);
-      --border-strong: rgba(55, 37, 25, 0.18);
+      --border-subtle: rgba(80, 52, 34, 0.12);
+      --border-strong: rgba(80, 52, 34, 0.22);
 
-      --text-main: #322018;
-      --text-soft: #8e7b6d;
-      --text-mute: #b29b8b;
+      --text-main: #3a2416;
+      --text-soft: #8d7362;
+      --text-mute: #b39a85;
 
-      --accent: #c4541a;
-      --accent-soft: rgba(197, 84, 26, 0.1);
-      --accent-strong: #a44110;
-      --accent-border: rgba(197, 84, 26, 0.4);
+      --accent: #c85f1f;
+      --accent-soft: rgba(200, 95, 31, 0.13);
+      --accent-strong: #a34717;
+      --accent-border: rgba(200, 95, 31, 0.5);
 
-      --price-color: #a44110;
+      --price-color: #a34717;
 
-      --chip-bg: #f3e6da;
-      --chip-border: rgba(50, 30, 18, 0.16);
-      --chip-text: #7b6252;
-      --chip-active-bg: #c4541a;
-      --chip-active-text: #ffffff;
+      --search-bg: rgba(255, 250, 244, 0.98);
+      --search-border: rgba(80, 52, 34, 0.22);
+      --search-placeholder: #b99d85;
 
-      --search-bg: #f7ece1;
-      --search-border: rgba(50, 30, 18, 0.28);
-      --search-placeholder: #b39c8b;
+      --card-bg: rgba(255, 255, 255, 0.96);
+      --card-bg-hover: rgba(248, 239, 231, 0.98);
+      --card-border: rgba(80, 52, 34, 0.16);
 
-      --item-bg-hover: rgba(197, 84, 26, 0.04);
-      --item-border: rgba(50, 30, 18, 0.08);
+      --badge-bg: rgba(200, 95, 31, 0.08);
+      --badge-text: #8a3b11;
+
+      --grid-gap: 14px;
+      --shadow-soft: 0 10px 26px rgba(0, 0, 0, 0.12);
     }
 
     :root[data-theme="dark"] {
-      --bg-page: #110f10;
-      --bg-surface: #181416;
-      --bg-soft: #211b1e;
-      --bg-muted: #241c1f;
+      /* Dark glass + warm accents */
+      --bg-page: #050307;
+      --bg-surface: rgba(12, 9, 18, 0.92);
+      --bg-surface-strong: rgba(14, 11, 22, 0.98);
+      --bg-glass: rgba(16, 12, 26, 0.94);
+      --bg-chip: rgba(25, 18, 36, 0.96);
+      --bg-chip-active: #ff9442;
+      --bg-tag: rgba(255, 255, 255, 0.04);
 
-      --border-subtle: rgba(255, 255, 255, 0.06);
-      --border-strong: rgba(255, 255, 255, 0.14);
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-strong: rgba(255, 255, 255, 0.22);
 
-      --text-main: #f6ede4;
-      --text-soft: #c3b2a6;
-      --text-mute: #9b8776;
+      --text-main: #f7eee4;
+      --text-soft: #c8b4a4;
+      --text-mute: #9f8774;
 
       --accent: #ff9442;
-      --accent-soft: rgba(255, 148, 66, 0.12);
-      --accent-strong: #ffc25e;
-      --accent-border: rgba(255, 194, 94, 0.6);
+      --accent-soft: rgba(255, 148, 66, 0.18);
+      --accent-strong: #ffc75e;
+      --accent-border: rgba(255, 199, 94, 0.7);
 
-      --price-color: #ffc25e;
+      --price-color: #ffc75e;
 
-      --chip-bg: #22181d;
-      --chip-border: rgba(255, 255, 255, 0.14);
-      --chip-text: #d1bfb0;
-      --chip-active-bg: #ff9442;
-      --chip-active-text: #1b0f0b;
-
-      --search-bg: #241c21;
+      --search-bg: rgba(18, 13, 26, 0.95);
       --search-border: rgba(255, 255, 255, 0.24);
-      --search-placeholder: #a38d7c;
+      --search-placeholder: #aa8f7b;
 
-      --item-bg-hover: rgba(255, 148, 66, 0.09);
-      --item-border: rgba(255, 255, 255, 0.1);
+      --card-bg: rgba(21, 15, 32, 0.98);
+      --card-bg-hover: rgba(30, 19, 49, 0.98);
+      --card-border: rgba(255, 255, 255, 0.14);
+
+      --badge-bg: rgba(255, 148, 66, 0.12);
+      --badge-text: #fde0b3;
+
+      --grid-gap: 12px;
+      --shadow-soft: 0 14px 38px rgba(0, 0, 0, 0.8);
     }
 
     /* =========================================================================
@@ -107,13 +117,13 @@
 
     body {
       font-family: var(--font-sans);
-      background: var(--bg-page);
-      color: var(--text-main);
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      padding: 16px;
+      background: var(--bg-page);
+      color: var(--text-main);
       transition: background var(--transition-med), color var(--transition-med);
+      overflow-x: hidden;
     }
 
     img {
@@ -131,50 +141,115 @@
     }
 
     /* =========================================================================
-       LAYOUT
+       ANIMATED BACKGROUND (subtle)
        ========================================================================= */
 
-    .app {
+    .bg-animated {
+      position: fixed;
+      inset: -20%;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(255, 182, 116, 0.3), transparent 55%),
+        radial-gradient(circle at 90% 20%, rgba(255, 108, 140, 0.28), transparent 55%),
+        radial-gradient(circle at 0% 90%, rgba(122, 140, 255, 0.2), transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(255, 219, 144, 0.25), transparent 60%);
+      opacity: 0.45;
+      pointer-events: none;
+      z-index: 0;
+      animation: bgFloat 40s linear infinite alternate;
+    }
+
+    @keyframes bgFloat {
+      0%   { transform: translate3d(0, 0, 0) scale(1); }
+      50%  { transform: translate3d(-8px, 10px, 0) scale(1.02); }
+      100% { transform: translate3d(10px, -12px, 0) scale(1.04); }
+    }
+
+    :root[data-theme="dark"] .bg-animated {
+      opacity: 0.5;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(255, 158, 94, 0.38), transparent 55%),
+        radial-gradient(circle at 90% 15%, rgba(255, 90, 145, 0.32), transparent 55%),
+        radial-gradient(circle at 5% 100%, rgba(112, 160, 255, 0.24), transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(255, 210, 126, 0.3), transparent 60%);
+    }
+
+    /* =========================================================================
+       APP WRAPPER
+       ========================================================================= */
+
+    .app-root {
+      position: relative;
+      z-index: 1;
       width: 100%;
       max-width: var(--page-max-width);
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
+      padding: 82px 12px 20px;
     }
 
     @media (min-width: 900px) {
-      .app {
-        gap: 16px;
+      .app-root {
+        padding: 90px 20px 28px;
       }
     }
 
     /* =========================================================================
-       HEADER (logo + theme + horaires)
+       STICKY HEADER
        ========================================================================= */
 
+    .top-shell {
+      position: fixed;
+      inset-inline: 0;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+    }
+
     .top-bar {
+      width: 100%;
+      max-width: var(--page-max-width);
+      margin: 10px 12px 0;
+      padding: 8px 10px;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-glass);
+      box-shadow: var(--shadow-soft);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      padding-inline: 4px;
+      gap: 10px;
+      pointer-events: auto;
+      backdrop-filter: blur(16px);
+    }
+
+    :root[data-theme="dark"] .top-bar {
+      background: var(--bg-glass);
+    }
+
+    @media (min-width: 900px) {
+      .top-bar {
+        margin-inline: 18px;
+        padding: 10px 16px;
+      }
     }
 
     .brand-side {
       display: flex;
       align-items: center;
       gap: 10px;
+      min-width: 0;
     }
 
     .brand-logo {
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       border-radius: 14px;
       overflow: hidden;
-      border: 1px solid var(--border-subtle);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+      border: 1px solid var(--border-strong);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       flex-shrink: 0;
+      background: #f6d3a5;
     }
 
     .brand-logo img {
@@ -187,13 +262,17 @@
       display: flex;
       flex-direction: column;
       gap: 2px;
+      min-width: 0;
     }
 
     .brand-name {
       font-size: 15px;
       font-weight: 600;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .brand-sub {
@@ -201,26 +280,36 @@
       color: var(--text-soft);
     }
 
-    .right-side {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    @media (max-width: 680px) {
+      .brand-name {
+        font-size: 14px;
+      }
+      .brand-sub {
+        font-size: 11px;
+      }
     }
 
-    .hours-badge {
+    .top-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: nowrap;
+    }
+
+    .hours-chip {
       display: inline-flex;
       flex-direction: column;
       gap: 2px;
-      padding: 6px 10px;
+      padding: 5px 8px;
       border-radius: var(--radius-lg);
       border: 1px solid var(--border-subtle);
-      background: var(--bg-soft);
+      background: var(--bg-surface);
       font-size: 11px;
       color: var(--text-soft);
-      min-width: 150px;
+      min-width: 140px;
     }
 
-    .hours-line {
+    .hours-line-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -237,8 +326,9 @@
       width: 9px;
       height: 9px;
       border-radius: 50%;
-      background: #1fa463;
+      background: #1fd073;
       position: relative;
+      box-shadow: 0 0 12px rgba(31, 208, 115, 0.6);
     }
 
     .status-dot::after {
@@ -246,11 +336,11 @@
       position: absolute;
       inset: 2px;
       border-radius: inherit;
-      background: #dbf6e7;
+      background: #e7fdf1;
     }
 
     :root[data-theme="dark"] .status-dot::after {
-      background: #13261a;
+      background: #13241c;
     }
 
     .hours-label {
@@ -258,19 +348,30 @@
     }
 
     .hours-now {
+      font-size: 11px;
       font-weight: 500;
       color: var(--text-main);
+      white-space: nowrap;
     }
 
     .hours-range {
       font-size: 11px;
       color: var(--text-mute);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .theme-toggle {
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-pill {
       border-radius: var(--radius-pill);
       border: 1px solid var(--border-subtle);
-      background: var(--bg-soft);
+      background: var(--bg-surface);
       padding: 4px 8px;
       display: inline-flex;
       align-items: center;
@@ -278,122 +379,120 @@
       cursor: pointer;
       font-size: 11px;
       color: var(--text-soft);
-      transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
-      min-width: 80px;
-      justify-content: center;
+      transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+      flex-shrink: 0;
+    }
+
+    .btn-pill:hover {
+      transform: translateY(-1px);
+      border-color: var(--accent-border);
     }
 
     .theme-toggle-thumb {
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      background: #f3cf8c;
+      background: radial-gradient(circle at 30% 20%, #ffe4b2 0, #f8c472 48%, #b6571e 100%);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 11px;
-      color: #4e2a11;
+      color: #4c2710;
     }
 
     :root[data-theme="dark"] .theme-toggle-thumb {
-      background: #f7d889;
+      background: radial-gradient(circle at 30% 20%, #fdf1c3 0, #f4cf6a 48%, #a45d1a 100%);
     }
 
-    .theme-toggle-label {
+    .btn-pill-label {
       text-transform: uppercase;
       letter-spacing: 0.14em;
     }
 
-    /* =========================================================================
-       SHEET
-       ========================================================================= */
-
-    .sheet {
-      background: var(--bg-surface);
-      border-radius: var(--radius-xl);
+    .layout-toggle-indicator {
+      width: 16px;
+      height: 16px;
+      border-radius: 6px;
       border: 1px solid var(--border-subtle);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-      padding: 16px 14px 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      position: relative;
-      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      padding: 2px;
     }
 
-    :root[data-theme="dark"] .sheet {
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    .layout-toggle-indicator span {
+      border-radius: 3px;
+      background: rgba(0, 0, 0, 0.06);
     }
 
-    @media (min-width: 900px) {
-      .sheet {
-        padding: 20px 22px 22px;
-        gap: 16px;
+    :root[data-theme="dark"] .layout-toggle-indicator span {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .layout-toggle[data-mode="pdf"] .layout-toggle-indicator {
+      grid-template-columns: 1fr;
+    }
+
+    .layout-toggle[data-mode="pdf"] .layout-toggle-indicator span:nth-child(2) {
+      opacity: 0.3;
+    }
+
+    @media (max-width: 720px) {
+      .top-bar {
+        flex-wrap: wrap;
+        row-gap: 6px;
       }
     }
 
-    .sheet-inner {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
     /* =========================================================================
-       SHEET TITLE
+       FLOATING SEARCH BAR
        ========================================================================= */
 
-    .sheet-header {
+    .floating-search-shell {
+      position: fixed;
+      inset-inline: 0;
+      top: 80px;
       display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 10px;
+      justify-content: center;
+      z-index: 18;
+      pointer-events: none;
     }
 
-    .sheet-title-block {
+    .floating-search {
+      width: 100%;
+      max-width: var(--page-max-width);
+      padding: 0 16px;
+      pointer-events: auto;
+    }
+
+    .search-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-glass);
+      padding: 8px 10px;
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 6px;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+      backdrop-filter: blur(16px);
     }
 
-    .sheet-title {
-      font-size: 18px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+    :root[data-theme="dark"] .search-card {
+      background: var(--bg-glass);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.85);
     }
-
-    .sheet-subtitle {
-      font-size: 12px;
-      color: var(--text-soft);
-      max-width: 340px;
-      line-height: 1.4;
-    }
-
-    .sheet-meta {
-      font-size: 11px;
-      color: var(--text-mute);
-      text-align: right;
-    }
-
-    /* =========================================================================
-       SEARCH & FILTERS
-       ========================================================================= */
 
     .search-row {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
-      gap: 10px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
     .search-box {
-      flex: 1 1 240px;
-      min-width: 220px;
       position: relative;
+      flex: 1 1 220px;
+      min-width: 0;
     }
 
     .search-input {
@@ -415,11 +514,11 @@
     .search-input:focus {
       border-color: var(--accent-border);
       box-shadow: 0 0 0 1px var(--accent-border);
-      background: #fff9f1;
+      background: #fff8f2;
     }
 
     :root[data-theme="dark"] .search-input:focus {
-      background: #2a2226;
+      background: rgba(32, 23, 46, 0.98);
     }
 
     .search-icon {
@@ -440,23 +539,40 @@
 
     .chips-row {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: 6px;
-      justify-content: flex-end;
+      overflow-x: auto;
+      padding: 2px 2px 2px 0;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+
+    .chips-row::-webkit-scrollbar {
+      height: 3px;
+    }
+
+    .chips-row::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.16);
+      border-radius: 999px;
+    }
+
+    :root[data-theme="dark"] .chips-row::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.24);
     }
 
     .chip {
       border-radius: var(--radius-pill);
-      border: 1px solid var(--chip-border);
-      background: var(--chip-bg);
-      color: var(--chip-text);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-chip);
+      color: var(--text-soft);
       padding: 4px 10px;
       font-size: 11px;
       cursor: pointer;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+      letter-spacing: 0.13em;
       white-space: nowrap;
+      flex-shrink: 0;
+      transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
     }
 
     .chip:hover {
@@ -465,13 +581,106 @@
     }
 
     .chip--active {
-      background: var(--chip-active-bg);
-      color: var(--chip-active-text);
+      background: var(--bg-chip-active);
+      color: #fff;
       border-color: transparent;
     }
 
+    .search-hint {
+      font-size: 11px;
+      color: var(--text-mute);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .search-hint strong {
+      color: var(--accent-strong);
+    }
+
+    @media (max-width: 700px) {
+      .floating-search {
+        padding-inline: 12px;
+      }
+    }
+
     /* =========================================================================
-       STATUS
+       CONTENT SHELL
+       ========================================================================= */
+
+    .content-shell {
+      margin-top: 104px;
+    }
+
+    @media (min-width: 900px) {
+      .content-shell {
+        margin-top: 116px;
+      }
+    }
+
+    .sheet {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      padding: 18px 12px 18px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    :root[data-theme="dark"] .sheet {
+      background: var(--bg-surface-strong);
+    }
+
+    @media (min-width: 900px) {
+      .sheet {
+        padding: 22px 18px 20px;
+      }
+    }
+
+    /* =========================================================================
+       SHEET HEADER
+       ========================================================================= */
+
+    .sheet-header {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+
+    .sheet-title {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .sheet-subtitle {
+      font-size: 12px;
+      color: var(--text-soft);
+      max-width: 420px;
+      line-height: 1.45;
+    }
+
+    .sheet-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 2px;
+    }
+
+    .sheet-badge {
+      border-radius: var(--radius-pill);
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      padding: 3px 8px;
+      font-size: 11px;
+      border: 1px solid var(--accent-border);
+    }
+
+    /* =========================================================================
+       STATUS ROW
        ========================================================================= */
 
     .search-status {
@@ -482,6 +691,8 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 6px;
+      margin-top: 8px;
+      margin-bottom: 10px;
     }
 
     .search-status-left {
@@ -496,15 +707,16 @@
       height: 8px;
       border-radius: 50%;
       background: var(--accent);
+      box-shadow: 0 0 10px rgba(200, 95, 31, 0.7);
     }
 
     .status-pill {
       border-radius: var(--radius-pill);
       border: 1px solid var(--border-subtle);
-      background: var(--bg-soft);
+      background: var(--bg-tag);
       padding: 3px 8px;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.16em;
       font-size: 10px;
     }
 
@@ -513,116 +725,32 @@
     }
 
     /* =========================================================================
-       GRID SECTIONS
+       GRID MENU LAYOUT
        ========================================================================= */
 
-    .sections-grid {
+    .menu-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: var(--grid-gap);
+      align-items: stretch;
     }
 
-    @media (max-width: 840px) {
-      .sections-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
+    .menu-layout--pdf {
+      grid-template-columns: minmax(0, 1fr);
     }
 
-    .sections-column {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .section-card {
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-soft);
-      padding: 10px 10px 8px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    @media (min-width: 900px) {
-      .section-card {
-        padding: 12px 12px 10px;
-      }
-    }
-
-    .section-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .section-head-left {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .section-title {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-    }
-
-    .section-subtitle {
-      font-size: 11px;
-      color: var(--text-soft);
-    }
-
-    .section-count {
-      font-size: 11px;
-      color: var(--text-mute);
-      white-space: nowrap;
-    }
-
-    .section-divider {
-      height: 1px;
-      background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.12),
-        rgba(0, 0, 0, 0.04) 30%,
-        rgba(0, 0, 0, 0.04) 70%,
-        rgba(0, 0, 0, 0.12)
-      );
-      opacity: 0.6;
-    }
-
-    :root[data-theme="dark"] .section-divider {
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.16),
-        rgba(255, 255, 255, 0.04) 30%,
-        rgba(255, 255, 255, 0.04) 70%,
-        rgba(255, 255, 255, 0.16)
-      );
-    }
-
-    .section-list {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    /* =========================================================================
-       MENU ITEM
-       ========================================================================= */
-
-    .menu-item {
+    .menu-item-card {
       position: relative;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+      padding: 10px 10px 9px;
       display: grid;
       grid-template-columns: minmax(0, 1.6fr) auto;
-      gap: 6px 10px;
+      gap: 6px 8px;
       align-items: center;
-      border-radius: var(--radius-md);
-      padding: 6px 4px;
-      border: 1px solid transparent;
-      transition: background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
       cursor: pointer;
+      transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
     }
 
     .menu-item-main {
@@ -633,11 +761,11 @@
     }
 
     .menu-item-media {
-      width: 50px;
-      height: 50px;
+      width: 52px;
+      height: 52px;
       border-radius: var(--radius-md);
       overflow: hidden;
-      background: #f2c18f;
+      background: #f5c89e;
       flex-shrink: 0;
     }
 
@@ -653,7 +781,7 @@
       min-width: 0;
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 3px;
     }
 
     .menu-item-name {
@@ -663,10 +791,16 @@
       font-weight: 500;
     }
 
+    .menu-item-tag {
+      font-size: 10px;
+      color: var(--text-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
     .menu-item-desc {
       font-size: 11px;
       color: var(--text-soft);
-      max-width: 320px;
       line-height: 1.4;
     }
 
@@ -678,29 +812,14 @@
       white-space: nowrap;
     }
 
-    .menu-item::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      border: 1px solid transparent;
-      pointer-events: none;
-      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-    }
-
-    .menu-item:hover {
-      background: var(--item-bg-hover);
-      border-color: var(--item-border);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    .menu-item-card:hover {
+      background: var(--card-bg-hover);
+      border-color: var(--accent-border);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
       transform: translateY(-1px);
     }
 
-    .menu-item:hover::after {
-      border-color: var(--accent-border);
-      box-shadow: 0 0 0 1px var(--accent-border);
-    }
-
-    .menu-item:hover .menu-item-img {
+    .menu-item-card:hover .menu-item-img {
       transform: scale(1.05);
       opacity: 0.96;
     }
@@ -711,10 +830,46 @@
       z-index: 2;
     }
 
-    @media (max-width: 520px) {
-      .menu-item {
+    /* PDF-like mode */
+    .menu-layout--pdf .menu-item-card {
+      grid-template-columns: minmax(0, 1.1fr) auto;
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
+      box-shadow: none;
+      background: transparent;
+      padding-inline: 0;
+    }
+
+    .menu-layout--pdf .menu-item-media {
+      display: none;
+    }
+
+    .menu-layout--pdf .menu-item-card:hover {
+      background: rgba(0, 0, 0, 0.02);
+      border-color: var(--card-border);
+      transform: none;
+      box-shadow: none;
+    }
+
+    .menu-layout--pdf .menu-item-name {
+      font-family: var(--font-serif);
+      font-size: 14px;
+      letter-spacing: 0.14em;
+    }
+
+    .menu-layout--pdf .menu-item-desc {
+      font-size: 11px;
+    }
+
+    .menu-layout--pdf .menu-item-price {
+      font-size: 13px;
+    }
+
+    @media (max-width: 560px) {
+      .menu-item-card {
         grid-template-columns: minmax(0, 1.5fr) auto;
-        padding-inline: 2px;
+        padding-inline: 8px;
       }
       .menu-item-media {
         width: 46px;
@@ -736,13 +891,17 @@
        ========================================================================= */
 
     .empty-notice {
-      margin-top: 6px;
+      margin-top: 8px;
       border-radius: var(--radius-md);
       border: 1px dashed var(--border-strong);
-      background: var(--bg-soft);
+      background: rgba(255, 255, 255, 0.6);
       padding: 8px 10px;
       font-size: 11px;
       color: var(--text-soft);
+    }
+
+    :root[data-theme="dark"] .empty-notice {
+      background: rgba(15, 10, 20, 0.96);
     }
 
     .empty-notice strong {
@@ -769,7 +928,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 6px;
-      padding-top: 4px;
+      margin-top: 14px;
       text-transform: uppercase;
       letter-spacing: 0.14em;
     }
@@ -781,25 +940,22 @@
 </head>
 
 <body>
-<div class="app">
+<div class="bg-animated"></div>
 
-  <!-- HEADER -->
+<!-- Sticky header -->
+<div class="top-shell">
   <header class="top-bar">
     <div class="brand-side">
       <a href="https://www.indian-nepaliswad.fr/" class="brand-logo" aria-label="Indian Nepali Swad – site officiel">
-        <img src="https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png" alt="Indian Nepali Swad logo">
+        <img src="https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png" alt="Logo Indian Nepali Swad">
       </a>
-      <div class="brand-text">
-        <div class="brand-name">Indian Nepali Swad</div>
-        <div class="brand-sub">Carte en ligne</div>
-      </div>
     </div>
 
-    <div class="right-side">
-      <div class="hours-badge" aria-live="polite" id="hoursBadge">
-        <div class="hours-line">
+    <div class="top-right">
+      <div class="hours-chip" id="hoursChip" aria-live="polite">
+        <div class="hours-line-top">
           <div class="hours-status">
-            <div class="status-dot" id="statusDot" aria-hidden="true"></div>
+            <div class="status-dot" id="statusDot"></div>
             <span class="hours-label" id="statusLabel">Chargement…</span>
           </div>
           <span class="hours-now" id="hoursNow"></span>
@@ -807,29 +963,26 @@
         <div class="hours-range" id="hoursRange">–</div>
       </div>
 
-      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Basculer le thème">
-        <div class="theme-toggle-thumb" id="themeThumb">☼</div>
-        <span class="theme-toggle-label" id="themeLabel">Jour</span>
-      </button>
+      <div class="header-controls">
+        <button type="button" class="btn-pill" id="themeToggle" aria-label="Basculer le thème">
+          <span class="btn-pill-label" id="themeLabel"></span>
+        </button>
+
+        <button type="button" class="btn-pill layout-toggle" id="layoutToggle" data-mode="grid" aria-label="Basculer le mode d’affichage">
+          <div class="layout-toggle-indicator">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </button>
+      </div>
     </div>
   </header>
+</div>
 
-  <!-- SHEET -->
-  <main class="sheet">
-    <div class="sheet-inner">
-
-      <!-- TITLE -->
-      <section class="sheet-header">
-        <div class="sheet-title-block">
-          <h1 class="sheet-title">Carte</h1>
-        </div>
-        <div class="sheet-meta" id="sheetMeta">
-          – 
-        </div>
-      </section>
-
-      <!-- SEARCH / FILTERS -->
-      <section class="search-row" aria-label="Recherche et filtres">
+<!-- Floating search -->
+<div class="floating-search-shell">
+  <div class="floating-search">
+    <div class="search-card">
+      <div class="search-row">
         <div class="search-box">
           <span class="search-icon">
             <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -853,12 +1006,35 @@
           <button class="chip" type="button" data-tag="Naan">Naans</button>
           <button class="chip" type="button" data-tag="Riz">Riz</button>
           <button class="chip" type="button" data-tag="Végétarien">Végétarien</button>
+          <button class="chip" type="button" data-tag="Nouilles">Nouilles</button>
           <button class="chip" type="button" data-tag="Dessert">Desserts</button>
           <button class="chip" type="button" data-tag="Boisson">Boissons</button>
         </div>
-      </section>
+      </div>
+      <div class="search-hint">
+        <span>Astuce : tapez <strong>naan</strong>, <strong>curry</strong> ou le nom du plat.</span>
+        <span id="searchHintRight"></span>
+      </div>
+    </div>
+  </div>
+</div>
 
-      <!-- STATUS -->
+<div class="app-root">
+  <div class="content-shell">
+    <main class="sheet">
+      <header class="sheet-header">
+        <h1 class="sheet-title">Carte du soir</h1>
+        <p class="sheet-subtitle">
+          Menus, entrées, currys, naans, plats végétariens, desserts et boissons. Un menu au format
+          “papier”, mais pensé pour mobiles et ordinateurs.
+        </p>
+        <div class="sheet-badge-row">
+          <span class="sheet-badge">Épices maison</span>
+          <span class="sheet-badge">Tandoor &amp; curry</span>
+          <span class="sheet-badge">Cuisine indienne &amp; népalaise</span>
+        </div>
+      </header>
+
       <section class="search-status" aria-live="polite">
         <div class="search-status-left">
           <span class="status-dot-small"></span>
@@ -866,34 +1042,25 @@
           <span class="status-pill" id="activeTagLabel">Filtre : Tous les plats</span>
         </div>
         <div class="search-status-right" id="queryInfoLabel">
-          Astuce : tapez quelques lettres d’un plat ou d’une catégorie.
+          Astuce : combinez recherche et catégories pour affiner.
         </div>
       </section>
 
-      <!-- GRID -->
-      <section class="sections-grid" aria-label="Sections du menu">
-        <div class="sections-column" id="leftColumn"></div>
-        <div class="sections-column" id="rightColumn"></div>
+      <section class="menu-layout" id="menuLayout" aria-label="Carte du restaurant">
+        <!-- Filled by JS -->
       </section>
 
-      <!-- EMPTY NOTICE -->
       <div id="emptyNoticeContainer"></div>
 
-      <!-- FOOTER -->
       <footer class="sheet-footer">
-        <span>Tarifs en euros • Menu principal</span>
-        <span>&copy;2017 - 2026 Indian Nepali Swad</span>
+        <span>Tarifs en euros • Carte du soir</span>
+        <span>Indian Nepali Swad • <strong>Paris</strong></span>
       </footer>
-    </div>
-  </main>
-
+    </main>
+  </div>
 </div>
 
 <script>
-  // ===========================================================================
-  // Storage keys & helper
-  // ===========================================================================
-
   const STORAGE_KEYS = {
     THEME: "ins_theme",
     COOKIES: "ins_cookies",
@@ -920,18 +1087,14 @@
     }
   };
 
-  // ===========================================================================
-  // Horaires
-  // ===========================================================================
-
   const horaires = {
-    1: ["11:15-14:45", "18:15-22:45"], // lundi
-    2: ["11:15-14:45", "18:15-22:45"], // mardi
-    3: ["11:15-14:45", "18:15-22:45"], // mercredi
-    4: ["11:15-14:45", "18:15-22:45"], // jeudi
-    5: ["11:15-14:45", "18:15-22:45"], // vendredi
-    6: ["11:15-14:45", "18:15-22:45"], // samedi
-    0: ["11:15-14:45", "18:15-22:45"]  // dimanche
+    1: ["11:15-14:45", "18:15-22:45"],
+    2: ["11:15-14:45", "18:15-22:45"],
+    3: ["11:15-14:45", "18:15-22:45"],
+    4: ["11:15-14:45", "18:15-22:45"],
+    5: ["11:15-14:45", "18:15-22:45"],
+    6: ["11:15-14:45", "18:15-22:45"],
+    0: ["11:15-14:45", "18:15-22:45"]
   };
 
   function parseTimeToMinutes(str) {
@@ -950,7 +1113,7 @@
 
   function describeTodayHours() {
     const now = new Date();
-    const day = now.getDay(); // 0–6
+    const day = now.getDay();
     const todayRanges = horaires[day];
 
     if (!todayRanges || !todayRanges.length) {
@@ -958,29 +1121,26 @@
         open: false,
         label: "Fermé aujourd’hui",
         now: "",
-        full: "–"
+        full: "Fermé aujourd’hui"
       };
     }
 
     const openNow = todayRanges.some(r => isNowInRange(r));
-    const label = openNow ? "Ouvert maintenant" : "Fermé pour le moment";
+    const label = openNow ? "Ouvert maintenant" : "Fermé actuellement";
     const prettyRanges = todayRanges.join(" • ");
 
     let nowLabel = "";
     if (openNow) {
-      const minutes = now.getHours() * 60 + now.getMinutes();
       const [currentRange] = todayRanges.filter(r => isNowInRange(r));
       const [, end] = currentRange.split("-");
-      nowLabel = `jusqu’à ${end}`;
-    } else {
-      nowLabel = "voir horaires";
+      nowLabel = "jusqu’à " + end;
     }
 
     return {
       open: openNow,
       label,
       now: nowLabel,
-      full: `Aujourd’hui : ${prettyRanges}`
+      full:  prettyRanges
     };
   }
 
@@ -989,20 +1149,18 @@
     const statusLabel = document.getElementById("statusLabel");
     const hoursNow = document.getElementById("hoursNow");
     const hoursRange = document.getElementById("hoursRange");
-    const sheetMeta = document.getElementById("sheetMeta");
+    const searchHintRight = document.getElementById("searchHintRight");
 
     const info = describeTodayHours();
     statusLabel.textContent = info.label;
     hoursNow.textContent = info.now;
     hoursRange.textContent = info.full;
-    sheetMeta.textContent = info.full;
-
     statusDot.style.opacity = info.open ? "1" : "0.4";
-  }
 
-  // ===========================================================================
-  // Theme
-  // ===========================================================================
+    const now = new Date();
+    const isMidi = now.getHours() < 16;
+    searchHintRight.textContent = isMidi ? "Service midi & soir." : "Service du soir en cours.";
+  }
 
   const themeToggle = document.getElementById("themeToggle");
   const themeThumb = document.getElementById("themeThumb");
@@ -1011,8 +1169,7 @@
   function applyTheme(theme) {
     const t = theme === "dark" ? "dark" : "light";
     document.documentElement.setAttribute("data-theme", t);
-    themeThumb.textContent = t === "dark" ? "☾" : "☼";
-    themeLabel.textContent = t === "dark" ? "Soir" : "Jour";
+    themeLabel.textContent = t === "dark" ? "Sombre" : "Claire";
   }
 
   function initTheme() {
@@ -1020,24 +1177,43 @@
     if (stored === "dark" || stored === "light") {
       applyTheme(stored);
     } else {
-      const prefersDark = window.matchMedia &&
+      const prefersDark =
+        window.matchMedia &&
         window.matchMedia("(prefers-color-scheme: dark)").matches;
       applyTheme(prefersDark ? "dark" : "light");
     }
 
     themeToggle.addEventListener("click", () => {
-      const current = document.documentElement.getAttribute("data-theme") === "dark"
-        ? "dark"
-        : "light";
+      const current =
+        document.documentElement.getAttribute("data-theme") === "dark"
+          ? "dark"
+          : "light";
       const next = current === "dark" ? "light" : "dark";
       applyTheme(next);
       storage.set(STORAGE_KEYS.THEME, next);
     });
   }
 
-  // ===========================================================================
-  // Data
-  // ===========================================================================
+  const layoutToggle = document.getElementById("layoutToggle");
+  const menuLayout = document.getElementById("menuLayout");
+
+  function applyLayoutMode(mode) {
+    if (mode === "pdf") {
+      menuLayout.classList.add("menu-layout--pdf");
+      layoutToggle.setAttribute("data-mode", "pdf");
+    } else {
+      menuLayout.classList.remove("menu-layout--pdf");
+      layoutToggle.setAttribute("data-mode", "grid");
+    }
+  }
+
+  function initLayoutToggle() {
+    layoutToggle.addEventListener("click", () => {
+      const current = layoutToggle.getAttribute("data-mode") === "pdf" ? "pdf" : "grid";
+      const next = current === "pdf" ? "grid" : "pdf";
+      applyLayoutMode(next);
+    });
+  }
 
   const products = [
     {name:"Menu Spécial",price:"18,90€",link:"./?q=Menu+Spécial",image:"https://www.indian-nepaliswad.fr/37%20menu%20special.jpg",tag:"Menu"},
@@ -1101,38 +1277,25 @@
   ];
 
   const tagDescriptions = {
-    "Menu": "Menus avec entrée, plat et accompagnements.",
+    "Menu": "Menus complets pour découvrir plusieurs spécialités.",
     "Entrée": "Entrées chaudes et croustillantes.",
     "Curry": "Currys mijotés, parfaits avec naan ou riz.",
     "Naan": "Pains maison cuits au tandoor.",
     "Riz": "Riz basmati nature ou parfumé.",
-    "Végétarien": "Plats sans viande, riches en légumes.",
+    "Végétarien": "Plats sans viande, généreux en légumes.",
     "Nouilles": "Nouilles sautées façon indo-népalaise.",
     "Dessert": "Spécialités sucrées.",
     "Boisson": "Boissons fraîches et lassi.",
-    "Sauce": "Sauces et accompagnements.",
+    "Sauce": "Sauces d’accompagnement.",
     "Extra": "Suppléments et couverts."
   };
 
-  const leftTags = ["Menu", "Entrée", "Curry", "Végétarien"];
-  const rightTags = ["Naan", "Riz", "Nouilles", "Dessert", "Boisson", "Sauce", "Extra"];
-
-  // ===========================================================================
-  // DOM
-  // ===========================================================================
-
   const searchInput = document.getElementById("searchInput");
   const chipRow = document.getElementById("chipRow");
-  const leftColumn = document.getElementById("leftColumn");
-  const rightColumn = document.getElementById("rightColumn");
   const resultCountLabel = document.getElementById("resultCountLabel");
   const activeTagLabel = document.getElementById("activeTagLabel");
   const queryInfoLabel = document.getElementById("queryInfoLabel");
   const emptyNoticeContainer = document.getElementById("emptyNoticeContainer");
-
-  // ===========================================================================
-  // Helpers
-  // ===========================================================================
 
   function normalize(str) {
     return str
@@ -1144,23 +1307,11 @@
 
   function debounce(fn, delay) {
     let timer;
-    return function(...args) {
+    return function (...args) {
       clearTimeout(timer);
       timer = setTimeout(() => fn.apply(this, args), delay);
     };
   }
-
-  function groupByTag(items) {
-    const map = {};
-    for (const item of items) {
-      (map[item.tag] || (map[item.tag] = [])).push(item);
-    }
-    return map;
-  }
-
-  // ===========================================================================
-  // Filtering
-  // ===========================================================================
 
   let state = {
     tag: "all",
@@ -1174,23 +1325,19 @@
     return list.filter(item => {
       const tagOk = tag === "all" ? true : item.tag === tag;
       if (!hasQ) return tagOk;
-
       const nameN = normalize(item.name);
       const tagN = normalize(item.tag);
       return tagOk && (nameN.includes(q) || tagN.includes(q));
     });
   }
 
-  // ===========================================================================
-  // Rendering
-  // ===========================================================================
-
   function buildItemHTML(p) {
     const wantDesc = ["Menu", "Curry", "Végétarien", "Nouilles"].includes(p.tag);
     const desc = wantDesc ? (tagDescriptions[p.tag] || "") : "";
+    const tagLabel = p.tag;
 
     return `
-      <article class="menu-item">
+      <article class="menu-item-card">
         <a class="menu-item-link" href="${p.link}" aria-label="${p.name} – ${p.price}"></a>
         <div class="menu-item-main">
           <div class="menu-item-media">
@@ -1198,6 +1345,7 @@
           </div>
           <div class="menu-item-text">
             <h3 class="menu-item-name">${p.name}</h3>
+            <div class="menu-item-tag">${tagLabel}</div>
             ${desc ? `<p class="menu-item-desc">${desc}</p>` : ""}
           </div>
         </div>
@@ -1206,41 +1354,16 @@
     `;
   }
 
-  function buildSectionHTML(tag, items) {
-    if (!items || !items.length) return "";
-    const desc = tagDescriptions[tag] || "";
-    const count = items.length;
-    return `
-      <section class="section-card">
-        <header class="section-header">
-          <div class="section-head-left">
-            <h2 class="section-title">${tag}</h2>
-            ${desc ? `<p class="section-subtitle">${desc}</p>` : ""}
-          </div>
-          <div class="section-count">${count} plat${count > 1 ? "s" : ""}</div>
-        </header>
-        <div class="section-divider"></div>
-        <div class="section-list">
-          ${items.map(buildItemHTML).join("")}
-        </div>
-      </section>
-    `;
-  }
-
   function renderMenu(list, query, tag) {
-    const grouped = groupByTag(list);
-    const leftHTML = leftTags.map(t => buildSectionHTML(t, grouped[t])).join("");
-    const rightHTML = rightTags.map(t => buildSectionHTML(t, grouped[t])).join("");
-    leftColumn.innerHTML = leftHTML;
-    rightColumn.innerHTML = rightHTML;
+    menuLayout.innerHTML = list.map(buildItemHTML).join("");
 
-    // Status
     if (!query && tag === "all") {
       resultCountLabel.textContent = "Toute la carte est affichée.";
       activeTagLabel.textContent = "Filtre : Tous les plats";
       queryInfoLabel.textContent = "Astuce : tapez un nom ou une catégorie pour filtrer.";
     } else {
-      resultCountLabel.textContent = `${list.length} résultat${list.length > 1 ? "s" : ""} affiché${list.length > 1 ? "s" : ""}.`;
+      resultCountLabel.textContent =
+        `${list.length} résultat${list.length > 1 ? "s" : ""} affiché${list.length > 1 ? "s" : ""}.`;
       const tagLabel = tag === "all" ? "Tous les plats" : tag;
       activeTagLabel.textContent = `Filtre : ${tagLabel}`;
       if (query) {
@@ -1263,10 +1386,6 @@
     renderMenu(products, "", "all");
   }
 
-  // ===========================================================================
-  // Interaction
-  // ===========================================================================
-
   function applyFilters() {
     const filtered = filterProducts(products, state.query, state.tag);
     if (!filtered.length && (state.query || state.tag !== "all")) {
@@ -1276,14 +1395,14 @@
     }
   }
 
-  const debouncedApply = debounce(applyFilters, 130);
+  const debouncedApply = debounce(applyFilters, 120);
 
-  searchInput.addEventListener("input", (e) => {
+  searchInput.addEventListener("input", e => {
     state.query = e.target.value;
     debouncedApply();
   });
 
-  chipRow.addEventListener("click", (e) => {
+  chipRow.addEventListener("click", e => {
     const chip = e.target.closest(".chip");
     if (!chip) return;
     const tag = chip.dataset.tag || "all";
@@ -1304,11 +1423,8 @@
     applyFilters();
   }
 
-  // ===========================================================================
-  // Init
-  // ===========================================================================
-
   initTheme();
+  initLayoutToggle();
   updateHoursUI();
   initFromUrl();
 </script>

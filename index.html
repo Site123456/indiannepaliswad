@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<title>Indian Nepali Swad | Hero</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta property="og:title" content="INDIAN NEPALI SWAD" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.indian-nepaliswad.fr" />
@@ -20,2027 +21,3083 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="keywords" content="Nourriture, INDIAN, NEPALI, SWAD">
 <meta name="author" content="Food, Nourriture, Restaurant, INDIAN, NEPALI, SWAD">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
-<link rel="stylesheet" href="./css/style.css"/>
-<link rel="stylesheet" href="https://www.indian-nepaliswad.fr/css/main.css"/>
-<link rel="stylesheet" href="https://www.indian-nepaliswad.fr/css/alerts.css"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-<link rel="stylesheet" href="https://www.indian-nepaliswad.fr/css/jquery-ui.css"/>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-<link href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" rel="stylesheet">
-<script src="https://cdn.datatables.net/2.0.2/js/dataTables.min.js" crossorigin="anonymous"></script>
-<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css">
-<script src="https://unpkg.com/leaflet-gesture-handling"></script>
-<script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/maplibre/maplibre-gl-leaflet@main/leaflet-maplibre-gl.js"></script>
-<link rel="stylesheet" href="https://www.indian-nepaliswad.fr/css/style.css"/>
-<script>
-$(document).ready(function(){
-    $("#contextmenu").hide();
-    $(document).bind("contextmenu", function(e){
-        $("#contextmenu").css("display", "none");
-        setTimeout(() => {
-            $("#contextmenu").css({'display':'block', 'left':e.pageX, 'top':e.pageY});
-            if(e.pageX > window.innerWidth - 400 ||e.pageX < 0 || e.pageY > window.innerHeight - 200|| e.pageY < 0) {
-                $("#contextmenu").css({'display':'block', 'left':e.pageX - 260, 'top':e.pageY - 300});
-            }
-        }, 100);
-        return false;
-    });
-    $(document).click(function(e){
-        if(e.button == 0){
-        $("#contextmenu").css("display", "none");
-        }
-    });
-    $(document).keydown(function(e){
-        if(e.keyCode == 27){
-        $("#ccontextmenu").css("display", "none");
-        }
-    });
-    const marker_coords = [48.84063,2.30602];
-    var southWest = L.latLng(41.84063, -2.50602);
-    var northEast = L.latLng(50.84063, 5.30602);
-    var bounds = L.latLngBounds(southWest, northEast);
-    const map = L.map('map', {
-        center: marker_coords,
-        zoom: 5,
-        maxZoom: 18,
-        minZoom: 5,
-        maxBounds: bounds,
-        zoomControl: true,
-        gestureHandling: true
-    });
-    L.control.scale().addTo(map);
-    L.tooltip(marker_coords, {permanent: true, content: `<b><a style="filter: var(--legend);color: var(--text-color);pointer-events: all;" href="https://www.google.com/maps/dir//4+Rue+Bargue,+75015+Paris">INS* Paris 15</a></b>`})
-    .addTo(map);
-    // paris 15
-    L.circle([48.84063, 2.30602], {
-        color: '#ff000085',
-        fillColor: '#ff000055',
-        fillOpacity: 0.2,
-        radius: 10000
-    }).addTo(map);
-    // Courbevoie 13 Rue Latérale, 92400
-    L.circle([48.80518, 2.46269], {
-        color: '#0000ff85',
-        fillColor: '#006aff55',
-        fillOpacity: 0.2,
-        radius: 10000
-    }).addTo(map);
-    // Saint-Ouen 10 rue palouzié, 93400
-    L.circle([48.90469, 2.32766], {
-        color: '#ff660085',
-        fillColor: '#ffa50055',
-        fillOpacity: 0.2,
-        radius: 10000
-    }).addTo(map);
-    // Bagneux 5 allée du parc de garlande, 92220
-    L.circle([48.80033, 2.30524], {
-        color: '#c8c80085',
-        fillColor: '#ffff0055',
-        fillOpacity: 0.2,
-        radius: 10000
-    }).addTo(map);
-    // ivry 11 rue Moïse, 94200
-    L.circle([48.81810, 2.40196], {
-        color: '#80008085',
-        fillColor: '#ff00ff55',
-        fillOpacity: 0.2,
-        radius: 10000
-    }).addTo(map);
-    // Bordeaux 170 Cours du Médoc,33300
-    L.circle([44.86313, -0.57288], {
-        color: '#00ff8085',
-        fillColor: '#00ffff55',
-        fillOpacity: 0.2,
-        radius: 10000
-    }).addTo(map);
-
-    var legend = L.control({ position: "bottomleft" });
-    setTimeout(() => {
-        legend.onAdd = function(map) {
-        var div = L.DomUtil.create("div", "legend d-none d-md-block");
-        div.innerHTML = `<h6>Zones de livraison couvert</h6>
-                        <div class="btn-group" style="display: flex;justify-content: start;align-items: center;">
-                            <input type="text" disabled class="form-control" style="cursor: help;background-color: #ff000085;width: 40px;display: inline;height: 20px;filter: var(--map-tiles-filter);">&nbsp;
-                            <a style="color:var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/">INS* PARIS 15</a>
-                        </div>
-                        <div class="btn-group" style="display: flex;justify-content: start;align-items: center;">
-                            <input type="text" disabled class="form-control" style="cursor: help;background-color: #00ff0085;width: 40px;display: inline;height: 20px;filter: var(--map-tiles-filter);">&nbsp;
-                            <a style="color:var(--text-color);" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">DELIVEROO Bordeaux</a>
-                        </div>
-                        <div class="btn-group" style="display: flex;justify-content: start;align-items: center;">
-                            <input type="text" disabled class="form-control" style="cursor: help;background-color: #0000ff85;width: 40px;display: inline;height: 20px;filter: var(--map-tiles-filter);">&nbsp;
-                            <a style="color:var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie">DELIVEROO Courbevoie</a>
-                        </div>
-                        <div class="btn-group" style="display: flex;justify-content: start;align-items: center;">
-                            <input type="text" disabled class="form-control" style="cursor: help;background-color: #ff660085;width: 40px;display: inline;height: 20px;filter: var(--map-tiles-filter);">&nbsp;
-                            <a style="color:var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers">DELIVEROO Saint-Ouen</a>
-                        </div>
-                        <div class="btn-group" style="display: flex;justify-content: start;align-items: center;">
-                            <input type="text" disabled class="form-control" style="cursor: help;background-color: #c8c80085;width: 40px;display: inline;height: 20px;filter: var(--map-tiles-filter);">&nbsp;
-                            <a style="color:var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux">DELIVEROO Bagneux</a>
-                        </div>
-                        <div class="btn-group" style="display: flex;justify-content: start;align-items: center;">
-                            <input type="text" disabled class="form-control" style="cursor: help;background-color: #80008085;width: 40px;display: inline;height: 20px;filter: var(--map-tiles-filter);">&nbsp;
-                            <a style="color:var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry">DELIVEROO Ivry</a>
-                        </div>
-                        <div class="text-muted small p-1">* : INDIAN NEPALI SWAD</div>`;
-        return div;
-        };
-        legend.addTo(map);
-        $(".leaflet-control-attribution.leaflet-control a:first-child").remove();
-        $(".leaflet-control-attribution.leaflet-control span:first-child").remove();
-    }, 1200);
-    const mapgl = L.maplibreGL({
-        style: 'https://openmaptiles.geo.data.gouv.fr/styles/osm-bright/style.json',
-        attribution: '<a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap</a><span> | </span>INDIAN NEPALI SWAD<span> zones couvertes pour île-de-france</span>'
-    }).addTo(map);
-});  
-</script>
-<title>INDIAN NEPALI SWAD | Acceuil</title>
-<script>
-function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-    }
-    }
-    return "";
-}
-function currentyear() {let d = new Date();let y = d.getFullYear();return y;}
-function notification(type, notif) {
-    $("#notification").hide("fade", 200);
-    if(getCookie("notifications") == "min" && type != "err") {
-        return;
-    }
-    setTimeout(() => {
-      if(type == "copy") {
-        $("#notifications").html(`
-        <div class="alert w-100" style="width:260px;max-width: 260px;">
-            <div class="icon">&copy;</div>
-            <div class="text">2017-`+currentyear()+`, INDIAN NEPALI SWAD.</div>
-        </div>
-        `);
-        console.log("&copy;2017-"+currentyear()+", INDIAN NEPALI SWAD.");
-      }
-      if(type == "err") {
-        $("#notifications").html(`
-        <div class="alert error">
-            <div class="icon bx bx-info-circle"></div>
-            <div class="text">Erreur</div>
-        </div>
-        `);
-        console.log("Erreur" + ": " + notif);
-      }
-      if(type == "error") {
-        $("#notifications").html(`
-        <div class="alert error">
-            <div class="icon bx bx-info-circle"></div>
-            <div class="text">${notif}</div>
-        </div>
-        `);
-        console.log("Erreur" + ": " + notif);
-      }
-      if(type == "ok") {
-        $("#notifications").html(`
-        <div class="alert success">
-            <div class="icon bx bx-check"></div>
-            <div class="text">${notif}</div>
-        </div>
-        `);
-        console.log("Succès" + ": " + notif);
-      }
-      if(type == "notif") {
-        $("#notifications").html(`
-        <div class="alert">
-            <div class="icon bx bx-info-circle"></div>
-            <div class="text">${notif}</div>
-        </div>
-        `);
-        console.log("Notification" + ": " + notif);
-      }
-      $("#notification").show("fade", 200);
-      setTimeout(() => {
-          $("#notification").hide("fade", 200);
-      }, 2000);
-    }, 400);
-}
-function systemtheme() {
-  $('#theme').val("system");
-  if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.documentElement.setAttribute('data-bs-theme', 'dark');
-    if(!$(':root').hasClass('dark')) {
-      $(':root').addClass('dark');
-    }
-    notification("ok", "Theme sombre.");
-  } else {
-    document.documentElement.setAttribute('data-bs-theme', 'light');
-    if($(':root').hasClass('dark')) {
-      $(':root').removeClass('dark');
-    }
-    notification("ok", "Theme claire.");
-  }
-  setCookie('theme', 'system', 60);
-}
-function darktheme() {
-  document.documentElement.setAttribute('data-bs-theme', 'dark');
-  $('#theme').val("dark");
-  if(!$(':root').hasClass('dark')) {
-    $(':root').addClass('dark');
-  }
-  setCookie('theme', 'dark', 60);
-  notification("ok", "Theme sombre.");
-}
-function lighttheme() {
-  document.documentElement.setAttribute('data-bs-theme', 'light');
-  $('#theme').val("light");
-  if($(':root').hasClass('dark')) {
-    $(':root').removeClass('dark');
-  }
-  setCookie('theme', 'light', 60);
-  notification("ok", "Theme claire.");
-}
-</script>
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-:root {
---first-color: #111111;
---title-color: #000000;
---text-color: #000000;
---header-shadow: #e6e6e666;
---form-color: #707070;
---header-scrolled: #fff8f8ba;
---bg-color: #ffffff;
---scrollbarbg: #fffafa;
---whiteindark: brightness(1) invert(0);
---map-tiles-filter: brightness(1) saturate(1) contrast(1);
---loader: #ffb547;
---body-color: #ffffff;
---sidebar-color: #FFF;
---primary-color: #fe5c5c;
---primary-color-light: #F6F5FF;
---toggle-color: #DDD;
---text-color: #707070;
---border-color: #414141;
---dark-color: #000000;
-/* ====== Transition ====== */
---tran-03: all 0.2s ease;
---tran-03: all 0.3s ease;
---tran-04: all 0.3s ease;
---tran-05: all 0.3s ease;
---scrollbarcolor: #3a2811;
---scrollbarbg: #412525;
-
-}
-:root.dark {
---first-color: #ffffff;
---title-color: #fff5f5;
---text-color: #ffffff;
---header-shadow: hsla(0, 0%, 12%, 0.4);
---header-scrolled: #000000;
---bg-color: #0f0f0f;
---form-color: #ffffff;
---scrollbarbg: #1e1e1e;
---whiteindark: brightness(0.2) invert(1);
---map-tiles-filter: invert(1) contrast(1) brightness(1.2);
---legend: invert(1) contrast(0.8) brightness(1);
---loader: #ffffff;
---body-color: #0f0f0f;
---sidebar-color: #262524;
---primary-color: #3c3b3a;
---primary-color-light: #3c3b3a;
---toggle-color: #fff;
---text-color: #ccc;
---border-color: #acacac;
---scrollbarcolor: #e6e6e6;
---scrollbarbg: #412525;
---dark-color: #ffffff;
-}
 * {
-box-sizing: border-box;
-padding: 0;
-margin: 0;
-}
-body {
-color: var(--text-color);
-background-color: var(--bg-color);
-height: fit-content;
-max-width: 100%;
-min-height: 100vh;
-padding-top: 80px;
-overflow-y: auto;
-overflow-x: hidden;
-}
-.preloader {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: 9999;
-text-align: center;
-background-color: var(--bg-color);
-color: var(--text-color);
-background-position: center;
-}
-.loaderall {
-position: fixed;
-z-index: 10000;
-bottom: 40px;
-text-align: center;
-padding: 20px;
-font-size: 20px;
-}
-.loader {
-display: inline-block;
-text-align: center;
-margin-top: 100px;
-line-height: 86px;
-text-align: center;
-position: relative;
-padding: 0 48px;
-font-size: 48px;
-font-family: Arial, Helvetica, sans-serif;
-border-radius: 1em;
-color: var(--loader);
-}
-.loader:before, .loader:after {
-content: "";
-display: block;
-width: 40px;
-height: 40px;
-border-radius: 6px;
-background: currentColor;
-position: absolute;
-animation: load 1s infinite alternate ease-in-out;
-opacity: 0.8;
-top: 0;
-}
-.loader:after {
-animation: load 2s infinite alternate-reverse ease-in-out;
-top: 0;
-}
-.loader:after {
-top: auto;
-bottom: 0;
-}
-@keyframes load {
-  0% {
-    left: 0;
-    height: 100%;
-    width: 40px;
-    transform: translateX(0);
-  }
-  10% {
-    height: 40px;
-    width: 40px;
-    left: 0;
-  }
-  25% {
-    height: 40px;
-    width: 100%;
-  }
-  40% {
-    height: 40px;
-    width: 40px;
-    left: 100%;
-  }
-  50% {
-    left: 100%;
-    height: 100%;
-    width: 40px;
-    transform: translateX(-100%);
-  }
-  60% {
-    height: 40px;
-    width: 40px;
-    left: 100%;
-  }
-  70% {
-    height: 40px;
-    width: 100%;
-  }
-  80% {
-    height: 40px;
-    width: 100%;
-    left: 0;
-  }
-  90% {
-    height: 40px;
-    width: 40px;
-    left: 0;
-  }
-  100% {
-    left: 0;
-    height: 100%;
-    width: 40px;
-    transform: translateX(0);
-  }
-}
-body:has(.sidebar:not(.close)){
-overflow-y: hidden;
-overflow-x: hidden;
-}
-::-moz-selection {
-color: #ffffff;
-background: #ff4314;
-}
-
-::selection {
-color: #ffffff;
-background: #ff4314;
-}
-a {
-color: #4d6dff;
-}
-.form-select, .form-control {
-color: var(--text-color);
-background-color: var(--bg-color);
-}
-#cookies {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-width: 100%;
-max-height: 100vh;
-padding: 1em 2em;
-pointer-events: none;
-opacity: 0;
-z-index: -8;
-overflow-x: hidden;
-overflow-y: auto;
-background-color: #00000080;
-transition: all 0.6s ease-in-out;
-}
-#cookies.shown {
-opacity: 1;
-pointer-events: all;
-z-index: 9996;
-}
-button {
--webkit-box-pack: center !important;
--ms-flex-pack: center !important;
--webkit-box-align: center !important;
--ms-flex-align: center !important;
-margin: 0px !important;
-position: relative !important;
-display: -webkit-inline-box !important;
-display: -moz-inline-box !important;
-display: -ms-inline-flexbox !important;
-display: -webkit-inline-flex !important;
-display: inline-flex !important;
--webkit-align-items: center !important;
-align-items: center !important;
--webkit-justify-content: center !important;
-justify-content: center !important;
-outline: none !important;
-text-decoration: none !important;
--moz-box-sizing: border-box !important;
-box-sizing: border-box !important;
--ms-touch-action: manipulation !important;
-touch-action: manipulation !important;
--webkit-user-select: none !important;
--moz-user-select: none !important;
--ms-user-select: none !important;
-user-select: none !important;
-cursor: default !important;
-}
-#contextmenu {
-position: absolute;
-top: 0;
-left: 0;
-background-color: var(--bg-color);
-z-index: 9999;
-width: 240px;
-padding-top: 8px;
-padding-bottom: 8px;
-box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.6);
-border-radius: 10px;
-transition: all 0.1s ease-in-out;
-display: none;
-}
-#contextmenu .hr {
-height: 1px;
-padding: 0;
-margin: 0;
-margin-top: 2px;
-margin-bottom: 2px;
-border-bottom: 1px solid var(--border-color);
-}
-.listcontext .itemcontext {
-position: relative;
-padding: 10px;
-font-size: 14px;
-color: var(--text-color);
-cursor: pointer;
-}
-.listcontext .itemcontext i {
-display: inline-block;
-width: 20px;
-margin-right: 6px;
-cursor: pointer;
-}
-.legend.leaflet-control {
-padding: 6px 8px;
-padding-bottom: 0;
-margin-bottom: 14px;
-font: 14px Arial, Helvetica, sans-serif;
-background: var(--bg-color);
-border-radius: 1em;
-line-height: 24px;
-color: var(--first-color);
-text-align: start;
-opacity: 0.8;
-filter: var(--legend);
-cursor: help;
-}
-.legend.leaflet-control:hover {
-opacity: 1;
-}
-#contextmenu .listcontext .itemcontext:before {
-content: "";
-position: absolute;
-top: 0px;
-left: 0px;
-width: 0%;
-height: 100%;
-background-color: var(--title-color);
-border-top-right-radius: 1em;
-border-bottom-right-radius: 1em;
-z-index: -1;
-transition: all 0.2s ease-in-out;
-}
-#contextmenu .listcontext .itemcontext:hover:before {
-width: 100%;
-border-radius: 0;
-}
-#contextmenu .listcontext .itemcontext:hover {
-color: var(--bg-color);
-}
-#contextmenu .no-border {
-border-bottom: none;
-border: none;
-}
-.pointer {
-cursor: pointer;
-}
-.leaflet-bottom.leaflet-right {
-z-index: 999;
-}
-.leaflet-control-scale.leaflet-control .leaflet-control-scale-line:nth-child(2) {
-display: none;
-}
-.leaflet-control-scale.leaflet-control .leaflet-control-scale-line:nth-child(1) {
-border: 2px solid var(--text-color);
-background-color: var(--bg-color);
-color: var(--text-color);
-border-radius: 4px;
-filter: var(--legend);
-}
-#notification {
-position: fixed;
-top: 10px;
-width: 100%;
-height: fit-content;
-max-height: 100vh;
-overflow: hidden;
-background-color: transparent;
-z-index: 99999;
-display: flex;
-justify-content: center;
-pointer-events: none;
-}
-#notifications {
-display: flex;
-justify-content: center;
-flex-direction: column;
-}
-#notifications div.alert {
-padding: 6px 10px;
-margin: 6px;
-width: 140px;
-max-width: 200px;
-font-size: 18px;
-border-radius: 6px;
-background-color: var(--text-color);
-color: var(--bg-color);
-margin-bottom: 15px;
-display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-#notifications div.alert .icon {
-position: absolute;
-left: 6px;
-color: var(--bg-color);
-background-color: var(--text-color);
-}
-#notifications div.alert.error {
-background-color: var(--bs-red);
-color: #ffffff;
-}
-#notifications div.alert.error .icon {
-background-color: var(--bs-red);
-color: #ffffff;
-}
-#notifications div.alert.success {
-background-color: var(--bs-green);
-color: #ffffff;
-}
-#notifications div.alert.success .icon {
-background-color: var(--bs-green);
-color: #ffffff;
-}
-#notification div.alert .text {
-padding-left: 16px;
-font-size: 14px;
-}
-.leaflet-control-attribution.leaflet-control {
-border-top-left-radius: 10px;
-padding: 6px 10px;
-}
-.leaflet-control-zoom.leaflet-bar.leaflet-control {
-border-radius: 10px;
-overflow: hidden;
-}
-#menubar {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-width: 100%;
-z-index: 99;
-height: 60px;
-background-color: var(--bg-color);
-}
-#menubar #menubar-items {
-display: flex;
-justify-content: end;
-align-items: center;
-height: 60px;
-padding-right: 14px;
-}
-#menubar #menubar-items li{
-margin-left: 10px;
-list-style: none;
-}
-#menubar #menubar-items li .navlinks{
-padding: 10px 14px;
-padding-left: 0px;
-margin-left: 0px;
-color: var(--text-color);
-background-color: var(--header-scrolled);
-text-decoration: none;
-}
-.container {
-padding: 10px;
-padding-left: 60px;
-}
-::-webkit-scrollbar {
-width: 8px;
-}
-.sidebar .bx.bx-chevron-right.toggle.transition2 {
-color: #ffffff;
-transition: all 0.1s ease-in-out;
-}
-.sidebar:not(.close) .image-text .image {
-width: 100%;
-}
-.sidebar.close header .image-text .image p {
-display: none;
-}
-.sidebar:not(.close) header .image-text .image p {
-display: block;
-position: absolute;
-top: 40px;
-}
-.sidebar:not(.close) header .image-text .image {
-padding-bottom: 20px;
-}svg {
-fill: var(--text-color);
-}
-.hovershadow {
-box-shadow: 4px 4px -10px transparent;
-cursor: pointer;
-transition: box-shadow 0.2s ease-in-out;
-}
-.hovershadow:hover {
-box-shadow: 2px 2px 6px #87878760;
-}
-.menu {
-  font-family: sans-serif;
-  font-size: 14px;
-}
-
-.menu-group {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5em;
-  padding: 1.5em 0;
-}
-
-.menu-item {
-  display: flex;
-}
-
-.menu-item-img {
-  width: 80px;
-  height: 80px;
-  flex-shrink: 0;
-  object-fit: cover;
-  margin-right: 1.5em;
-}
-
-.menu-item-text {
-  flex-grow: 1;
-}
-
-.menu-item-heading {
-  display: flex;
-  justify-content: space-between;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.menu-item-name {
-  margin-right: 1.5em;
+html,
+body {
+  height: 100%;
+}
+:root {
+  --bg: #faf5f0;
+  --bg-soft: #f5eee6;
+  --bg-elevated: #ffffff;
+  --text-main: #231916;
+  --text-soft: #7b6f68;
+  --text-muted: #a49a92;
+  --accent-primary: #f25a2b;
+  --accent-primary-soft: rgba(242, 90, 43, 0.12);
+  --accent-primary-soft-strong: rgba(242, 90, 43, 0.18);
+  --accent-delivery: #00ccbc;
+  --accent-delivery-soft: rgba(0, 204, 188, 0.16);
+  --accent-delivery-strong: #01b9ac;
+  --border-subtle: #e4d9ce;
+  --border-strong: #d4c6b8;
+  --shadow-soft: 0 18px 60px rgba(107, 78, 61, 0.14);
+  --shadow-strong: 0 30px 80px rgba(40, 22, 13, 0.2);
+  --radius-xl: 40px;
+  --radius-lg: 30px;
+  --radius-md: 22px;
+  --radius-sm: 14px;
+  --radius-pill: 999px;
+  --t-fast: 0.18s ease;
+  --t-med: 0.32s ease-out;
+  --t-slow: 0.6s ease;
+  --scrollbar-bg: #f1e5d6;
+  --scrollbar-thumb: #c59d7a;
+  --scrollbar-thumb-hover: #b27f58;
 }
 
-.menu-item-desc {
+body.theme-dark {
+  --bg: #070404;
+  --bg-soft: #130b08;
+  --bg-elevated: #141010;
+  --text-main: #fdf7f2;
+  --text-soft: #c1b2a8;
+  --text-muted: #8f847c;
+  --accent-primary: #ff6a38;
+  --accent-primary-soft: rgba(255, 106, 56, 0.2);
+  --accent-primary-soft-strong: rgba(255, 106, 56, 0.28);
+  --accent-delivery: #00e0ce;
+  --accent-delivery-soft: rgba(0, 224, 206, 0.2);
+  --accent-delivery-strong: #00d6c4;
+  --border-subtle: rgba(255, 255, 255, 0.16);
+  --border-strong: rgba(255, 255, 255, 0.3);
+  --shadow-soft: 0 22px 80px rgba(0, 0, 0, 0.7);
+  --shadow-strong: 0 36px 120px rgba(0, 0, 0, 0.95);
+  --scrollbar-bg: #120c09;
+  --scrollbar-thumb: #4b3527;
+  --scrollbar-thumb-hover: #6c4a33;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: var(--bg);
+  color: var(--text-main);
+  overflow-y: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font: inherit;
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
+}
+
+.hero-shell {
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.94),
+    rgba(255, 252, 246, 0.98)
+  );
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.theme-dark .hero-shell {
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 106, 56, 0.16),
+    rgba(20, 12, 9, 1)
+  );
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.hero-shell-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero-shell-bg-image {
+  position: absolute;
+  inset: -80px;
+  background-image:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.68), rgba(250, 245, 240, 0.96)),
+    url("https://www.indian-nepaliswad.fr/Photo%20acceuil%201.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.65;
+  transform-origin: center;
+  transform: scale(1.08);
+}
+
+body.theme-dark .hero-shell-bg-image {
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.96)),
+    url("https://www.indian-nepaliswad.fr/Photo%20acceuil%201.jpg");
+  opacity: 0.95;
+  animation: zoomDark 22s ease-in-out infinite alternate;
+}
+
+.hero-shell-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(255, 198, 137, 0.1), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(255, 172, 128, 0.3), transparent 45%),
+    linear-gradient(to bottom right, rgba(255, 255, 255, 0.12), rgba(252, 244, 236, 0.1));
+  mix-blend-mode: screen;
+  opacity: 0.55;
+}
+
+body.theme-dark .hero-shell-bg-overlay {
+  background:
+    radial-gradient(circle at top left, rgba(255, 106, 56, 0.3), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(0, 204, 188, 0.22), transparent 50%);
+  mix-blend-mode: soft-light;
+  opacity: 1;
+}
+
+.hero-shell-bg-noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  background-size: 260px 260px;
+  mix-blend-mode: soft-light;
+  opacity: 0.4;
+}
+
+body.theme-dark .hero-shell-bg-noise {
+  opacity: 0.45;
+}
+
+.hero-top-bar-sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 40;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.96),
+    rgba(255, 255, 255, 0.82),
+    transparent
+  );
+  padding: 0.7rem 2.4rem 0.4rem;
+}
+
+body.theme-dark .hero-top-bar-sticky {
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 7, 5, 0.98),
+    rgba(10, 7, 5, 0.86),
+    transparent
+  );
+}
+
+@media (max-width: 1024px) {
+  .hero-top-bar-sticky {
+    padding: 0.65rem 1.8rem 0.4rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-top-bar-sticky {
+    padding: 0.6rem 1.1rem 0.4rem;
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0.3rem 2.4rem 1.6rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  flex: 1;
+  min-height: 0;
+}
+
+@media (max-width: 1024px) {
+  .hero-content {
+    padding: 0.3rem 1.8rem 1.4rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-content {
+    padding: 0.3rem 1.1rem 1.2rem;
+  }
+}
+
+.hero-header-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr) minmax(0, 1fr);
+  gap: 1.1rem;
+  align-items: center;
+}
+
+@media (max-width: 1040px) {
+  .hero-header-row {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+    grid-template-rows: auto auto;
+  }
+  .hero-header-search-wrap {
+    grid-column: 1 / -1;
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-header-right {
+    justify-self: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-header-right {
+    justify-self: flex-end;
+  }
+  .hero-header-search-wrap {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.hero-logo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.45rem 0.9rem 0.45rem 0.45rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(226, 210, 196, 0.9);
+  box-shadow: 0 12px 40px rgba(195, 164, 140, 0.35);
+}
+
+body.theme-dark .hero-logo-pill {
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 106, 56, 0.35),
+    rgba(16, 11, 8, 0.98)
+  );
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.92);
+}
+
+.hero-logo-symbol-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo-symbol-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-logo-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.04rem;
+}
+
+.hero-logo-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #111111;
+}
+
+.hero-logo-subline {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #a08c7e;
+}
+
+body.theme-dark .hero-logo-title {
+  color: #f9f3ec;
+}
+
+body.theme-dark .hero-logo-subline {
+  color: #b9a79a;
+}
+
+@media (max-width: 1360px) {
+  .hero-logo-title {
+    font-size: 0.96rem;
+    letter-spacing: 0.22em;
+  }
+  .hero-logo-pill {
+    gap: 0.5rem;
+    width: 300px;
+  }
+  #themeToggle, a.hero-pickup-pill { display: none; }
+}
+
+.hero-header-search-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-search-shell {
+  width: min(560px, 100%);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 14px 48px rgba(148, 125, 109, 0.35);
+  border: 1px solid rgba(223, 209, 196, 0.9);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.2rem 0.3rem 0.2rem 0.65rem;
+}
+
+body.theme-dark .hero-search-shell {
+  background: rgba(14, 10, 8, 0.98);
+  border-color: rgba(255, 255, 255, 0.24);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.9);
+}
+
+.hero-search-icon {
+  font-size: 1.1rem;
+  color: #b49b8a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.theme-dark .hero-search-icon {
+  color: #e0cabc;
+}
+
+.hero-search-input-wrap {
+  flex: 1;
+  position: relative;
+}
+
+.hero-search-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.hero-search-input::placeholder {
+  color: #b6a79b;
+}
+
+body.theme-dark .hero-search-input::placeholder {
+  color: #9e8e83;
+}
+
+.hero-search-kbd {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.22rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(247, 241, 235, 0.98);
+  border: 1px solid rgba(213, 197, 185, 0.9);
+  font-size: 0.7rem;
+  color: #7a6f68;
+}
+
+.hero-search-kbd span {
+  display: inline-flex;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid rgba(196, 180, 168, 0.8);
+  padding: 0 0.25rem;
+  font-size: 0.7rem;
+  color: #796b63;
+}
+
+body.theme-dark .hero-search-kbd {
+  background: rgba(20, 14, 10, 0.9);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #cabcaf;
+}
+
+body.theme-dark .hero-search-kbd span {
+  background: rgba(0, 0, 0, 0.9);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #f2e3d7;
+}
+
+.hero-header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.7rem;
+}
+
+.hero-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(224, 207, 191, 0.9);
+  font-size: 0.78rem;
+  color: #7c6f66;
+  box-shadow: 0 10px 26px rgba(210, 186, 164, 0.4);
+}
+
+body.theme-dark .hero-theme-toggle {
+  background: rgba(19, 14, 10, 0.98);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #cfc0b3;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.9);
+}
+
+.hero-theme-icon-wrap {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffe5b7, #f7b85b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #7b4816;
+}
+
+body.theme-dark .hero-theme-icon-wrap {
+  background: radial-gradient(circle at top, #19121a, #050308);
+  color: #f9e9c9;
+}
+
+.hero-theme-label {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero-pickup-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.26rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(224, 207, 191, 0.9);
+  font-size: 0.78rem;
+  color: #7c6f66;
+}
+
+body.theme-dark .hero-pickup-pill {
+  background: rgba(17, 12, 9, 0.98);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #c9bbae;
+}
+
+.hero-pickup-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--accent-primary-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #a54822;
+}
+
+body.theme-dark .hero-pickup-icon {
+  background: var(--accent-primary-soft);
+  color: #ffd8b5;
+}
+
+.settings-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(224, 207, 191, 0.9);
+  color: #7c6f66;
+  box-shadow: 0 10px 26px rgba(210, 186, 164, 0.4);
+  font-size: 1.1rem;
+}
+
+body.theme-dark .settings-btn {
+  background: rgba(19, 14, 10, 0.98);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #cfc0b3;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.9);
+}
+
+.hero-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.1fr);
+  gap: 1.3rem;
+  margin-top: 1.3rem;
+  min-height: 0;
+}
+
+@media (max-width: 1024px) {
+  .hero-main-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.hero-left {
+  padding: 1.5rem 1.6rem 1.3rem 1.3rem;
+  border-radius: var(--radius-lg);
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 161, 127, 0.24),
+    rgba(255, 255, 255, 0.98)
+  );
+  border: 1px solid rgba(229, 213, 198, 0.96);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 0;
+}
+
+body.theme-dark .hero-left {
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 106, 56, 0.24),
+    rgba(16, 10, 7, 0.98)
+  );
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.96);
+}
+
+@media (max-width: 640px) {
+  .hero-left {
+    padding: 1.3rem 1.1rem 1.1rem;
+  }
+}
+
+.hero-col {
+  background: radial-gradient(
+    circle at top left,
+    rgba(0, 0, 0, 0.04),
+    rgba(119, 0, 0, 0.1)
+  );
+  padding: 1.5rem 1.6rem 1.3rem 1.3rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-left-eyebrow-line {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--text-soft);
+  flex-wrap: wrap;
+}
+
+.hero-eyebrow-pill {
+  padding: 0.16rem 0.7rem;
+  border-radius: 999px;
+  background: var(--accent-primary-soft);
+  border: 1px solid rgba(242, 90, 43, 0.4);
+  color: #a7421c;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+body.theme-dark .hero-eyebrow-pill {
+  color: #ffd8c0;
+  border-color: rgba(255, 106, 56, 0.7);
+}
+
+.hero-eyebrow-divider {
+  width: 28px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(152, 129, 114, 0.4),
+    rgba(152, 129, 114, 0)
+  );
+}
+
+.hero-eyebrow-text {
+  font-size: 0.8rem;
+  color: var(--text-soft);
+}
+
+.hero-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.hero-title-main {
+  font-size: clamp(2.2rem, 4.2vw, 3.3rem);
+  line-height: 1.06;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-main);
+}
+body.theme-dark .hero-title-main {
+  background: linear-gradient(to bottom, #fff9f3, #f8e2cd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-title-sub {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  max-width: 32rem;
   line-height: 1.6;
 }
-.link-cat, .footer-cat-links, .footer-cat-links li a, .link-cat .footer-toggle {
-color: var(--text-color);
+
+.hero-tags-line {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.1rem;
+}
+@media (max-width: 840px) {
+  .hero-title-sub {
+    font-size: 0.9rem;
+  }
+  
+  .hero-tags-line {
+    display: none;
+  }
 }
 
-.footer-cat-links li a:after, .footer-toggle, .footer-toggle::after {
-color: var(--text-color);
-background-color: var(--text-color);
+
+.hero-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.96);
+  font-size: 0.78rem;
+  color: var(--text-soft);
 }
-.sidebar li a:hover i img {
-filter: brightness(0) invert(1);
+
+body.theme-dark .hero-tag-pill {
+  background: rgba(15, 10, 7, 0.96);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: var(--text-muted);
 }
-@media screen and (min-width: 999px) {
-  .menu {
-  font-size: 16px;
-  }
-  .menu-group {
-  grid-template-columns: repeat(2, 1fr);
-  }
-  .menu-item-img {
-  width: 125px;
-  height: 125px;
-  }
+
+.hero-tag-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--accent-primary);
 }
-@media screen and (max-width: 999px) {
-    .leaflet-control-attribution.leaflet-control a, .leaflet-control-attribution.leaflet-control span {
-    display: none;
-    } 
-    .sidebar{
-    height: 100vh;
+
+.hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+}
+
+.hero-phone-cta {
+  border-radius: 999px;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--accent-primary),
+    #ff7d45
+  );
+  color: #fffdf7;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.83rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 18px 54px rgba(242, 90, 43, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.hero-phone-cta i {
+  font-size: 1.05rem;
+}
+
+.hero-phone-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 70px rgba(242, 90, 43, 0.8);
+}
+
+.hero-cta-secondary {
+  border-radius: 999px;
+  padding: 0.78rem 1.4rem;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid var(--border-strong);
+  color: #5f4e45;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  box-shadow: 0 14px 46px rgba(171, 144, 124, 0.5);
+}
+
+body.theme-dark .hero-cta-secondary {
+  background: rgba(19, 12, 9, 0.96);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #f8e6d7;
+  box-shadow: 0 20px 65px rgba(0, 0, 0, 0.9);
+}
+
+.hero-cta-secondary i {
+  font-size: 1rem;
+}
+
+.hero-cta-text-link {
+  border-radius: 999px;
+  padding: 0.74rem 1.2rem;
+  background: transparent;
+  border: 1px dashed rgba(167, 151, 137, 0.7);
+  color: var(--text-soft);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hero-cta-text-link i {
+  font-size: 1rem;
+}
+
+.hero-cta-text-link:hover {
+  border-style: solid;
+  color: var(--text-main);
+}
+
+.hero-lower-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  flex-wrap: wrap;
+}
+
+.hero-rating-block {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.hero-rating-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.04rem;
+  color: #f7b500;
+  font-size: 0.82rem;
+}
+
+.hero-rating-text-main {
+  color: var(--text-main);
+}
+
+.hero-rating-text-sub {
+  color: var(--text-soft);
+}
+
+body.theme-dark .hero-rating-text-main {
+  color: #fff4e4;
+}
+
+.hero-open-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 6px solid var(--border-subtle);
+  color: var(--text-soft);
+}
+.hero-open-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+.hero-open-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #28a745; /* vert */
+  border: 6px solid rgba(40, 167, 69, 0.4);
+  opacity: 0.9;
+  box-shadow: 0 0 6px rgba(40, 167, 69, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Fermé */
+.hero-open-status.closed .hero-open-dot {
+  background: #dc3545; /* rouge */
+  border-color: rgba(220, 53, 69, 0.4);
+  box-shadow: 0 0 6px rgba(220, 53, 69, 0.5);
+  opacity: 0.85;
+}
+
+/* Conteneur (optionnel, pour un rendu plus propre) */
+.hero-open-status {
+  padding: 6px 12px;
+  border: 2px solid rgba(0,0,0,0.08);
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(4px);
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+/* Mode sombre */
+body.theme-dark .hero-open-status {
+  background: rgba(16, 10, 8, 0.6);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.theme-dark .hero-open-dot {
+  opacity: 0.85;
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.4);
+}
+
+body.theme-dark .hero-open-status.closed .hero-open-dot {
+  box-shadow: 0 0 8px rgba(220, 53, 69, 0.4);
+}
+
+
+.hero-time-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.98);
+  color: var(--text-soft);
+}
+
+body.theme-dark .hero-time-badge {
+  background: rgba(17, 12, 9, 0.98);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.hero-time-badge i {
+  font-size: 0.9rem;
+}
+
+.recent-searches {
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.recent-search-label {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.recent-search-chip {
+  border-radius: 999px;
+  padding: 0.18rem 0.6rem;
+  border: 1px solid rgba(197, 181, 166, 0.96);
+  background: rgba(255, 255, 255, 0.98);
+  font-size: 0.74rem;
+  color: #7a6b63;
+  cursor: pointer;
+  max-width: 140px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.recent-search-chip i {
+  font-size: 0.85rem;
+  color: #c1a793;
+}
+
+body.theme-dark .recent-search-chip {
+  background: rgba(15, 10, 7, 0.98);
+  border-color: rgba(255, 255, 255, 0.24);
+  color: #d6c4b7;
+}
+
+.recent-search-chip:hover {
+  border-color: var(--accent-primary);
+}
+
+@media (max-width: 720px) {
+  .hero-lower-line {
+    gap: 0.5rem;
+  }
+  .recent-searches {
+    margin-top: 0.2rem;
+  }
+  .hero-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-phone-cta,
+  .hero-cta-secondary,
+  .hero-cta-text-link {
     width: 100%;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    }
-    .sidebar.close{
-    width: 100px;
-    height: 60px;
-    background-color: transparent;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    }
-    .sidebar .bx.bx-chevron-right.toggle.transition2 {
-    transform: translateX(-14px) translateY(-16px);
-    }
-    .sidebar:not(.close) .bx.bx-chevron-right.toggle.transition2 {
-    transform: translateX(-20px) rotate(180deg);
-    }
-    .container {
-    padding: 10px;
-    padding-left: 10px;
-    }
+    justify-content: center;
+  }
 }
-.sidebar li a:hover i.icon, .sidebar li a:hover span.text.nav-text {
-color: #ffffff;
+
+.hero-right {
+  padding: 1.5rem 1.4rem 1.2rem 1.2rem;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(229, 213, 198, 0.96);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  min-height: 0;
+}
+
+body.theme-dark .hero-right {
+  background: radial-gradient(
+    circle at top right,
+    rgba(0, 224, 206, 0.16),
+    rgba(14, 10, 8, 0.97)
+  );
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.96);
+}
+
+@media (max-width: 1024px) {
+  .hero-right {
+    padding-top: 1.1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-right {
+    padding: 1.4rem 1.1rem 1.1rem;
+    gap: 1rem;
+  }
+}
+
+.hero-delivery-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.hero-delivery-pill {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.26rem 0.7rem;
+  border-radius: 999px;
+  background: var(--accent-delivery-soft);
+  border: 1px solid rgba(0, 204, 188, 0.5);
+  color: #07554f;
+  font-size: 0.76rem;
+}
+
+body.theme-dark .hero-delivery-pill {
+  color: #e6fff9;
+}
+
+.hero-delivery-pill i {
+  font-size: 0.95rem;
+}
+
+.hero-delivery-text-main {
+  font-size: 0.88rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.hero-delivery-text-sub {
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  max-width: 24rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .hero-delivery-text-sub {
+    font-size: 0.8rem;
+  }
+}
+
+.hero-delivery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 640px) {
+  .hero-delivery-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.hero-delivery-card {
+  padding: 0.9rem 0.9rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(227, 209, 194, 0.95);
+  box-shadow: 0 18px 50px rgba(187, 154, 130, 0.45);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: transform var(--t-med), box-shadow var(--t-med),
+    border var(--t-fast), background var(--t-fast);
+}
+
+body.theme-dark .hero-delivery-card {
+  background: rgba(16, 11, 8, 0.98);
+  border-color: rgba(255, 255, 255, 0.26);
+  box-shadow: 0 22px 80px rgba(0, 0, 0, 0.98);
+}
+
+.hero-delivery-main-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.hero-delivery-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.hero-delivery-name i {
+  font-size: 1.1rem;
+  color: var(--accent-delivery-strong);
+}
+
+.hero-delivery-chip {
+  font-size: 0.68rem;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(250, 231, 209, 0.9);
+  color: #866049;
+}
+
+body.theme-dark .hero-delivery-chip {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f5e0cf;
+}
+
+.hero-delivery-city {
+  font-size: 0.78rem;
+  color: var(--text-soft);
+}
+
+.hero-delivery-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+  margin-top: 0.28rem;
+  font-size: 0.75rem;
+  color: var(--text-soft);
+}
+
+.hero-delivery-pillmeta {
+  padding: 0.18rem 0.54rem;
+  border-radius: 999px;
+  background: rgba(250, 232, 213, 0.9);
+  border: 1px solid rgba(218, 189, 164, 0.9);
+  color: #7c5a44;
+}
+
+body.theme-dark .hero-delivery-pillmeta {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #f8e2cf;
+}
+
+.hero-delivery-meta-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.hero-delivery-meta-right i {
+  font-size: 0.9rem;
+}
+
+.hero-delivery-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 80px rgba(176, 133, 102, 0.72);
+  border-color: rgba(242, 90, 43, 0.65);
+}
+
+body.theme-dark .hero-delivery-card:hover {
+  box-shadow: 0 28px 100px rgba(0, 0, 0, 1);
+  border-color: rgba(0, 224, 206, 0.9);
+}
+
+.hero-map-shell {
+  margin-top: 0.9rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(224, 207, 191, 0.98);
+  box-shadow: 0 18px 60px rgba(182, 149, 124, 0.45);
+  padding: 0.8rem 0.85rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  min-height: 0;
+  flex: 1;
+}
+
+body.theme-dark .hero-map-shell {
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 106, 56, 0.19),
+    rgba(16, 11, 9, 0.97)
+  );
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.98);
+}
+
+.hero-map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.hero-map-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.16rem;
+}
+
+.hero-map-title {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.hero-map-sub {
+  font-size: 0.76rem;
+  color: var(--text-soft);
+}
+
+.hero-map-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(220, 204, 189, 0.98);
+  font-size: 0.76rem;
+  color: var(--text-soft);
+}
+
+body.theme-dark .hero-map-switch {
+  background: rgba(15, 10, 7, 0.98);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.hero-map-switch i {
+  font-size: 0.9rem;
+}
+
+.hero-map-main {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(220, 200, 183, 0.95);
+  background: #f3e9de;
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+body.theme-dark .hero-map-main {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: #221410;
+}
+
+.hero-map-main span {
+  font-size: 0.8rem;
+  color: var(--text-soft);
+  text-align: center;
+}
+
+.hero-map-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-top: 0.35rem;
+  font-size: 0.76rem;
+  color: var(--text-soft);
+  flex-wrap: wrap;
+}
+
+.hero-map-footer-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.hero-map-footer-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(221, 205, 191, 0.96);
+  color: var(--text-soft);
+}
+
+body.theme-dark .hero-map-footer-pill {
+  background: rgba(16, 11, 8, 0.98);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.hero-map-footer-pill i {
+  font-size: 0.86rem;
+}
+
+.hero-map-footer-right {
+  text-align: right;
+}
+
+@media (max-width: 720px) {
+  .hero-map-footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-map-footer-right {
+    text-align: left;
+  }
+}
+
+.cookies-banner {
+  position: fixed;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(420px, calc(100% - 2.4rem));
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(214, 198, 182, 0.98);
+  box-shadow: 0 22px 80px rgba(156, 129, 107, 0.6);
+  padding: 0.9rem 1rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+  color: #6f6158;
+  z-index: 999;
+}
+
+body.theme-dark .cookies-banner {
+  background: rgba(16, 11, 8, 0.98);
+  border-color: rgba(255, 255, 255, 0.26);
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.98);
+  color: #d3c0b1;
+}
+
+.cookies-header-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.cookies-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-main);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.cookies-title i {
+  font-size: 1rem;
+  color: var(--accent-primary);
+}
+
+.cookies-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--accent-primary);
+}
+
+.cookies-body-text {
+  line-height: 1.5;
+}
+
+.cookies-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.1rem;
+}
+
+.cookies-btn {
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(196, 180, 165, 0.96);
+  background: rgba(255, 255, 255, 0.98);
+  font-size: 0.78rem;
+  color: #796b62;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+body.theme-dark .cookies-btn {
+  background: rgba(16, 11, 8, 0.98);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #d2c1b2;
+}
+
+.cookies-btn i {
+  font-size: 0.9rem;
+}
+
+.cookies-btn-primary {
+  background: var(--accent-primary);
+  border-color: transparent;
+  color: #fffdf7;
+}
+
+.cookies-btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+.settings-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.48);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 1.2rem;
+}
+
+.settings-overlay.visible {
+  display: flex;
+}
+
+.settings-panel {
+  width: min(420px, 100%);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(214, 198, 182, 0.98);
+  box-shadow: 0 24px 90px rgba(156, 129, 107, 0.8);
+  padding: 1.1rem 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+body.theme-dark .settings-panel {
+  background: rgba(16, 11, 8, 0.98);
+  border-color: rgba(255, 255, 255, 0.24);
+  box-shadow: 0 28px 100px rgba(0, 0, 0, 1);
+  color: #d3c0b1;
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.settings-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.settings-title i {
+  font-size: 1.1rem;
+  color: var(--accent-primary);
+}
+
+body.theme-dark .settings-title {
+  color: #fdf7f2;
+}
+
+.settings-close-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(214, 198, 182, 0.98);
+  color: #7a6f68;
+  font-size: 1.1rem;
+}
+
+body.theme-dark .settings-close-btn {
+  background: rgba(17, 12, 9, 0.98);
+  border-color: rgba(255, 255, 255, 0.24);
+  color: #d3c0b1;
+}
+
+.settings-section {
+  border-top: 1px solid rgba(214, 198, 182, 0.8);
+  padding-top: 0.55rem;
+  margin-top: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  color: var(--text-soft);
+}
+
+body.theme-dark .settings-section {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.settings-section-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+}
+
+.settings-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.settings-item-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.settings-item-title {
+  font-size: 0.8rem;
+  color: var(--text-main);
+}
+
+body.theme-dark .settings-item-title {
+  color: #fdf7f2;
+}
+
+.settings-item-sub {
+  font-size: 0.75rem;
+  color: var(--text-soft);
+}
+
+.settings-toggle {
+  position: relative;
+  width: 40px;
+  height: 22px;
+}
+
+.settings-toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.settings-slider {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: rgba(210, 194, 180, 0.7);
+  transition: background var(--t-fast);
+}
+
+.settings-slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #ffffff;
+  left: 2px;
+  top: 2px;
+  transition: transform var(--t-fast);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.settings-toggle input:checked + .settings-slider {
+  background: var(--accent-primary);
+}
+
+.settings-toggle input:checked + .settings-slider::before {
+  transform: translateX(18px);
+}
+
+.settings-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.settings-footer a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.search-suggestions-panel {
+  position: absolute;
+  left: -20px;
+  min-width: 300px;
+  right: -20px;
+  width: calc(100% + 40px);
+  top: calc(100% + 0.4rem);
+  z-index: 30;
+  display: none;
+}
+
+.search-suggestions-inner {
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.99);
+  border: 1px solid rgba(223, 209, 196, 0.95);
+  box-shadow: 0 20px 60px rgba(148, 125, 109, 0.4);
+  overflow: hidden;
+}
+
+body.theme-dark .search-suggestions-inner {
+  background: rgba(14, 10, 8, 0.98);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 22px 80px rgba(0, 0, 0, 0.95);
+}
+
+.search-suggestions-list {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.search-suggestion-item {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr) auto;
+  gap: 0.6rem;
+  padding: 0.6rem 0.75rem;
+  align-items: center;
+  cursor: pointer;
+  transition: background var(--t-fast);
+}
+
+.search-suggestion-item:hover,
+.search-suggestion-item.active {
+  background: rgba(247, 241, 235, 0.9);
+}
+
+body.theme-dark .search-suggestion-item:hover,
+body.theme-dark .search-suggestion-item.active {
+  background: rgba(24, 17, 13, 0.96);
+}
+
+.search-suggestion-thumb {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f3e9de;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #a08c7e;
+}
+
+.search-suggestion-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 0.8rem;
+}
+
+.search-suggestion-name {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+body.theme-dark .search-suggestion-name {
+  color: #fdf7f2;
+}
+
+.search-suggestion-meta {
+  font-size: 0.75rem;
+  color: var(--text-soft);
+}
+
+.search-suggestion-price {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent-primary);
+}
+
+.search-suggestions-footer {
+  padding: 0.45rem 0.75rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: rgba(250, 245, 238, 0.96);
+}
+
+body.theme-dark .search-suggestions-footer {
+  background: rgba(18, 13, 10, 0.98);
+}
+
+.search-highlight {
+  font-weight: 600;
+  color: var(--accent-primary);
+}
+#map {
+  width: 100%;
+  height: 300px;
+  border-radius: 1rem;
+}
+.map-label {
+  background: rgba(0,0,0,0.65);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+body.theme-dark .map-label {
+  background: rgba(255,255,255,0.85);
+  color: #111;
+}
+
+.map-label-cluster {
+  background: #ff6a3d;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.leaflet-control-container {
+  pointer-events: none;
+  display: none !important;
+  opacity: 0 !important;
+}
+/* Style de base (thème clair par défaut) */
+.site-footer {
+  background: #f8f9fa;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.site-footer .footer-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.site-footer .footer-links li {
+  margin-bottom: 0.4rem;
+}
+
+.site-footer .footer-links a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-footer .footer-links a:hover {
+  color: #007bff;
+}
+
+.footer-social {
+  font-size: 1.4rem;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-social:hover {
+  color: #007bff;
+}
+
+/* ----------------------------- */
+/* THÈME SOMBRE (body.theme-dark) */
+/* ----------------------------- */
+body.theme-dark .site-footer {
+  background: #111;
+  color: #ddd;
+}
+
+body.theme-dark .site-footer a,
+body.theme-dark .footer-social {
+  color: #ddd;
+}
+
+body.theme-dark .site-footer a:hover,
+body.theme-dark .footer-social:hover {
+  color: #ffb703;
+}
+.btn-cta {
+  background: linear-gradient(135deg, #ff7a00, #ffb703);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.9rem 2.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: all 0.25s ease;
+}
+
+.btn-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  color: #fff;
+}
+
+.theme-dark .btn-cta {
+  background: linear-gradient(135deg, #ffb703, #ff7a00);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.1);
+}
+
+.theme-dark .btn-cta:hover {
+  box-shadow: 0 12px 28px rgba(255,255,255,0.2);
+}
+
+@keyframes zoomDark {
+  0% {
+    transform: scale(1.08) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.1) translate3d(0, -8px, 0);
+  }
+  100% {
+    transform: scale(1.12) translate3d(0, 0, 0);
+  }
 }
 </style>
 </head>
 <body>
-<div id="notification">
-    <div id="notifications">
-    </div>
-</div>
-<div id="menubar">
-  <div class="d-flex align-content-center justify-content-end">
-      <input autocomplete="off" type="search" id="searchbar" class="form-control rounded-top-0 w-100 h-100 form-control-lg" style="max-width: calc(100% - 140px);margin-right: 10px;height: 60px;text-overflow: ellipsis;" placeholder="Recherche (ctrl + « / » pour le focus)" />
+<div class="hero-shell">
+  <div class="hero-shell-bg">
+    <div class="hero-shell-bg-image"></div>
+    <div class="hero-shell-bg-overlay"></div>
+    <div class="hero-shell-bg-noise"></div>
   </div>
-</div>
-<nav class="sidebar close">
-  <header>
-      <div class="image-text">
-          <span class="image">
-              <img src="https://www.indian-nepaliswad.fr/etc/android-chrome-512x512.png" alt="" style="filter: var(--whiteindark);">
-              <p>INDIAN NEPALI SWAD</p>
-          </span>
-      </div>
-      <i class='bx bx-chevron-right toggle transition2'></i>
-      <hr>
-  </header>
-  <div class="menu-bar">
-      <div class="menu">
-          <li class="search-box">
-              <i class='bx bx-search icon' id="focusfilternav"></i>
-              <input type="text" placeholder="Filtrer..." id="filternav" style="border-top: none;">
-          </li>
-          <ul class="menu-links p-0" id="tofilternavbar">
-              <li class="nav-link" title="Acceuil">
-                  <a href="https://www.indian-nepaliswad.fr">
-                      <i class='bx bx-home-alt bx-tada-hover icon' ></i>
-                      <span class="text nav-text">Acceuil</span>
-                  </a>
-              </li>
-              <li class="nav-link" title="Voir Notre Carte">
-                <a href="#menus">
-                    <i class='bx bx-restaurant bx-tada-hover icon' ></i>
-                    <span class="text nav-text">Voir Notre Carte</span>
-                </a>
-            </li>
-            <hr>
-            <li class="nav-link" title="Nous Contacter">
-                <a href="tel:0145327373">
-                    <i class='bx bx-phone bx-tada-hover icon'></i>
-                    <span class="text nav-text">Nous Contacter</span>
-                </a>
-            </li>
-            <hr>
-            <li class="nav-link" title="Deliveroo Paris">
-                <a href="https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/">
-                    <i class='icon bx-tada-hover'><img src="https://www.indian-nepaliswad.fr/deliveroo-logo.png" alt="" width="30px"></i>
-                    <span class="text nav-text">Deliveroo Paris</span>
-                </a>
-            </li>
-            <li class="nav-link" title="Deliveroo Édition Bordeaux">
-                <a href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">
-                  <i class='icon bx-tada-hover'><img src="https://www.indian-nepaliswad.fr/deliveroo-logo.png" alt="" width="30px"></i>
-                    <span class="text nav-text">Édition Bordeaux</span>
-                </a>
-            </li>
-            <li class="nav-link" title="Deliveroo Courbevoie">
-                <a href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">
-                    <i class='icon bx-tada-hover'><img src="https://www.indian-nepaliswad.fr/deliveroo-logo.png" alt="" width="30px"></i>
-                    <span class="text nav-text">Édition Courbevoie</span>
-                </a>
-            </li>
-            <li class="nav-link" title="Deliveroo Édition St-Ouen">
-                <a href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers">
-                    <i class='icon bx-tada-hover'><img src="https://www.indian-nepaliswad.fr/deliveroo-logo.png" alt="" width="30px"></i>
-                    <span class="text nav-text">Édition St-Ouen</span>
-                </a>
-            </li>
-            <li class="nav-link" title="Deliveroo Édition Bagneux">
-                <a href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux">
-                  <i class='icon bx-tada-hover'><img src="https://www.indian-nepaliswad.fr/deliveroo-logo.png" alt="" width="30px"></i>
-                    <span class="text nav-text">Édition Bagneux</span>
-                </a>
-            </li>
-            <li class="nav-link" title="Deliveroo Édition Ivry">
-                <a href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry">
-                    <i class='icon bx-tada-hover'><img src="https://www.indian-nepaliswad.fr/deliveroo-logo.png" alt="" width="30px"></i>
-                    <span class="text nav-text">Édition Ivry</span>
-                </a>
-            </li>
-            <hr>
-            <li class="nav-link" title="Politique de confidentialité">
-                <a href="https://www.indian-nepaliswad.fr/policy.html">
-                    <i class='bx bxs-user-account bx-tada-hover icon'></i>
-                    <span class="text nav-text">Confidentialité</span>
-                </a>
-            </li>
-            <hr>
-            <li class="nav-link">
-              <a href="#menus" title="MENUS">
-                <i class='fa fa-dot-circle bx-tada-hover icon' ></i>
-                <span class="text nav-text">MENUS</span>
-              </a>
-            </li>
-            <li class="nav-link">
-              <a href="#naan" title="NAAN">
-                <i class='fa fa-dot-circle bx-tada-hover icon' ></i>
-                <span class="text nav-text">Pains Maisons</span>
-              </a>
-            </li>
-            <li class="nav-link">
-              <a href="#entrees" title="Nos Entrées">
-                <i class='fa fa-dot-circle bx-tada-hover icon' ></i>
-                <span class="text nav-text">Nos Entrées</span>
-              </a>
-            </li>
-            <li class="nav-link">
-              <a href="#special" title="Nos spécialités">
-                <i class='fa fa-dot-circle bx-tada-hover icon' ></i>
-                <span class="text nav-text">Nos spécialités</span>
-              </a>
-            </li>
-            <li class="nav-link">
-              <a href="#veg" title="Plats Végétariens">
-                <i class='fa fa-dot-circle bx-tada-hover icon' ></i>
-                <span class="text nav-text">Plats Végétariens</span>
-              </a>
-            </li>
-            <li class="nav-link">
-              <a href="#complet" title="Plat complet">
-                <i class='fa fa-dot-circle bx-tada-hover icon' ></i>
-                <span class="text nav-text">Plat complet</span>
-              </a>
-            </li>
-            <li class="nav-link">
-              <a href="#riz" title="RIZ">
-                <i class='fa fa-dot-circle bx-tada-hover icon' ></i>
-                <span class="text nav-text">RIZ</span>
-              </a>
-            </li>
-            <li class="nav-link">
-              <a href="#desserts" title="DESSERTS">
-                <i class='fa fa-dot-circle bx-tada-hover icon' ></i>
-                <span class="text nav-text">DESSERTS</span>
-              </a>
-            </li>
-            <li class="nav-link">
-              <a href="#softs" title="Boissons / Softs">
-                <i class='fa fa-dot-circle bx-tada-hover icon' ></i>
-                <span class="text nav-text">Boissons / Softs</span>
-              </a>
-            </li>
-            <hr>
-          </ul>
-      </div>
-      <div class="bottom-content pb-4">
-        <li class="nav-link">
-          <a href="#" title="&copy;2023, INDIAN NEPALI SWAD." onclick="notification('copy');">
-            <i class='bx bx-copyright bx-tada-hover icon' ></i>
-            <span class="text small colorall" style="font-size: 0.8em;">INDIAN NEPALI SWAD</span>
-          </a>
-        </li>
-        <li class="nav-link" style="margin-bottom: 10px;">
-          <a href="#" title="Supprimer vos données" class="bg-danger bg-opacity-25 text-dange" onclick="deleteAllCookies()">
-            <i class='fa fa-trash bx-tada-hover icon text-danger' ></i>
-            <span class="text small text-danger" style="font-size: 0.7em;">Supprimer vos données</span>
-          </a>
-        </li>
-          
-      </div>
-  </div>
-</nav>
-<div id="contextmenu">
-  <div class="listcontext">
-    <div class="itemcontext" onclick='window.location="https://www.google.com/maps/dir//4+Rue+Bargue,+75015+Paris";'>
-      <i class="fa fa-location-arrow"></i>
-      Venir prendre un emporter
-    </div>
-  </div>
-  <hr class="hr">
-  <div class="listcontext">
-    <div class="itemcontext" onclick="window.location='tel:0145327373';">
-      <i class="fa fa-phone-alt"></i>
-      Emportez - Paris
-    </div>
-  </div>
-  <hr class="hr">
-  <div class="listcontext">
-    <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/';">
-      <i class="fa fa-external-link-alt"></i>
-      Deliveroo - Paris
-    </div>
-  </div>
-  <div class="listcontext">
-    <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/';">
-        <i class="fa fa-external-link-alt"></i>Deliveroo - Bordeaux
-    </div>
-  </div>
-  <div class="listcontext">
-    <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/';">
-        <i class="fa fa-external-link-alt"></i>Deliveroo - Courbevoie
-    </div>
-  </div>
-  <div class="listcontext">
-    <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/';">
-        <i class="fa fa-external-link-alt"></i>Deliveroo - Saint Ouen
-    </div>
-  </div>
-  <div class="listcontext">
-    <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/';">
-        <i class="fa fa-external-link-alt"></i>Deliveroo - Bagneux
-    </div>
-  </div>
-  <div class="listcontext">
-    <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry/';">
-        <i class="fa fa-external-link-alt"></i>Deliveroo - ivry
-    </div>
-  </div>
-  <hr class="hr">
-  <div class="listcontext">
-    <div class="itemcontext" onclick="window.location='https://www.indian-nepaliswad.fr/policy.html';">
-        <i class="bx bxs-user-account"></i>Politique de Confidentialité
-    </div>
-  </div>
-</div>
-<div class="preloader">
-  <div class="loaderall">INDIAN NEPALI SWAD | Initialisation de l&apos;interface d&apos;utilisateur...<br><span class="small">&copy;INDIAN NEPALI SWAD</span></div>
-  <span class="loader" style="scale: 0.6;">
-    <img src="https://www.indian-nepaliswad.fr/etc/logo.png" alt="" class="p-4 img-fluid" style="filter: var(--whiteindark);">
-  </span>
-</div>
-<div id="cookies" style="display: flex;justify-content: center;align-items: center;">
-  <div class="d-flex justify-content-center">
-    <div class="shadow-lg p-3 rounded-4" style="background-color: var(--bg-color);max-width: 1000px;width: 100%;max-height: 100vh;overflow-x: hidden;overflow-y: auto;scale: 0.9;">
-      <h2 class="mt-2 btn-group">Configurez<div class="d-none d-md-block">&nbsp;l'interface&nbsp;utilisateur&nbsp;pour</div>&nbsp;<a href="https://www.indian-nepaliswad.fr" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100%;">indian-nepaliswad.fr</a>.</h2>
-      <p class="text-muted btn-group"><div>Nous utilisons des cookies et d'autres technologies similaires pour enregistrer et appliquer vos préférences.</div><div class="d-none d-md-block m-0 p-0" style="display: inline-block;">Nous utilisons uniquement des cookies nécessaires pour appliquer les préférences, en naviguant, vous acceptez notre politique de cookies inscrite dans le <a href="https://www.indian-nepaliswad.fr/policy.html">politique de confidentialité</a>.</div></p>
-      <div class="row" style="padding: 0;margin: 0;">
-        <div class="col-lg-8">
-          <hr>
-          <div class="row">
-            <div class="d-flex justify-content-center align-items-start flex-column col-6 col-md-8">
-              <span class="mt-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"/>
-                </svg>&nbsp;
-                Sélectionnez votre thème
-              </span>
-              <small class="text-secondary mt-1 d-none d-md-block d-lg-block">Personnalisez l'apparence de votre interface utilisateur.</small>
-            </div>
-            <div class="d-flex justify-content-center align-items-center col-6 col-md-4">
-              <select name="" id="theme" class="form-select p-2" style="background-color: var(--bg-color);color: var(--first-color);height: fit-content;">
-                <option value="system" selected>Système</option>
-                <option value="light">Claire</option>
-                <option value="dark">Sombre</option>
-              </select>
-            </div>
-          </div>
-          <hr>
-          <div class="row pb-2">
-            <div class="d-flex justify-content-center align-items-start flex-column col-6 col-md-8">
-              <span class="mt-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
-                </svg>&nbsp;
-                Notifications contextuelles
-              </span>
-              <small class="text-secondary mt-1 d-none d-md-block d-lg-block">En sélectionnant « Tous », vous aurez toutes les fenêtres contextuelles de notification. En sélectionnant « Aucun », vous n&apos;aurez que des fenêtres contextuelles d&apos;erreur(s).</small>
-            </div>
-            <div class="d-flex justify-content-center align-items-center col-6 col-md-4">
-              <select name="" id="notif" class="form-select p-2" style="background-color: var(--bg-color);color: var(--first-color);height: fit-content;">
-                <option value="all">Tous</option>
-                <option value="none">Aucun</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 d-none d-lg-flex" style="overflow: hidden;justify-content: center;align-items: start;height: 200px;"><img src="https://www.indian-nepaliswad.fr/etc/logo.png" alt="" class="img-fluid h-100" style="filter: var(--whiteindark);transition: all 0.2s ease-in-out;"></div>
-      </div>
-      <hr>
-    <h4 class="small">En naviguant sur <a href="https://www.indian-nepaliswad.fr">indian-nepaliswad.fr</a> vous acceptez notre <a href="https://www.indian-nepaliswad.fr/policy.html">politique de confidentialité</a>.</h4>
-    <div class="btn-group w-100">
-        <button class="m-1 rounded-2 btn btn-primary" onclick="if($('#cookies').hasClass('shown')){$('#cookies').removeClass('shown');}setCookie('cookiesmenu', 'hide', 60);notification('notif', 'Fenêtre fermé');">Continuer</button>
-    </div>
-    </div>
-  </div>
-</div>
-<div class="container">
-  <div class="jumbotron jumbotron-main" id="home">
-    <div id="particles-js" style="background-image: url(https://www.indian-nepaliswad.fr/Photo%20acceuil%201.jpg);background-position: center;background-size: cover;filter: blur(0px);border-radius: 1em;"><canvas class="particles-js-canvas-el" width="1409" height="319" style="width: 100%; height: 100%;opacity: 0.6;"></canvas></div><!-- /.particles div -->
-    <div class="container center-vertically-holder text-center">
-      <div class="center-vertically">
-        <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3 text-center" style="pointer-events: none;">
-          <div class="bg-dark bg-opacity-25 rounded" style=" visibility: visible; text-align: center; -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s, opacity 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s; transition: transform 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s, opacity 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s; ">
-            <h1 class="scaleReveal" data-sr-id="46" style="padding-left: 10px; visibility: visible; font-size: 3em; -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s, opacity 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s; transition: transform 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s, opacity 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s; ">
-              <strong>INDIAN NEPALI SWAD</strong>
-            </h1>
-            <p class="bottomReveal" data-sr-id="2" style=" visibility: visible; text-align: center; -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s, opacity 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s; transition: transform 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s, opacity 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s; ">
-              Gastronomie Indienne et Népalaise<br><br>
-              <div class="row p-2">
-                <a class="m-1 btn rounded" style="pointer-events: all;width:fit-content;color: var(--text-color);background-color: var(--bg-color);border: 2px solid var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/">Deliveroo Paris</a>
-                <a class="m-1 btn rounded" style="pointer-events: all;width:fit-content;color: var(--text-color);background-color: var(--bg-color);border: 2px solid var(--text-color);" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
-                <a class="m-1 btn rounded" style="pointer-events: all;width:fit-content;color: var(--text-color);background-color: var(--bg-color);border: 2px solid var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">Deliveroo Courbevoie</a>
-                <a class="m-1 btn rounded" style="pointer-events: all;width:fit-content;color: var(--text-color);background-color: var(--bg-color);border: 2px solid var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/">Deliveroo Saint-Ouen</a>
-                <a class="m-1 btn rounded" style="pointer-events: all;width:fit-content;color: var(--text-color);background-color: var(--bg-color);border: 2px solid var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/">Deliveroo Bagneux</a>
-                <a class="m-1 btn rounded" style="pointer-events: all;width:fit-content;color: var(--text-color);background-color: var(--bg-color);border: 2px solid var(--text-color);" href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry/">Deliveroo Ivry</a>
-              </div>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <p class="small text-muted">
-    <div class="row">
-        <div class="col-md-6 col-lg-4 text-muted">
-            Indian Nepali Swad est un restaurant de la gastronomie indienne et népalaise. Vous y découvrirez des saveurs authentiques, délicieuses et savoureuses de l&apos;Orient authentique en livraison ou à emporter.
-            <br><br><h5 style="color: var(--title-color);">Venir prendre un emporter</h5>
-            <div class="listcontext">
-                <a class="itemcontext" href="https://www.google.com/maps/dir//4+Rue+Bargue,+75015+Paris" style="text-decoration: none;">
-                    <i class="fa fa-map-marked-alt"></i>&nbsp;&nbsp;Adresse : 4 rue Bargue, 75015 Paris,
-                </a>
-            </div>
-            <br>
-            <div class="listcontext">
-                <a class="itemcontext" href="tel:0145327373" style="text-decoration: none;">
-                    <i class="fa fa-phone"></i>&nbsp;&nbsp;Téléphone : 01 45 32 73 73.
-                </a>
-            </div>
-            <br>
-            <h5>Commander sur DELIVEROO</h5>
-            <div class="listcontext">
-                <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/';">
-                    <i class="fa fa-external-link-alt"></i>&nbsp;&nbsp;Deliveroo - Paris
-                </div>
-            </div>
-            <div class="listcontext">
-                <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/';">
-                    <i class="fa fa-external-link-alt"></i>&nbsp;&nbsp;Deliveroo - Bordeaux
-                </div>
-            </div>
-            <div class="listcontext">
-                <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/';">
-                    <i class="fa fa-external-link-alt"></i>&nbsp;&nbsp;Deliveroo - Courbevoie
-                </div>
-            </div>
-            <div class="listcontext">
-                <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/';">
-                    <i class="fa fa-external-link-alt"></i>&nbsp;&nbsp;Deliveroo - Saint Ouen
-                </div>
-            </div>
-            <div class="listcontext">
-                <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/';">
-                    <i class="fa fa-external-link-alt"></i>&nbsp;&nbsp;Deliveroo - Bagneux
-                </div>
-            </div>
-            <div class="listcontext">
-                <div class="itemcontext" onclick="window.location='https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry/';">
-                    <i class="fa fa-external-link-alt"></i>&nbsp;&nbsp;Deliveroo - ivry
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 d-md-block col-lg-8 pb-4 mb-4">
-            <div id="map" style="width: 100%; height: 100%;border:0;border-radius: 1em;filter: var(--map-tiles-filter);min-height: 200px;"></div>
-            
-        </div>
-    </div>
-    <br>
-  </p><br>
-  <div class="wrapper121" style="display: flex;align-items: center;">
-    <div class="icon121"><i id="left1" class="fa-solid fa-angle-left"></i></div>
-    <ul class="options1" style="display: flex;align-items: center;">
-      <li title="Clickez sur le produit pour faire défiler le barre de défilement." class="option1" style="background-color: var(--bg-color);color: var(--text-color);border-radius: 0.5em;font-size: 0.9em;padding: 0.6em 0.8em;"><a style="color: var(--text-color);text-decoration: none;" href="#menus" class="p-0 m-0">Menus</a></li>
-      <li title="Clickez sur le produit pour faire défiler le barre de défilement." class="option1" style="background-color: var(--bg-color);color: var(--text-color);border-radius: 0.5em;font-size: 0.9em;padding: 0.6em 0.8em;"><a style="color: var(--text-color);text-decoration: none;" href="#naan" class="p-0 m-0">Naan (Pains Maisons)</a></li>
-      <li title="Clickez sur le produit pour faire défiler le barre de défilement." class="option1" style="background-color: var(--bg-color);color: var(--text-color);border-radius: 0.5em;font-size: 0.9em;padding: 0.6em 0.8em;"><a style="color: var(--text-color);text-decoration: none;" href="#entrees" class="p-0 m-0">Nos Entrées</a></li>
-      <li title="Clickez sur le produit pour faire défiler le barre de défilement." class="option1" style="background-color: var(--bg-color);color: var(--text-color);border-radius: 0.5em;font-size: 0.9em;padding: 0.6em 0.8em;"><a style="color: var(--text-color);text-decoration: none;" href="#special" class="p-0 m-0">Nos spécialités</a></li>
-      <li title="Clickez sur le produit pour faire défiler le barre de défilement." class="option1" style="background-color: var(--bg-color);color: var(--text-color);border-radius: 0.5em;font-size: 0.9em;padding: 0.6em 0.8em;"><a style="color: var(--text-color);text-decoration: none;" href="#veg" class="p-0 m-0">Plats Végétariens</a></li>
-      <li title="Clickez sur le produit pour faire défiler le barre de défilement." class="option1" style="background-color: var(--bg-color);color: var(--text-color);border-radius: 0.5em;font-size: 0.9em;padding: 0.6em 0.8em;"><a style="color: var(--text-color);text-decoration: none;" href="#complet" class="p-0 m-0">Plat complet - Chau Min-Nouilles sautées</a></li>
-      <li title="Clickez sur le produit pour faire défiler le barre de défilement." class="option1" style="background-color: var(--bg-color);color: var(--text-color);border-radius: 0.5em;font-size: 0.9em;padding: 0.6em 0.8em;"><a style="color: var(--text-color);text-decoration: none;" href="#riz" class="p-0 m-0">RIZ</a></li>
-      <li title="Clickez sur le produit pour faire défiler le barre de défilement." class="option1" style="background-color: var(--bg-color);color: var(--text-color);border-radius: 0.5em;font-size: 0.9em;padding: 0.6em 0.8em;"><a style="color: var(--text-color);text-decoration: none;" href="#desserts" class="p-0 m-0">DESSERTS</a></li>
-      <li title="Clickez sur le produit pour faire défiler le barre de défilement." class="option1" style="background-color: var(--bg-color);color: var(--text-color);border-radius: 0.5em;font-size: 0.9em;padding: 0.6em 0.8em;"><a style="color: var(--text-color);text-decoration: none;" href="#softs" class="p-0 m-0">Boissons / Softs</a></li>
-    </ul>
-    <div class="icon121"><i id="right1" class="fa-solid fa-angle-right"></i></div>
-  </div>
-  <!------Json genereator + Json generated------>
-  <h3>Menus</h3>
-  <p class="small text-muted">Bon appétit! 🍽️</p>
-  <div id="menus"></div>
-  <hr>
-  <h3>Pain Maison (Naan) au Tandoor</h3>
-  <p class="small text-muted">Tous nos Naans sont préparés à la minute dans notre four Tandoor traditionnel.</p>
-  <div class="menu container">
-    <div class="menu-group" id="naan">
-      
-    </div>
-  </div>
-  <hr>
-  <h3>Nos entrées</h3>
-  <p class="small text-muted">Notre sélections de grillades, beignets et soupes!</p>
-  <div class="menu container">
-    <div class="menu-group" id="entrees">
-      
-    </div>
-  </div>
-  <hr>
-  <h3>Nos spécialités 🇮🇳</h3>
-  <p class="small text-muted">Nos spécialités disponibles en version poulet, agneau, poisson ou crevette! Il est recommandé de choisir un accompagnement Riz avec nos plats.</p>
-  <div class="menu container">
-    <div class="menu-group" id="special">
-      
-    </div>
-  </div>
-  <hr>
-  <h3>Plats Végétariens</h3>
-  <p class="small text-muted">Il est recommandé de choisir un accompagnement Riz avec les Plats Légumes/ Végé.</p>
-  <div class="menu container">
-    <div class="menu-group" id="veg">
-      
-    </div>
-  </div>
-  <hr>
-  <h3>Plat complet - Chau Min-Nouilles sautées 🇳🇵</h3>
-  <p class="small text-muted">Spécialité Népalaise - Plat complet à base de nouilles.</p>
-  <div class="menu container">
-    <div class="menu-group" id="complet">
-      
-    </div>
-  </div>
-  <hr>
-  <h3>Riz</h3>
-  <p class="small text-muted"></p>
-  <div class="menu container">
-    <div class="menu-group" id="riz">
-      
-    </div>
-  </div>
-  <hr>
-  <h3>Nos Desserts Maison</h3>
-  <p class="small text-muted"></p>
-  <div class="menu container">
-    <div class="menu-group" id="desserts">
-      
-    </div>
-  </div>
-  <hr>
-  <h3>Softs</h3>
-  <p class="small text-muted"></p>
-  <div class="menu container">
-    <div class="menu-group" id="softs">
-      
-    </div>
-  </div>
-  <footer class="text-center text-lg-start text-muted mb-0" style="background: radial-gradient(var(--body-color), transparent);color: var(--text-color);" >
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" style="color: var(--text-color);">
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <img src="https://www.indian-nepaliswad.fr/etc/android-chrome-512x512.png" alt="" class="img-fluid" width="50" style="filter: var(--whiteindark);">
-        <span>INDIAN NEPALI SWAD</span>
-      </div>
-      <!-- Left -->
 
-      <!-- Right -->
-      <div class="fa-2x">
-        <a href="https://www.facebook.com/people/Indian-Nepali-Swad/100041638634787/" class="text-decoration-none" style="color: var(--text-color);">
-          <i class="bx bxl-facebook text-decoration-none bx-tada-hover"></i>
-        </a>
-        <a href="https://twitter.com/INepaliswad" class="text-decoration-none" style="color: var(--text-color);">
-          <i class="bx bxl-twitter text-decoration-none bx-tada-hover"></i>
-        </a>
-        <a href="https://www.youtube.com/channel/UCHPsdHfepFygMiWvlLclhcA" class="text-decoration-none" style="color: var(--text-color);">
-          <i class="bx bxl-youtube text-decoration-none bx-tada-hover"></i>
-        </a>
-        <a href="https://www.instagram.com/indiannepaliswad/" class="text-decoration-none" style="color: var(--text-color);">
-          <i class="bx bxl-instagram text-decoration-none bx-tada-hover"></i>
+  <div class="hero-top-bar-sticky">
+    <header class="hero-header-row">
+      <div class="hero-logo-container">
+        <a href="https://www.indian-nepaliswad.fr" class="hero-logo-pill">
+          <div class="hero-logo-symbol-img">
+            <img src="https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png" alt="Indian Nepali Swad Logo" />
+          </div>
+          <div class="hero-logo-text-block">
+            <div class="hero-logo-title">INDIAN NEPALI SWAD</div>
+            <div class="hero-logo-subline">Gastronomie INDIENNE et NEPALAISE</div>
+          </div>
         </a>
       </div>
-      <!-- Right -->
-    </section>
-    <section>
-    <div class="row">
-        <div class="col-3">                
-            <div class="link-cat" onclick="footerToggle(this)">
-                <span class="footer-toggle"></span>
-                <span class="footer-cat">Information</span>
+
+      <div class="hero-header-search-wrap">
+        <div class="hero-search-shell">
+          <div class="hero-search-icon">
+            <i class="bx bx-search"></i>
+          </div>
+          <div class="hero-search-input-wrap">
+            <input
+              id="heroSearchInput"
+              class="hero-search-input"
+              type="text"
+              placeholder="Rechercher un plat « menu », « tandoori »…"
+              autocomplete="off"
+            />
+            <div
+              id="searchSuggestionsPanel"
+              class="search-suggestions-panel"
+            >
+              <div class="search-suggestions-inner scrollbar-thin">
+                <div class="search-suggestions-list" id="searchSuggestionsList"></div>
+                <div class="search-suggestions-footer">
+                  <span id="searchSuggestionsCount"></span>
+                  <span>Entrée pour chercher · ↑↓ pour naviguer</span>
+                </div>
+              </div>
             </div>
-            <ul class="footer-cat-links">
-                <li><a href="./policy.html"><span>Politique de confidentialité</span></a></li>
-                <li><a href="tel:0145327373"><span>Contactez nous</span></a></li>
-            </ul>
+          </div>
+          <div class="hero-search-kbd">
+            <span>Ctrl</span>
+            <span>K</span>
+          </div>
         </div>
-        <div class="col-3">
-            <div class="link-cat" onclick="footerToggle(this)">
-                <span class="footer-toggle"></span>
-                <span class="footer-cat">Services</span>
+        
+        <div
+          class="recent-searches"
+          id="recentSearchContainer"
+          style="display: none"
+        ></div>
+      </div>
+
+      <div class="hero-header-right">
+        <button id="themeToggle" class="hero-theme-toggle" type="button">
+          <div class="hero-theme-icon-wrap" id="themeIcon">
+            <i class="bx bx-sun"></i>
+          </div>
+          <div class="hero-theme-label" id="themeLabel">CLAIR</div>
+        </button>
+        <a href="tel:0145327373" class="hero-pickup-pill">
+          <div class="hero-pickup-icon">
+            <i class="bx bx-phone"></i>
+          </div>
+          <div>01 45 32 73 73</div>
+        </a>
+        <button id="settingsOpenBtn" class="settings-btn" type="button">
+          <i class="bx bx-slider-alt"></i>
+        </button>
+      </div>
+    </header>
+  </div>
+  <div class="mt-5 pt-5 pb-2"></div>
+  <div class="hero-content">
+    <div class="hero-main-grid">
+      <div class="hero-left">
+        <div class="hero-left-eyebrow-line">
+          <div class="hero-eyebrow-pill">Gastronomie INDIENNE & NÉPALAISE</div>
+        </div>
+
+        <div class="hero-title-block">
+          <h1 class="hero-title-main">
+            INDIAN NEPALI SWAD
+          </h1>
+          <p class="hero-title-sub">
+            Découvrez des saveurs authentiques, délicieuses et savoureuses de l'Orient en livraison ou à l'emporter.
+          </p>
+        </div>
+
+        <div class="hero-cta-row">
+          <a href="tel:0145327373" class="hero-phone-cta">
+            <i class="bx bx-phone-call"></i>
+            Appeler PARIS 15
+          </a>
+          <a href="./menu/" class="hero-cta-text-link" type="button">
+            <i class="bx bx-detail"></i>
+            Voir la carte
+          </a>
+        </div>
+
+        <div class="hero-tags-line pt-4">
+          <a href="https://g.page/r/CT1s_FIYmtEuEBE/review" class="hero-tag-pill d-flex align-items-center justify-content-center" target="_blank" rel="noopener">
+            <div class="hero-tag-dot"></div>
+            Donner un avis Paris
+          </a>
+          <a href="https://g.page/r/CZsKBBu9vI8GEBM/review" class="hero-tag-pill d-flex align-items-center justify-content-center" target="_blank" rel="noopener">
+            <div class="hero-tag-dot"></div>
+            Donner un avis Bordeau
+          </a>
+        </div>
+        <div class="hero-lower-line">
+          <div class="hero-rating-block">
+            <div class="hero-rating-stars">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half"></i>
             </div>
-            <ul class="footer-cat-links">
-                <li><a href="tel:0145327373"><span>Appelez seulement pour Emporter</span></a></li>
-                <li><a href="https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/"><span>Deliveroo Paris</span></a></li>
-                <li><a href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/"><span>Deliveroo Bordeaux</span></a></li>
-                <li><a href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/"><span>Deliveroo Courbevoie</span></a></li>
-                <li><a href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/"><span>Deliveroo Saint Ouen</span></a></li>
-                <li><a href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/"><span>Deliveroo Bagneux</span></a></li>
-                <li><a href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry/"><span>Deliveroo Ivry</span></a></li>
-            </ul>
-        </div>
-        <div class="col-3">
-            <div class="link-cat" onclick="footerToggle(this)">
-                <span class="footer-toggle"></span>
-                <span class="footer-cat">Notre Carte</span>
+            <div>
+              <span class="hero-rating-text-main">4,7/5</span>
+              <span class="hero-rating-text-sub">
+                · +2000 avis (Cumul sur 6 sites)
+              </span>
             </div>
-            <ul class="footer-cat-links">
-                <li><a href="#menus"><span>Menus</span></a></li>
-                <li><a href="#naan"><span>Pains Maisons</span></a></li>
-                <li><a href="#entrees"><span>Nos Entrées</span></a></li>
-                <li><a href="#special"><span>Nos spécialités</span></a></li>
-                <li><a href="#riz"><span>RIZ</span></a></li>
-                <li><a href="#desserts"><span>DESSERTS</span></a></li>
-              <li><a href="#softs"><span>Boissons / Softs</span></a></li>
-            </ul>
+          </div>
+          <div id="hero-status" class="hero-open-status">
+            <div class="hero-open-dot"></div>
+            <div class="hero-open-text">Chargement…</div>
+          </div>
+
         </div>
-        <div class="col-3" id="newsletter">
-            <div id="address" style="color: var(--text-color);">
-                <span>Adresse</span>
-                <ul>
-                    <li style="color: var(--text-color);">
-                        <i class="far fa-building"></i>
-                        <div style="color: var(--text-color);">4 Rue Bargue, <br/>75015 Paris.</div>
-                    </li>
-                    <li>
-                      <a href="https://goo.gl/maps/F957tJgHVujEjExi8" style="color: var(--text-color);"><i class="fa fa-location-arrow"></i>Venir prendre un emporter</a>
-                  </li>
-                </ul>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-delivery-header">
+          <div class="hero-delivery-pill">
+            <i class="bx bx-package"></i>
+            <div class="hero-delivery-text-main">
+              Commander sur DELIVEROO
             </div>
-            
+          </div>
         </div>
+
+        <div class="hero-delivery-grid">
+          <a
+            class="hero-delivery-card"
+            href="https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/"
+          >
+            <div class="hero-delivery-main-row">
+              <div class="hero-delivery-name">
+                <i class="bx bx-link-external"></i>
+                INS
+                <span class="hero-delivery-chip">Paris 15</span>
+              </div>
+              <div class="hero-delivery-meta-right">
+                <i class="bx bx-chevron-right"></i>
+              </div>
+            </div>
+            <div class="hero-delivery-city">4 Rue Bargue · Pasteur</div>
+            <div class="hero-delivery-meta">
+              <div class="hero-delivery-pillmeta">Livrée dans 5 - 15 min · 0.03 km</div>
+              <div class="hero-delivery-meta-right">
+                <i class="bx bx-star"></i>
+                <span>4,6</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            class="hero-delivery-card"
+            href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/"
+          >
+            <div class="hero-delivery-main-row">
+              <div class="hero-delivery-name">
+                <i class="bx bx-link-external"></i>
+                INS
+                <span class="hero-delivery-chip">Bordeaux</span>
+              </div>
+              <div class="hero-delivery-meta-right">
+                <i class="bx bx-chevron-right"></i>
+              </div>
+            </div>
+            <div class="hero-delivery-city">Éditions Cour du Médoc</div>
+            <div class="hero-delivery-meta">
+              <div class="hero-delivery-pillmeta">Livrée dans 5 - 15 min · 0.03 km</div>
+              <div class="hero-delivery-meta-right">
+                <i class="bx bx-star"></i>
+                <span>4,6</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            class="hero-delivery-card"
+            href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/"
+          >
+            <div class="hero-delivery-main-row">
+              <div class="hero-delivery-name">
+                <i class="bx bx-link-external"></i>
+                INS
+                <span class="hero-delivery-chip">Courbevoie</span>
+              </div>
+              <div class="hero-delivery-meta-right">
+                <i class="bx bx-chevron-right"></i>
+              </div>
+            </div>
+            <div class="hero-delivery-city">
+              Ouest parisien · La Défense
+            </div>
+            <div class="hero-delivery-meta">
+              <div class="hero-delivery-pillmeta">Livrée dans 10 - 20 min · 0.03 km</div>
+              <div class="hero-delivery-meta-right">
+                <i class="bx bx-star"></i>
+                <span>4,6</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            class="hero-delivery-card"
+            href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/"
+          >
+            <div class="hero-delivery-main-row">
+              <div class="hero-delivery-name">
+                <i class="bx bx-link-external"></i>
+                INS
+                <span class="hero-delivery-chip">Saint‑Ouen</span>
+              </div>
+              <div class="hero-delivery-meta-right">
+                <i class="bx bx-chevron-right"></i>
+              </div>
+            </div>
+            <div class="hero-delivery-city">
+              Nord parisien · Aubervilliers
+            </div>
+            <div class="hero-delivery-meta">
+              <div class="hero-delivery-pillmeta">Livrée dans 5 - 15 min · 0.03 km</div>
+              <div class="hero-delivery-meta-right">
+                <i class="bx bx-star"></i>
+                <span>4,5</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            class="hero-delivery-card"
+            href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/"
+          >
+            <div class="hero-delivery-main-row">
+              <div class="hero-delivery-name">
+                <i class="bx bx-link-external"></i>
+                INS
+                <span class="hero-delivery-chip">Bagneux</span>
+              </div>
+              <div class="hero-delivery-meta-right">
+                <i class="bx bx-chevron-right"></i>
+              </div>
+            </div>
+            <div class="hero-delivery-city">Éditions Bagneux</div>
+            <div class="hero-delivery-meta">
+              <div class="hero-delivery-pillmeta">Livrée dans 5 - 15 min · 0.03 km</div>
+              <div class="hero-delivery-meta-right">
+                <i class="bx bx-star"></i>
+                <span>4,6</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            class="hero-delivery-card"
+            href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry/"
+          >
+            <div class="hero-delivery-main-row">
+              <div class="hero-delivery-name">
+                <i class="bx bx-link-external"></i>
+                INS
+                <span class="hero-delivery-chip">Ivry</span>
+              </div>
+              <div class="hero-delivery-meta-right">
+                <i class="bx bx-chevron-right"></i>
+              </div>
+            </div>
+            <div class="hero-delivery-city">Éditions Ivry</div>
+            <div class="hero-delivery-meta">
+              <div class="hero-delivery-pillmeta">Livrée dans 5 - 15 min · 0.03 km</div>
+              <div class="hero-delivery-meta-right">
+                <i class="bx bx-star"></i>
+                <span>4,5</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
-    </section>
-    <div id="copyright" style="color: var(--title-color);">
-        &copy; Tous droits réservés, www.indian-nepaliswad.fr 2017-<script>document.write(new Date().getFullYear())</script>.
+    <div class="row d-flex justify-content-center align-items-center mt-2 mb-5 hero-col">
+      <div class="col-md-6"><div id="map"></div></div>
+      <div class="col-md-6">
+          <h5 style="color: var(--title-color);">Venir prendre un emporter</h5>
+          <div class="listcontext">
+              <a class="itemcontext" href="https://www.google.com/maps/dir//4+Rue+Bargue,+75015+Paris" style="text-decoration: none;">
+                  <i class="bx bx-map"></i>&nbsp;&nbsp;Adresse : 4 rue Bargue, 75015 Paris,
+              </a>
+          </div>
+          <div class="listcontext">
+              <a class="itemcontext" href="tel:0145327373" style="text-decoration: none;">
+                  <i class="bx bx-phone"></i>&nbsp;&nbsp;Téléphone : 01 45 32 73 73.
+              </a>
+          </div>
+          <br>
+          <h5>Commander sur DELIVEROO</h5>
+          <div class="listcontext">
+              <a href="https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/" target="_blank" style="text-decoration: none;">
+                  <i class="bx bx-link-external"></i>&nbsp;&nbsp;Deliveroo - Paris
+              </a>
+          </div>
+          <div class="listcontext">
+              <a href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/" target="_blank" style="text-decoration: none;">
+                  <i class="bx bx-link-external"></i>&nbsp;&nbsp;Deliveroo - Bordeaux
+              </a>
+          </div>
+          <div class="listcontext">
+              <a href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/" target="_blank" style="text-decoration: none;">
+                  <i class="bx bx-link-external"></i>&nbsp;&nbsp;Deliveroo - Courbevoie
+              </a>
+          </div>
+          <div class="listcontext">
+              <a href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/" target="_blank" style="text-decoration: none;">
+                  <i class="bx bx-link-external"></i>&nbsp;&nbsp;Deliveroo - Saint Ouen
+              </a>
+          </div>
+          <div class="listcontext">
+              <a href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/" target="_blank" style="text-decoration: none;">
+                  <i class="bx bx-link-external"></i>&nbsp;&nbsp;Deliveroo - Bagneux
+              </a>
+          </div>
+          <div class="listcontext">
+              <a href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry/" target="_blank" style="text-decoration: none;">
+                  <i class="bx bx-link-external"></i>&nbsp;&nbsp;Deliveroo - Ivry
+              </a>
+          </div>
+      </div>
     </div>
-  </footer>
+  </div>
 </div>
+<div class="cta-container p-5 mb-5 opacity-100 w-100 d-flex justify-content-center align-items-center flex-column z-10">
+  <a href="./menu/" class="btn btn-cta btn-lg px-5 py-3 mb-3 mt-5">
+    Voir la carte
+  </a>
+  <p>https://www.indian-nepaliswad.fr/menu/</p>
+</div>
+<footer class="site-footer py-4 mt-5">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-md-4">
+        <img src="https://www.indian-nepaliswad.fr/etc/logo.png" alt="Logo Indian Nepali Swad" style="width: 150px; margin-bottom: 1rem;" />
+      </div>
+
+      <div class="col-md-4">
+        <h5 class="footer-title">Liens rapides</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="./menu/">Menu</a></li>
+          <li><a href="./policy.html">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h5 class="footer-title">Suivez‑nous</h5>
+        <div class="flex">
+          <a href="https://www.facebook.com/people/Indian-Nepali-Swad/100041638634787/" class="text-decoration-none">
+            <i class="bx bxl-facebook text-decoration-none bx-tada-hover"></i>
+          </a>
+          <a href="https://twitter.com/INepaliswad" class="text-decoration-none">
+            <i class="bx bxl-twitter text-decoration-none bx-tada-hover"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UCHPsdHfepFygMiWvlLclhcA" class="text-decoration-none">
+            <i class="bx bxl-youtube text-decoration-none bx-tada-hover"></i>
+          </a>
+          <a href="https://www.instagram.com/indiannepaliswad/" class="text-decoration-none">
+            <i class="bx bxl-instagram text-decoration-none bx-tada-hover"></i>
+          </a>
+      </div>
+      </div>
+    </div>
+    <p class="opacity-75 text-lg-center small">
+      Pour toute question, n’hésitez pas à nous contacter au <a href="tel:0145327373" class="text-decoration-underline">01 45 32 73 73</a> dans nos horaires d’ouverture.
+    </p>
+
+    <div class="text-center mt-4 small">
+      &copy; 2017 - 2026 Indian Nepali Swad — Tous droits réservés.
+    </div>
+  </div>
+</footer>
+<div id="cookiesBanner" class="cookies-banner" style="display: none">
+  <div class="cookies-header-line">
+    <div class="cookies-title">
+      <i class="bx bx-cookie"></i>
+      <span>Gestion des préférences</span>
+    </div>
+    <div class="cookies-dot"></div>
+  </div>
+  <div class="cookies-body-text">
+    Nous utilisons un stockage local pour mémoriser votre thème (clair/sombre)
+    et vos dernières recherches, pour simplifier votre prochaine visite.
+    Aucune donnée n’est partagée, plus d'infos sur: <a class="text-decoration-underline" href="https://www.indian-nepaliswad.fr/policy.html">https://www.indian-nepaliswad.fr/policy.html</a>.
+  </div>
+  <div class="cookies-actions">
+    <button
+      id="cookiesAccept"
+      class="cookies-btn cookies-btn-primary"
+      type="button"
+    >
+      <i class="bx bx-check"></i>
+      J'ai compris
+    </button>
+  </div>
+</div>
+<div id="settingsOverlay" class="settings-overlay">
+  <div class="settings-panel">
+    <div class="settings-header">
+      <div class="settings-title">
+        <i class="bx bx-slider"></i>
+        <span>Préférences d’affichage</span>
+      </div>
+      <button
+        id="settingsCloseBtn"
+        class="settings-close-btn"
+        type="button"
+      >
+        <i class="bx bx-x"></i>
+      </button>
+    </div>
+
+    <div class="settings-section">
+      <div class="settings-section-title">Apparence</div>
+
+      <div class="settings-item">
+        <div class="settings-item-label">
+          <div class="settings-item-title">Mode sombre</div>
+          <div class="settings-item-sub">
+            Bascule entre thème clair et sombre pour l’ensemble du site.
+          </div>
+        </div>
+        <label class="settings-toggle">
+          <input id="settingsDarkModeToggle" type="checkbox" />
+          <span class="settings-slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <div class="settings-section-title">Recherches</div>
+
+      <div class="settings-item">
+        <div class="settings-item-label">
+          <div class="settings-item-title">
+            Mémoriser les recherches
+          </div>
+          <div class="settings-item-sub">
+            Sauvegarder les dernières recherches dans ce navigateur.
+          </div>
+        </div>
+        <label class="settings-toggle">
+          <input id="settingsSearchesToggle" type="checkbox" checked />
+          <span class="settings-slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <div class="settings-section-title">Cookies & stockage</div>
+
+      <div class="settings-item">
+        <div class="settings-item-label">
+          <div class="settings-item-title">
+            Réinitialiser les préférences
+          </div>
+          <div class="settings-item-sub">
+            Supprimer toutes les données locales (thème, recherches, cookies).
+          </div>
+        </div>
+        <button id="settingsResetBtn" class="cookies-btn" type="button">
+          <i class="bx bx-trash"></i>
+          Effacer
+        </button>
+      </div>
+    </div>
+
+    <div class="settings-footer">
+      <div>Ces préférences ne quittent pas votre navigateur.</div>
+      <div>
+        <a href="https://www.indian-nepaliswad.fr/policy.html" target="_blank">Politique de confidentialité</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
-$( document ).ready(function() {
-  fetch("https://www.indian-nepaliswad.fr/menulist/menu.json")
-  .then(function(response){
-      return response.json();
-  }).then(function(products){
-      let menu = "",
-      content = "",
-      menudet = "";
-      for(let product of products){
-          for(let option of product.options){
-              for(var i = 0; i < option.options.length; i++) {
-                  content += `<option>${option.options[i]}</option>`;
-              }
-              menudet += `
-              <div class="col-6 col-lg-4">
-                  <h4>${option.title}</h4>
-                  <select class="form-select">
-                  ${content}
-                  </select>
-              </div>
-              `;
-              content="";
-          }
-          menu += `
-          <section class="py-5">
-              <div class="container">
-                  <div class="row gx-5">
-                  <aside class="col-lg-4 col-md-4">
-                      <div class="border rounded-4 mb-3 d-flex justify-content-center">
-                      <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image" href="#">
-                          <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit" src="${product.image}" onerror="$(this).attr('src','https://www.indian-nepaliswad.fr/assets/logo.png');$(this).css('filter','var(--whiteindark)');"/>
-                      </a>
-                      </div>
-                  </aside>
-                  <main class="col-lg-8 col-md-8">
-                      <div class="ps-lg-3 ps-md-3">
-                      <h4 class="title" style="font-size: 2em;">
-                          ${product.title}
-                      </h4>
-                          <div class="row pt-2">
-                              <dd class="badge bg-success" style="width:fit-content;" title="Produit du type : ${product.type}">${product.type}</dd>
-                          </div>
-                      <div class="row">
-                          <div class="row">
-                            <h5 class="small col-8">Cette formule contient :&nbsp;<span class="text-muted">${product.description}</span></h5>
-                            <div class="mb-3 col-4">
-                                <span class="h5">${product.price}&euro;</span>
-                            </div>
-                          </div>
-                        <div class="col-12 row">
-                            ${menudet}
-                        </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-6 p-1">
-                              <a class="mt-2 btn btn-sm btn-danger rounded" href="${product.link1}">DELIVEROO Paris</a>
-                          </div>
-                          <div class="col-6 p-1">
-                              <a class="mt-2 btn btn-sm btn-danger rounded" href="${product.link2}">DELIVEROO Courbevoie</a>
-                          </div>
-                          <div class="col-6 p-1">
-                              <a class="mt-2 btn btn-sm btn-danger rounded" href="${product.link3}">DELIVEROO Saint-Ouen</a>
-                          </div>
-                          <div class="col-6 p-1">
-                              <a class="mt-2 btn btn-sm btn-danger rounded" href="${product.link4}">DELIVEROO Bagneux</a>
-                          </div>
-                          <div class="col-6 p-1">
-                              <a class="mt-2 btn btn-sm btn-danger rounded" href="${product.link5}">DELIVEROO Ivry</a>
-                          </div>
-                          <div class="col-6 p-1">
-                              <a class="mt-2 btn btn-sm btn-danger rounded" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">DELIVEROO Bordeaux</a>
-                          </div>
-                      </div>
-                  </main>
-                  </div>
-              </div>
-          </section>
-          `;
-          $("#menus").html(menu);
-          content = "";
-          menudet = "";
-      }
-  });
-  fetch("./menulist/naan.json")
-  .then(function(response){
-    return response.json();
-  }).then(function(products){
-    let produit = "";
-    for(let product of products){
-      produit += `
-      <div class="menu-item">
-        <img
-          src="${product.image}"
-          alt="${product.type}"
-          class="menu-item-img rounded"
-          onerror="$(this).attr('src','https://www.indian-nepaliswad.fr/etc/logo.png');$(this).css('filter','var(--whiteindark)');"
-        />
-        <div class="menu-item-text">
-          <h3 class="menu-item-heading">
-            <span class="menu-item-name">${product.title}</span>
-            <p class="small" style="font-size: 0.6em;">${product.price}&euro;</p>
-          </h3>
-          <dd class="badge bg-secondary" style="width:fit-content;" title="Produit du type : ${product.type}">${product.type}</dd>
-          <p class="menu-item-desc">
-            ${product.description}
-          </p>
-          <div class="row p-2">
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/Pasteur/bidit-risheb/${product.link}">Deliveroo Paris</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/${product.link1}">Deliveroo Courbevoie</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/${product.link2}">Deliveroo Saint-Ouen</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/${product.link3}">Deliveroo Bagneux</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry/${product.link4}">Deliveroo Ivry</a>
-          </div>
-        </div>
-      </div>
-        `;
+const storage = {
+  get(key) {
+    try {
+      const raw = localStorage.getItem(key);
+      if (!raw) return null;
+      return JSON.parse(raw);
+    } catch (e) {
+      return null;
     }
-    $("#naan").html(produit);
-  });
-  fetch("https://www.indian-nepaliswad.fr/json/entrees.json")
-  .then(function(response){
-    return response.json();
-  }).then(function(products){
-    let produit = "";
-    for(let product of products){
-      produit += `
-      <div class="menu-item">
-        <img
-          src="${product.image}"
-          alt="${product.type}"
-          class="menu-item-img rounded"
-          onerror="$(this).attr('src','https://www.indian-nepaliswad.fr/etc/logo.png');$(this).css('filter','var(--whiteindark)');"
-        />
-        <div class="menu-item-text">
-          <h3 class="menu-item-heading">
-            <span class="menu-item-name">${product.title}</span>
-            <p class="small" style="font-size: 0.6em;">${product.price}&euro;</p>
-          </h3>
-          <dd class="badge bg-secondary" style="width:fit-content;" title="Produit du type : ${product.type}">${product.type}</dd>
-          <p class="menu-item-desc">
-            ${product.description}
-          </p>
-          <div class="row p-2">
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="${product.link}">Deliveroo Paris</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">Deliveroo Courbevoie</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/">Deliveroo Saint-Ouen</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/">Deliveroo Bagneux</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry/">Deliveroo Ivry</a>
-          </div>
-        </div>
-      </div>
-        `;
-    }
-    $("#entrees").html(produit);
-  });
-  fetch("https://www.indian-nepaliswad.fr/json/special.json")
-  .then(function(response){
-    return response.json();
-  }).then(function(products){
-    let produit = "";
-    for(let product of products){
-      produit += `
-      <div class="menu-item">
-        <img
-          src="${product.image}"
-          alt="${product.type}"
-          class="menu-item-img rounded"
-          onerror="$(this).attr('src','https://www.indian-nepaliswad.fr/etc/logo.png');$(this).css('filter','var(--whiteindark)');"
-        />
-        <div class="menu-item-text">
-          <h3 class="menu-item-heading">
-            <span class="menu-item-name">${product.title}</span>
-            <p class="small" style="font-size: 0.6em;">${product.price}&euro;</p>
-          </h3>
-          <dd class="badge bg-secondary" style="width:fit-content;" title="Produit du type : ${product.type}">${product.type}</dd>
-          <p class="menu-item-desc">
-            ${product.description}
-          </p>
-          <div class="row p-2">
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="${product.link}">Deliveroo Paris</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">Deliveroo Courbevoie</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/">Deliveroo Saint-Ouen</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/">Deliveroo Bagneux</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry/">Deliveroo Ivry</a>
-          </div>
-        </div>
-      </div>
-        `;
-    }
-    $("#special").html(produit);
-  });
-  fetch("https://www.indian-nepaliswad.fr/json/veg.json")
-  .then(function(response){
-    return response.json();
-  }).then(function(products){
-    let produit = "";
-    for(let product of products){
-      produit += `
-      <div class="menu-item">
-        <img
-          src="${product.image}"
-          alt="${product.type}"
-          class="menu-item-img rounded"
-          onerror="$(this).attr('src','https://www.indian-nepaliswad.fr/etc/logo.png');$(this).css('filter','var(--whiteindark)');"
-        />
-        <div class="menu-item-text">
-          <h3 class="menu-item-heading">
-            <span class="menu-item-name">${product.title}</span>
-            <p class="small" style="font-size: 0.6em;">${product.price}&euro;</p>
-          </h3>
-          <dd class="badge bg-secondary" style="width:fit-content;" title="Produit du type : ${product.type}">${product.type}</dd>
-          <p class="menu-item-desc">
-            ${product.description}
-          </p>
-          <div class="row p-2">
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="${product.link}">Deliveroo Paris</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">Deliveroo Courbevoie</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/">Deliveroo Saint-Ouen</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/">Deliveroo Bagneux</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry/">Deliveroo Ivry</a>
-          </div>
-        </div>
-      </div>
-        `;
-    }
-    $("#veg").html(produit);
-  });
-  fetch("https://www.indian-nepaliswad.fr/json/complet.json")
-  .then(function(response){
-    return response.json();
-  }).then(function(products){
-    let produit = "";
-    for(let product of products){
-      produit += `
-      <div class="menu-item">
-        <img
-          src="${product.image}"
-          alt="${product.type}"
-          class="menu-item-img rounded"
-          onerror="$(this).attr('src','https://www.indian-nepaliswad.fr/etc/logo.png');$(this).css('filter','var(--whiteindark)');"
-        />
-        <div class="menu-item-text">
-          <h3 class="menu-item-heading">
-            <span class="menu-item-name">${product.title}</span>
-            <p class="small" style="font-size: 0.6em;">${product.price}&euro;</p>
-          </h3>
-          <dd class="badge bg-secondary" style="width:fit-content;" title="Produit du type : ${product.type}">${product.type}</dd>
-          <p class="menu-item-desc">
-            ${product.description}
-          </p>
-          <div class="row p-2">
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="${product.link}">Deliveroo Paris</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">Deliveroo Courbevoie</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/">Deliveroo Saint-Ouen</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/">Deliveroo Bagneux</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry/">Deliveroo Ivry</a>
-          </div>
-        </div>
-      </div>
-        `;
-    }
-    $("#complet").html(produit);
-  });
-  fetch("https://www.indian-nepaliswad.fr/json/riz.json")
-  .then(function(response){
-    return response.json();
-  }).then(function(products){
-    let produit = "";
-    for(let product of products){
-      produit += `
-      <div class="menu-item">
-        <img
-          src="${product.image}"
-          alt="${product.type}"
-          class="menu-item-img rounded"
-          onerror="$(this).attr('src','https://www.indian-nepaliswad.fr/etc/logo.png');$(this).css('filter','var(--whiteindark)');"
-        />
-        <div class="menu-item-text">
-          <h3 class="menu-item-heading">
-            <span class="menu-item-name">${product.title}</span>
-            <p class="small" style="font-size: 0.6em;">${product.price}&euro;</p>
-          </h3>
-          <dd class="badge bg-secondary" style="width:fit-content;" title="Produit du type : ${product.type}">${product.type}</dd>
-          <p class="menu-item-desc">
-            ${product.description}
-          </p>
-          <div class="row p-2">
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="${product.link}">Deliveroo Paris</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">Deliveroo Courbevoie</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/">Deliveroo Saint-Ouen</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/">Deliveroo Bagneux</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry/">Deliveroo Ivry</a>
-          </div>
-        </div>
-      </div>
-        `;
-    }
-    $("#riz").html(produit);
-  });
-  fetch("https://www.indian-nepaliswad.fr/json/desserts.json")
-  .then(function(response){
-    return response.json();
-  }).then(function(products){
-    let produit = "";
-    for(let product of products){
-      produit += `
-      <div class="menu-item">
-        <img
-          src="${product.image}"
-          alt="${product.type}"
-          class="menu-item-img rounded"
-          onerror="$(this).attr('src','https://www.indian-nepaliswad.fr/etc/logo.png');$(this).css('filter','var(--whiteindark)');"
-        />
-        <div class="menu-item-text">
-          <h3 class="menu-item-heading">
-            <span class="menu-item-name">${product.title}</span>
-            <p class="small" style="font-size: 0.6em;">${product.price}&euro;</p>
-          </h3>
-          <dd class="badge bg-secondary" style="width:fit-content;" title="Produit du type : ${product.type}">${product.type}</dd>
-          <p class="menu-item-desc">
-            ${product.description}
-          </p>
-          <div class="row p-2">
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="${product.link}">Deliveroo Paris</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">Deliveroo Courbevoie</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/">Deliveroo Saint-Ouen</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/">Deliveroo Bagneux</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry/">Deliveroo Ivry</a>
-          </div>
-        </div>
-      </div>
-        `;
-    }
-    $("#desserts").html(produit);
-  });
-  fetch("https://www.indian-nepaliswad.fr/json/softs.json")
-  .then(function(response){
-    return response.json();
-  }).then(function(products){
-    let produit = "";
-    for(let product of products){
-      produit += `
-      <div class="menu-item">
-        <img
-          src="${product.image}"
-          alt="${product.type}"
-          class="menu-item-img rounded"
-          onerror="$(this).attr('src','https://www.indian-nepaliswad.fr/etc/logo.png');$(this).css('filter','var(--whiteindark)');"
-        />
-        <div class="menu-item-text">
-          <h3 class="menu-item-heading">
-            <span class="menu-item-name">${product.title}</span>
-            <p class="small" style="font-size: 0.6em;">${product.price}&euro;</p>
-          </h3>
-          <dd class="badge bg-secondary" style="width:fit-content;" title="Produit du type : ${product.type}">${product.type}</dd>
-          <p class="menu-item-desc">
-            ${product.description}
-          </p>
-          <div class="row p-2">
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="${product.link}">Deliveroo Paris</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/bordeaux/bordeaux-editions-cour-du-medoc/indian-nepali-swad-editions-bordeaux/">Deliveroo Bordeaux</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-courbevoie/indian-nepali-swad-editions-courbevoie/">Deliveroo Courbevoie</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-saint-ouen/indian-nepali-swad-editions-aubervilliers/">Deliveroo Saint-Ouen</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-site-bagneux/indian-nepali-swad-editions-bagneux/">Deliveroo Bagneux</a>
-              <a class="m-1 btn btn-sm" style="border:2px solid var(--text-color);width:fit-content;" href="https://deliveroo.fr/fr/menu/paris/editions-ivry/indian-nepali-swad-editions-ivry/">Deliveroo Ivry</a>
-          </div>
-        </div>
-      </div>
-        `;
-    }
-    $("#softs").html(produit);
-  });
-});
-const body = document.querySelector('body'),
-sidebar = body.querySelector('nav'),
-toggle = body.querySelector(".toggle"),
-searchBtn = body.querySelector(".search-box");
-toggle.addEventListener("click" , () =>{
-sidebar.classList.toggle("close");
-})
-searchBtn.addEventListener("click" , () =>{
-sidebar.classList.remove("close");
-$("#filternav").focus();
-})
-const options1 = document.querySelector(".options1"),
-allOption1 = options1.querySelectorAll(".option1"),
-arrowIcons1 = document.querySelectorAll(".icon121 i");
-
-let isDragging1 = false, prevTouch1, prevScroll1;
-
-const handleIcons1 = (scrollVal1) => {
-    let maxScrollableWidth = options1.scrollWidth - options1.clientWidth;
-    arrowIcons1[0].parentElement.style.display = scrollVal1 <= 0 ? "none" : "flex";
-    arrowIcons1[1].parentElement.style.display = maxScrollableWidth > scrollVal1 ? "flex" : "none";
-}
-
-arrowIcons1.forEach(icon => {
-    icon.addEventListener("click", () => {
-        let scrollWidth = options1.scrollLeft += icon.id === "left1" ? -350 : 350;
-        handleIcons1(scrollWidth);
-    });
-});
-
-const dragStart1 = (e) => {
-    isDragging1 = true
-    prevTouch1 = e.pageX || e.touches[0].pageX;
-    prevScroll1 = options1.scrollLeft;
+  },
+  set(key, value) {
+    try {
+      localStorage.setItem(key, JSON.stringify(value));
+    } catch (e) {}
+  },
+  remove(key) {
+    try {
+      localStorage.removeItem(key);
+    } catch (e) {}
+  }
 };
 
-const dragging1 = e => {
-    if(!isDragging1) return;
-    options1.classList.add("dragging1");
-    options1.scrollLeft = prevScroll1 - ((e.pageX || e.touches[0].pageX) - prevTouch1);
-    handleIcons1(options1.scrollLeft);
+const themeToggleBtn = document.getElementById("themeToggle");
+const themeIconWrap = document.getElementById("themeIcon");
+const themeLabel = document.getElementById("themeLabel");
+const recentSearchContainer = document.getElementById(
+  "recentSearchContainer"
+);
+const searchInput = document.getElementById("heroSearchInput");
+const cookiesBanner = document.getElementById("cookiesBanner");
+const cookiesAccept = document.getElementById("cookiesAccept");
+const settingsOverlay = document.getElementById("settingsOverlay");
+const settingsOpenBtn = document.getElementById("settingsOpenBtn");
+const settingsCloseBtn = document.getElementById("settingsCloseBtn");
+const settingsDarkModeToggle = document.getElementById(
+  "settingsDarkModeToggle"
+);
+const settingsSearchesToggle = document.getElementById(
+  "settingsSearchesToggle"
+);
+const settingsResetBtn = document.getElementById("settingsResetBtn");
+const searchSuggestionsPanel = document.getElementById(
+  "searchSuggestionsPanel"
+);
+const searchSuggestionsList = document.getElementById(
+  "searchSuggestionsList"
+);
+const searchSuggestionsCount = document.getElementById(
+  "searchSuggestionsCount"
+);
+
+const STORAGE_KEYS = {
+  THEME: "ins_theme",
+  COOKIES: "ins_cookies",
+  SEARCHES: "ins_recent_searches",
+  SEARCHES_ENABLED: "ins_searches_enabled"
+};
+const products=[
+{name:"Menu Spécial",price:"18,90€",link:"./menu/?q=Menu+Spécial",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Menu"},
+{name:"Menu Best Deal",price:"24,90€",link:"./menu/?q=Menu+Best+Deal",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Menu"},
+{name:"Menu végétarien",price:"18,90€",link:"./menu/?q=Menu+végétarien",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Menu"},
+{name:"Combo sauces",price:"1,00€",link:"./menu/?q=Combo+de+3+sauces",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Sauce"},
+{name:"Set de couverts",price:"0,50€",link:"./menu/?q=Set+de+couverts",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Extra"},
+{name:"Naan fromage",price:"4,90€",link:"./menu/?q=Naan+fromage",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Naan"},
+{name:"Garlic naan",price:"4,50€",link:"./menu/?q=Garlic+naan",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Naan"},
+{name:"Naan nature",price:"2,90€",link:"./menu/?q=Naan+nature",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Naan"},
+{name:"Naan Indian Nepali Swad",price:"6,50€",link:"./menu/?q=Naan+Indian+Nepali+Swad",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Naan"},
+{name:"Keema Naan",price:"6,50€",link:"./menu/?q=Keema+Naan",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Naan"},
+{name:"Roti Chapati",price:"3,00€",link:"./menu/?q=Roti+Chapati",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Naan"},
+{name:"Papadam",price:"1,00€",link:"./menu/?q=Papadam",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Naan"},
+{name:"Poulet tandoori",price:"8,50€",link:"./menu/?q=Poulet+tandoori",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Entrée"},
+{name:"Samoussas légumes",price:"7,50€",link:"./menu/?q=Samoussas+légumes",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Entrée"},
+{name:"Samoussas poulet",price:"8,50€",link:"./menu/?q=Samoussas+poulet",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Entrée"},
+{name:"Poulet Tikka",price:"8,90€",link:"./menu/?q=Poulet+Tikka",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Entrée"},
+{name:"Onion Bhaji",price:"6,90€",link:"./menu/?q=Onion+Bhaji",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Entrée"},
+{name:"Pakora",price:"7,50€",link:"./menu/?q=Pakora",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Entrée"},
+{name:"Seekh kebab",price:"8,50€",link:"./menu/?q=Seekh+kebab",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Entrée"},
+{name:"Poulet butter",price:"14,50€",link:"./menu/?q=Poulet+butter",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Curry"},
+{name:"Poulet Tikka Masala",price:"14,50€",link:"./menu/?q=Poulet+Tikka+Masala",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Curry"},
+{name:"Madras",price:"13,90€",link:"./menu/?q=Madras",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Curry"},
+{name:"Shahi korma",price:"14,50€",link:"./menu/?q=Shahi+korma",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Curry"},
+{name:"Biryani",price:"16,50€",link:"./menu/?q=Biryani",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Riz"},
+{name:"Poulet au curry",price:"12,90€",link:"./menu/?q=Poulet+au+curry",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Curry"},
+{name:"Palak",price:"13,90€",link:"./menu/?q=Palak",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Curry"},
+{name:"Agneau Spécial Népali Swad",price:"15,50€",link:"./menu/?q=Agneau+Spécial+Népali+Swad",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Curry"},
+{name:"Vindaloo",price:"13,90€",link:"./menu/?q=Vindaloo",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Curry"},
+{name:"Poulet Dahl",price:"13,90€",link:"./menu/?q=Poulet+Dahl",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Curry"},
+{name:"Curry",price:"12,90€",link:"./menu/?q=Curry",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Curry"},
+{name:"Agneau Dahl",price:"14,90€",link:"./menu/?q=Agneau+Dahl",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Curry"},
+{name:"Bharta",price:"13,90€",link:"./menu/?q=Bharta",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Curry"},
+{name:"Poulet Masala",price:"14,50€",link:"./menu/?q=Poulet+Masala",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Curry"},
+{name:"Masala",price:"14,50€",link:"./menu/?q=Masala",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Curry"},
+{name:"Dahl",price:"13,90€",link:"./menu/?q=Dahl",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Curry"},
+{name:"Dahl Tadka",price:"11,90€",link:"./menu/?q=Dahl+Tadka",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Végétarien"},
+{name:"Palak paneer",price:"12,50€",link:"./menu/?q=Palak+paneer",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Végétarien"},
+{name:"Bhaigan bharta",price:"12,90€",link:"./menu/?q=Bhaigan+bharta",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Végétarien"},
+{name:"Légumes biryani",price:"14,50€",link:"./menu/?q=Légumes+biryani",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Riz"},
+{name:"Légumes korma",price:"12,90€",link:"./menu/?q=Légumes+korma",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Végétarien"},
+{name:"Légume curry",price:"10,90€",link:"./menu/?q=Légume+curry",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Végétarien"},
+{name:"Chau-Min poulet",price:"14,90€",link:"./menu/?q=Chau-Min+poulet",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Nouilles"},
+{name:"Chau-Min légumes",price:"13,90€",link:"./menu/?q=Chau-Min+légumes",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Nouilles"},
+{name:"Chau-Min crevettes",price:"16,90€",link:"./menu/?q=Chau-Min+crevettes",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Nouilles"},
+{name:"Chau-Min agneau",price:"15,90€",link:"./menu/?q=Chau-Min+agneau",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Nouilles"},
+{name:"Riz basmati",price:"3,90€",link:"./menu/?q=Riz+basmati",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Riz"},
+{name:"Riz safran",price:"4,40€",link:"./menu/?q=Riz+safran",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Riz"},
+{name:"Matar pulao",price:"5,40€",link:"./menu/?q=Matar+pulao",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Riz"},
+{name:"Suji Halwa",price:"5,90€",link:"./menu/?q=Suji+Halwa",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Dessert"},
+{name:"Gulab Jamun",price:"5,90€",link:"./menu/?q=Gulab+Jamun",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Dessert"},
+{name:"Lassi maison",price:"6,50€",link:"./menu/?q=Lassi+maison",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Boisson"},
+{name:"Lassi Mangue",price:"6,50€",link:"./menu/?q=Lassi+Mangue",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Boisson"},
+{name:"Coca-cola zéro",price:"2,00€",link:"./menu/?q=Coca-cola+zéro",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Boisson"},
+{name:"Coca-cola",price:"2,00€",link:"./menu/?q=Coca-cola",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Boisson"},
+{name:"Ice Tea Pêche",price:"2,00€",link:"./menu/?q=Ice+Tea+Pêche",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Boisson"},
+{name:"Eau plate 50cl",price:"3,00€",link:"./menu/?q=Eau+plate+50cl",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Boisson"},
+{name:"Fanta orange",price:"2,00€",link:"./menu/?q=Fanta+orange",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Boisson"},
+{name:"Set de couverts",price:"0,50€",link:"./menu/?q=Set+de+couverts",image:"https://www.indian-nepaliswad.fr/etc/apple-touch-icon.png",tag:"Extra"}
+];
+
+
+function setThemeIcon(isDark) {
+  themeIconWrap.innerHTML = "";
+  const icon = document.createElement("i");
+  icon.className = isDark ? "bx bx-moon" : "bx bx-sun";
+  themeIconWrap.appendChild(icon);
+  themeLabel.textContent = isDark ? "SOMBRE" : "CLAIR";
 }
 
-const stopDragging1 = () => {
-    isDragging1 = false;
-    options1.classList.remove("dragging1");
-}
-options1.addEventListener("mousedown", dragStart1);
-options1.addEventListener("touchstart", dragStart1);
-options1.addEventListener("mousemove", dragging1);
-options1.addEventListener("touchmove", dragging1);
-document.addEventListener("mouseup", stopDragging1);
-options1.addEventListener("touchend", stopDragging1);
-</script>
-<script>
-function allnotif() {
-setCookie("notifications", "all", 60);
-$('#notif').val("all");
-notification("ok", "Notifs activé");
-}
-function minnotif() {
-setCookie("notifications", "min", 60);
-$('#notif').val("none");
-}
-$('#theme').change(function(){
-    if($(this).val() == "light") {
-        lighttheme()
-    }
-    if($(this).val() == "system") {
-        systemtheme()
-    }
-    if($(this).val() == "dark") {
-        darktheme()
-    }
-});
-$('#notif').change(function(){
-    if($(this).val() == "all") {
-        allnotif();
-    }
-    if($(this).val() == "none") {
-        minnotif();
-    }
-});
-$( document ).ready(function() {
-  if(getCookie('notifications') == "all") {
-    allnotif();
+function applyTheme(theme) {
+  if (theme === "dark") {
+    document.body.classList.add("theme-dark");
+    setThemeIcon(true);
+  } else {
+    document.body.classList.remove("theme-dark");
+    setThemeIcon(false);
   }
-  else if(getCookie('notifications') == "min") {
-    minnotif();
-  }
-  if(getCookie('theme') == "light") {
-    lighttheme();
-  }
-  else if(getCookie('theme') == "dark") {
-    darktheme();
-  }
-  else {
-    systemtheme();
-  }
-  if(getCookie("cookiesmenu") != "hide") {
-    if(!$('#cookies').hasClass("shown")) {
-      $('#cookies').addClass("shown");
-    }
-  }
-  $("#notification").hide();
-  $(".nav-link").tooltip();
-  $(".nav-link a").tooltip();
-  $(".option1").tooltip();
-  setTimeout(() => {
-      $(".preloader").hide("fade", 400);
-  }, 600);
-});
-particlesJS("particles-js", {
-    "particles": {
-		"number": {
-			"value": 400,
-			"density": {
-				"enable": true,
-				"value_area": 800
-			}
-		},
-		"color": {
-			"value": "#ffffff"
-		},
-		"shape": {
-			"type": "circle",
-			"stroke": {
-				"width": 0,
-				"color": "#ffffff"
-			},
-			"polygon": {
-				"nb_sides": 100
-			},
-			"image": {
-				"src": "https://www.indian-nepaliswad.fr/etc/logo.png",
-				"width": 100,
-				"height": 100
-			}
-		},
-		"opacity": {
-			"value": 0.6,
-			"random": true,
-			"anim": {
-				"enable": false,
-				"speed": 10,
-				"opacity_min": 0.4,
-				"sync": true
-			}
-		},
-		"size": {
-			"value": 10,
-			"random": true,
-			"anim": {
-				"enable": true,
-				"speed": 40,
-				"size_min": 2,
-				"sync": false
-			}
-		},
-		"line_linked": {
-			"enable": false
-		},
-		"move": {
-			"enable": true,
-			"speed": 2,
-			"direction": "none",
-			"random": true,
-			"straight": false,
-			"out_mode": "out",
-			"bounce": true,
-			"attract": {
-				"enable": true,
-				"rotateX": 600,
-				"rotateY": 1200
-			}
-		}
-	},
-	"interactivity": {
-		"detect_on": "canvas",
-		"events": {
-			"onhover": {
-				"enable": true,
-				"mode": "repulse"
-			},
-			"onclick": {
-				"enable": true,
-				"mode": "bubble"
-			},
-			"resize": true
-		},
-		"modes": {
-			"grab": {
-				"distance": 140,
-				"line_linked": {
-					"opacity": 1
-				}
-			},
-			"bubble": {
-				"distance": 200,
-				"size": 10,
-				"duration": 2,
-				"opacity": 8,
-				"speed": 3
-			},
-			"repulse": {
-				"distance": 100,
-				"duration": 0.2
-			},
-			"push": {
-				"particles_nb": 4
-			}
-		}
-	},
-	"retina_detect": true
-}); 
-function deleteAllCookies() {
-  var cookies = document.cookie.split(";");
-  for (var i = 0; i < cookies.length; i++) {
-  var cookie = cookies[i];
-  var eqPos = cookie.indexOf("=");
-  var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-  document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-  }
-  function deletealluserinfotermin() {
-    notification("notif", "Supression...");
-    setTimeout(() => {
-      notification("error", "3s");
-      setTimeout(() => {
-        notification("error", "2s");
-        setTimeout(() => {
-          notification("error", "1s");
-          setTimeout(() => {
-            window.location.reload();
-          }, 1000);
-        }, 1000);
-      }, 1000);
-    }, 1000);
-  }
-  document.cookie.indexOf("useron!=true") != -1 ? redirectionuseron() : deletealluserinfotermin();
-  function redirectionuseron() {
-    notification("info", "Une connection d'utilisateur à été détecté, redirection en cours...");
-    redirectionuseron();
-    setTimeout(() => {
-      notification("error","Ooups, la connection à été interrompue.");
-      notification("error", "Veuillez réessayer plus tard.");
-      notification("warning", "Actualisation du session dans :");
-      notification("error", "3s");
-      setTimeout(() => {
-        notification("error", "2s");
-        setTimeout(() => {
-          notification("error", "1s");
-          setTimeout(() => {
-            window.location.reload();
-          }, 1000);
-        }, 1000);
-      }, 1000);
-    }, 1000);
+  if (settingsDarkModeToggle) {
+    settingsDarkModeToggle.checked = theme === "dark";
   }
 }
-$(document).ready(function(){
-  $("#filternav").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#tofilternavbar li").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+
+function initTheme() {
+  let stored = storage.get(STORAGE_KEYS.THEME);
+  if (stored !== "light" && stored !== "dark") {
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    stored = prefersDark ? "dark" : "light";
+  }
+  applyTheme(stored);
+}
+
+function toggleTheme() {
+  const isDark = document.body.classList.contains("theme-dark");
+  const next = isDark ? "light" : "dark";
+  applyTheme(next);
+  storage.set(STORAGE_KEYS.THEME, next);
+}
+
+themeToggleBtn.addEventListener("click", toggleTheme);
+
+function searchesEnabled() {
+  const stored = storage.get(STORAGE_KEYS.SEARCHES_ENABLED);
+  if (stored === null || stored === undefined) return true;
+  return !!stored;
+}
+
+function renderRecentSearches(list) {
+  recentSearchContainer.innerHTML = "";
+  if (!list || !list.length || !searchesEnabled()) {
+    recentSearchContainer.style.display = "none";
+    return;
+  }
+  const label = document.createElement("a");
+  label.className = "recent-search-label";
+  label.href = "./menu/" + (searchInput.value.trim()
+    ? "?q=" + encodeURIComponent(searchInput.value.trim())
+    : "");
+  label.textContent = "Récentes :";
+  recentSearchContainer.appendChild(label);
+
+  list.forEach((term) => {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "recent-search-chip";
+
+    const icon = document.createElement("i");
+    icon.className = "bx bx-history";
+    chip.appendChild(icon);
+
+    const span = document.createElement("span");
+    span.textContent = term;
+    chip.appendChild(span);
+
+    chip.addEventListener("click", () => {
+      performSearchRedirect(term);
     });
+
+    recentSearchContainer.appendChild(chip);
+  });
+
+  recentSearchContainer.style.display = "flex";
+}
+
+function loadRecentSearches() {
+  const data = storage.get(STORAGE_KEYS.SEARCHES);
+  if (!data || !Array.isArray(data)) {
+    renderRecentSearches([]);
+    return;
+  }
+  renderRecentSearches(data);
+}
+
+function performSearchRedirect(query) {
+  const trimmed = query.trim();
+  const finalQuery = trimmed || "";
+  const url =
+    finalQuery.length > 0
+      ? "./menu/?q=" + encodeURIComponent(finalQuery)
+      : "./menu/";
+  window.location.href = url;
+}
+/* -------------------------------------------------------
+   Better highlight (supports multiple matches, safe HTML)
+-------------------------------------------------------- */
+function highlightMatch(name, q) {
+  if (!q.trim()) return name;
+  const escaped = q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const regex = new RegExp(escaped, "gi");
+  return name.replace(regex, (m) => `<span class="search-highlight">${m}</span>`);
+}
+
+/* -------------------------------------------------------
+   State
+-------------------------------------------------------- */
+let activeSuggestionIndex = -1;
+let currentSuggestions = [];
+
+/* -------------------------------------------------------
+   Render suggestions
+-------------------------------------------------------- */
+function renderSuggestions(matches, q) {
+  searchSuggestionsList.innerHTML = "";
+  currentSuggestions = matches.slice(0, 70); // show more items
+  activeSuggestionIndex = -1;
+
+  currentSuggestions.forEach((p, index) => {
+    const item = document.createElement("div");
+    item.className = "search-suggestion-item";
+    item.dataset.index = index;
+
+    item.innerHTML = `
+      <div class="search-suggestion-thumb">
+        <img src="${p.image}" alt="${p.name}">
+      </div>
+      <div class="search-suggestion-info">
+        <div class="search-suggestion-name">${highlightMatch(p.name, q)}</div>
+        <div class="search-suggestion-meta">${p.tag || "Suggestion"}</div>
+      </div>
+      <div class="search-suggestion-price">${p.price || ""}</div>
+    `;
+
+    item.addEventListener("mouseenter", () => setActiveSuggestion(index));
+    item.addEventListener("click", () => {
+      window.location.href = p.link || "./menu/?q=" + encodeURIComponent(p.name);
+    });
+
+    searchSuggestionsList.appendChild(item);
+  });
+
+  searchSuggestionsCount.textContent =
+    matches.length > 1 ? `${matches.length} résultats` : `${matches.length} résultat`;
+
+  searchSuggestionsPanel.style.display = "block";
+}
+
+/* -------------------------------------------------------
+   Active suggestion (keyboard navigation)
+-------------------------------------------------------- */
+function setActiveSuggestion(index) {
+  const items = [...searchSuggestionsList.children];
+  items.forEach((el) => el.classList.remove("active"));
+
+  if (index >= 0 && index < items.length) {
+    items[index].classList.add("active");
+    activeSuggestionIndex = index;
+
+    const itemEl = items[index];
+    const panelRect = searchSuggestionsList.getBoundingClientRect();
+    const itemRect = itemEl.getBoundingClientRect();
+
+    if (itemRect.top < panelRect.top) {
+      searchSuggestionsList.scrollTop -= panelRect.top - itemRect.top + 10;
+    } else if (itemRect.bottom > panelRect.bottom) {
+      searchSuggestionsList.scrollTop += itemRect.bottom - panelRect.bottom + 10;
+    }
+  } else {
+    activeSuggestionIndex = -1;
+  }
+}
+
+/* -------------------------------------------------------
+   Debounced search
+-------------------------------------------------------- */
+let searchTimeout = null;
+
+function handleSearchInputChange() {
+  clearTimeout(searchTimeout);
+
+  searchTimeout = setTimeout(() => {
+    const q = searchInput.value.trim().toLowerCase();
+
+    if (!q) {
+      renderSuggestions(products, "");
+      return;
+    }
+
+    const matches = products.filter((p) =>
+      p.name.toLowerCase().includes(q)
+    );
+
+    if (!matches.length) {
+      searchSuggestionsPanel.style.display = "none";
+      searchSuggestionsList.innerHTML = "";
+      searchSuggestionsCount.textContent = "";
+      currentSuggestions = [];
+      activeSuggestionIndex = -1;
+      return;
+    }
+
+    renderSuggestions(matches, q);
+  }, 120);
+}
+
+/* -------------------------------------------------------
+   Events
+-------------------------------------------------------- */
+searchInput.addEventListener("input", handleSearchInputChange);
+
+/* Show all items on focus */
+searchInput.addEventListener("focus", () => {
+  renderSuggestions(products, "");
+});
+
+/* Keyboard navigation */
+searchInput.addEventListener("keydown", (e) => {
+  const key = e.key;
+
+  if (key === "ArrowDown") {
+    e.preventDefault();
+    const next =
+      activeSuggestionIndex < currentSuggestions.length - 1
+        ? activeSuggestionIndex + 1
+        : 0;
+    setActiveSuggestion(next);
+  }
+
+  else if (key === "ArrowUp") {
+    e.preventDefault();
+    const prev =
+      activeSuggestionIndex > 0
+        ? activeSuggestionIndex - 1
+        : currentSuggestions.length - 1;
+    setActiveSuggestion(prev);
+  }
+
+  else if (key === "Enter") {
+    e.preventDefault();
+    if (activeSuggestionIndex >= 0) {
+      const p = currentSuggestions[activeSuggestionIndex];
+      window.location.href = p.link || "./menu/?q=" + encodeURIComponent(p.name);
+    } else {
+      performSearchRedirect(searchInput.value || "");
+    }
+  }
+
+  else if (key === "Escape") {
+    searchSuggestionsPanel.style.display = "none";
+  }
+});
+
+/* Close when clicking outside */
+document.addEventListener("click", (e) => {
+  if (!searchSuggestionsPanel.contains(e.target) &&
+      e.target !== searchInput) {
+    searchSuggestionsPanel.style.display = "none";
+  }
+});
+
+/* Ctrl+K shortcut */
+document.addEventListener("keydown", (e) => {
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+    e.preventDefault();
+    searchInput.focus();
+    searchInput.select();
+  }
+});
+
+document.querySelectorAll(".hero-delivery-card").forEach((card) => {
+  const link = card.getAttribute("data-link");
+  if (!link) return;
+  card.addEventListener("click", () => {
+    window.open(link, "_blank", "noopener");
   });
 });
-function footerToggle(footerBtn) {
-    $(footerBtn).toggleClass("btnActive");
-    $(footerBtn).next().toggleClass("active");
+
+cookiesAccept.addEventListener("click", () => {
+  storage.set(STORAGE_KEYS.COOKIES, "accepted");
+  cookiesBanner.style.display = "none";
+});
+
+function initCookiesBanner() {
+  const state = storage.get(STORAGE_KEYS.COOKIES);
+  if (state === "accepted") {
+    cookiesBanner.style.display = "none";
+    return;
+  }
+  cookiesBanner.style.display = "flex";
 }
+
+function openSettings() {
+  settingsOverlay.classList.add("visible");
+}
+
+function closeSettings() {
+  settingsOverlay.classList.remove("visible");
+}
+
+settingsOpenBtn.addEventListener("click", openSettings);
+settingsCloseBtn.addEventListener("click", closeSettings);
+
+settingsOverlay.addEventListener("click", (e) => {
+  if (e.target === settingsOverlay) {
+    closeSettings();
+  }
+});
+
+settingsDarkModeToggle.addEventListener("change", (e) => {
+  const checked = e.target.checked;
+  const next = checked ? "dark" : "light";
+  applyTheme(next);
+  storage.set(STORAGE_KEYS.THEME, next);
+});
+
+settingsSearchesToggle.addEventListener("change", (e) => {
+  const enabled = e.target.checked;
+  storage.set(STORAGE_KEYS.SEARCHES_ENABLED, enabled);
+  if (!enabled) {
+    renderRecentSearches([]);
+  } else {
+    loadRecentSearches();
+  }
+});
+
+function clearAllCookies() {
+  const cookies = document.cookie.split(";");
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i];
+    const eqPos = cookie.indexOf("=");
+    const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+    document.cookie =
+      name.trim() +
+      "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;SameSite=Lax";
+  }
+}
+
+settingsResetBtn.addEventListener("click", () => {
+  storage.remove(STORAGE_KEYS.THEME);
+  storage.remove(STORAGE_KEYS.SEARCHES);
+  storage.remove(STORAGE_KEYS.SEARCHES_ENABLED);
+  storage.remove(STORAGE_KEYS.COOKIES);
+  clearAllCookies();
+  applyTheme("light");
+  if (settingsDarkModeToggle) settingsDarkModeToggle.checked = false;
+  if (settingsSearchesToggle) settingsSearchesToggle.checked = true;
+  renderRecentSearches([]);
+  cookiesBanner.style.display = "flex";
+});
+
+function initSettingsState() {
+  if (settingsSearchesToggle) {
+    settingsSearchesToggle.checked = searchesEnabled();
+  }
+}
+
+initTheme();
+initSettingsState();
+loadRecentSearches();
+initCookiesBanner();
+  const horaires = {
+    1: ["11:15-14:45", "18:15-22:45"], // lundi
+    2: ["11:15-14:45", "18:15-22:45"], // mardi
+    3: ["11:15-14:45", "18:15-22:45"], // mercredi
+    4: ["11:15-14:45", "18:15-22:45"], // jeudi
+    5: ["11:15-14:45", "18:15-22:45"], // vendredi
+    6: ["11:15-14:45", "18:15-22:45"], // samedi
+    0: ["11:15-14:45", "18:15-22:45"], // dimanche
+  };
+
+  function parseTime(t) {
+    const [h, m] = t.split(":").map(Number);
+    const d = new Date();
+    d.setHours(h, m, 0, 0);
+    return d;
+  }
+
+  function isOpenNow() {
+    const now = new Date();
+    const day = now.getDay();
+    const todaySlots = horaires[day];
+
+    for (const slot of todaySlots) {
+      const [start, end] = slot.split("-");
+      const startTime = parseTime(start);
+      const endTime = parseTime(end);
+
+      if (now >= startTime && now <= endTime) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function updateStatus() {
+    const statusEl = document.getElementById("hero-status");
+    const textEl = statusEl.querySelector(".hero-open-text");
+
+    if (isOpenNow()) {
+      statusEl.classList.remove("closed");
+      textEl.textContent = "Ouvert" +
+        (new Date().getHours() >= 18 ? " jusqu'à 22:45" : " jusqu'à 14:45");
+    } else {
+      statusEl.classList.add("closed");
+      textEl.textContent = "Fermé actuellement";
+    }
+  }
+
+  updateStatus();
+  setInterval(updateStatus, 60000); // mise à jour chaque minute
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"> </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const map = L.map("map", {
+        center: [47, 1.8],
+        zoom: 4,
+        zoomControl: false
+    });
+
+    // Light + Dark tiles
+    const lightTiles = L.tileLayer(
+        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+    );
+    const darkTiles = L.tileLayer(
+        "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+    );
+
+    lightTiles.addTo(map);
+
+    function applyMapTheme() {
+        const isDark = document.body.classList.contains("theme-dark");
+        if (isDark) {
+            map.removeLayer(lightTiles);
+            darkTiles.addTo(map);
+        } else {
+            map.removeLayer(darkTiles);
+            lightTiles.addTo(map);
+        }
+    }
+
+    new MutationObserver(applyMapTheme)
+        .observe(document.body, { attributes: true, attributeFilter: ["class"] });
+
+    applyMapTheme();
+
+
+    // -----------------------------
+    // DELIVERY ZONES DATA
+    // -----------------------------
+    const zones = [
+        { name: "Paris 15",     lat: 48.84063, lng: 2.30602, color: "#ff000085", fill: "#ff000055" },
+        { name: "Courbevoie",   lat: 48.80518, lng: 2.46269, color: "#0000ff85", fill: "#006aff55" },
+        { name: "Saint‑Ouen",   lat: 48.90469, lng: 2.32766, color: "#ff660085", fill: "#ffa50055" },
+        { name: "Bagneux",      lat: 48.80033, lng: 2.30524, color: "#c8c80085", fill: "#ffff0055" },
+        { name: "Ivry",         lat: 48.81810, lng: 2.40196, color: "#80008085", fill: "#ff00ff55" },
+        { name: "Bordeaux",     lat: 44.86313, lng: -0.57288, color: "#00ff8085", fill: "#00ffff55" }
+    ];
+
+
+    // -----------------------------
+    // ADD CIRCLES
+    // -----------------------------
+    zones.forEach(z => {
+        L.circle([z.lat, z.lng], {
+            color: z.color,
+            fillColor: z.fill,
+            fillOpacity: 0.25,
+            radius: 10000
+        }).addTo(map);
+    });
+
+
+    // -----------------------------
+    // SMART LABEL CLUSTERING
+    // -----------------------------
+
+    const LABEL_DISTANCE = 18; // pixels threshold for grouping
+
+    function project(lat, lng) {
+        return map.latLngToLayerPoint([lat, lng]);
+    }
+
+    function clusterLabels() {
+        const groups = [];
+        const used = new Set();
+
+        zones.forEach((z, i) => {
+            if (used.has(i)) return;
+
+            const group = [z];
+            const p1 = project(z.lat, z.lng);
+
+            zones.forEach((other, j) => {
+                if (i === j || used.has(j)) return;
+
+                const p2 = project(other.lat, other.lng);
+                const dist = p1.distanceTo(p2);
+
+                if (dist < LABEL_DISTANCE) {
+                    group.push(other);
+                    used.add(j);
+                }
+            });
+
+            used.add(i);
+            groups.push(group);
+        });
+
+        return groups;
+    }
+
+    let labelMarkers = [];
+
+    function renderLabels() {
+        labelMarkers.forEach(m => map.removeLayer(m));
+        labelMarkers = [];
+
+        const groups = clusterLabels();
+
+        groups.forEach(group => {
+            if (group.length === 1) {
+                // Single label
+                const z = group[0];
+                const marker = L.marker([z.lat, z.lng], {
+                    icon: L.divIcon({
+                        className: "map-label",
+                        html: z.name,
+                        iconSize: [100, 24],
+                        iconAnchor: [50, 12]
+                    })
+                }).addTo(map);
+
+                labelMarkers.push(marker);
+
+            } else {
+                // Cluster label
+                const centerLat = group.reduce((a, b) => a + b.lat, 0) / group.length;
+                const centerLng = group.reduce((a, b) => a + b.lng, 0) / group.length;
+
+                const label = " + " + group.length + " Sites";
+
+                const marker = L.marker([centerLat, centerLng], {
+                    icon: L.divIcon({
+                        className: "map-label-cluster",
+                        html: label,
+                        iconSize: [120, 28],
+                        iconAnchor: [60, 14]
+                    })
+                })
+                .addTo(map)
+                .on("click", () => {
+                    // Zoom to show all labels
+                    const bounds = L.latLngBounds(group.map(g => [g.lat, g.lng]));
+                    map.fitBounds(bounds.pad(0.4));
+                });
+
+                labelMarkers.push(marker);
+            }
+        });
+    }
+
+    map.on("zoomend moveend", renderLabels);
+    renderLabels();
+
+});
+</script>
 </body>
 </html>
